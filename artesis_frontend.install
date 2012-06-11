@@ -3,6 +3,10 @@
  * @file
  * Installation of Artesis frontend features.
  */
+
+/**
+ * Implements hook_install().
+ */
 function artesis_frontend_install() {
   /*
    * Create date formats used by frontend lists.
