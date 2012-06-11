@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Artesis Frontend feature.
+ */
+
+include_once('artesis_frontend.features.inc');
