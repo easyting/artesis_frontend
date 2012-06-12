@@ -5,3 +5,15 @@
  */
 
 include_once('artesis_frontend.features.inc');
+
+/**
+ * Implements hook_views_default_views_alter().
+ *
+ * Alter system taxonomy term view to ensure its path doesn't conflict
+ * with panel page path.
+ */
+function artesis_frontend_views_default_views_alter(&$views) {
+  if (isset($views['taxonomy_term'])) {
+    $views['taxonomy_term']->display['page']->display_options['path'] = 'taxonomy/term/%/views';
+  }
+}
