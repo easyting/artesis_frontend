@@ -11,14 +11,7 @@ function artesis_frontend_install() {
   /*
    * Create date formats used by frontend lists.
    */
-  $date_formats = array(
-    'year_only'     => 'Y',
-    'reverse_date'  => 'Y-m-d',
-    'month_only'    => 'F',
-    'day_only'      => 'j',
-    'date_with_day_of_week' => 'D, j.m.Y',
-    'date_and_month_only'   => 'j F'
-  );
+  $date_formats = artesis_frontend_get_date_formats();
 
   foreach ($date_formats as $name => $format) {
     // Create format definition.
@@ -38,4 +31,43 @@ function artesis_frontend_install() {
     // Create date format settings.
     variable_set('date_format_' . $name, $format);
   }
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function artesis_frontend_uninstall() {
+  /*
+   * Remove date formats created for frontend lists.
+   */
+  $date_formats = artesis_frontend_get_date_formats();
+
+  foreach ($date_formats as $name => $format) {
+    // Remove format definition.
+    db_delete('date_formats')
+      ->condition('format', $format)
+      ->condition('type', 'custom')
+      ->execute();
+
+    // Remove format types.
+    db_delete('date_format_type')
+      ->condition('type', $name)
+      ->condition('locked', 0)
+      ->execute();
+
+    // Remove date format settings.
+    variable_del('date_format_' . $name);
+  }
+}
+
+function artesis_frontend_get_date_formats() {
+  return
+    array(
+      'year_only'     => 'Y',
+      'reverse_date'  => 'Y-m-d',
+      'month_only'    => 'F',
+      'day_only'      => 'j',
+      'date_with_day_of_week' => 'D, j.m.Y',
+      'date_and_month_only'   => 'j F'
+    );
 }
