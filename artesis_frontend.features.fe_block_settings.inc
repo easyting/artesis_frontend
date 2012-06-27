@@ -13,6 +13,21 @@ function artesis_frontend_default_fe_block_settings() {
   // alpha_basetheme
   $theme = array();
 
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'alpha_basetheme',
+    'status' => '1',
+    'weight' => '1',
+    'region' => 'menu',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => 4,
+    'i18n_mode' => '0',
+  );
+
   $theme['ding_library-library_address'] = array(
     'module' => 'ding_library',
     'delta' => 'library_address',
@@ -73,6 +88,51 @@ function artesis_frontend_default_fe_block_settings() {
     'i18n_mode' => '0',
   );
 
+  $theme['menu-menu-footer-menu-2'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-2',
+    'theme' => 'alpha_basetheme',
+    'status' => '1',
+    'weight' => '2',
+    'region' => 'postscript_second',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-3'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-3',
+    'theme' => 'alpha_basetheme',
+    'status' => '1',
+    'weight' => '3',
+    'region' => 'postscript_third',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-4'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-4',
+    'theme' => 'alpha_basetheme',
+    'status' => '1',
+    'weight' => '4',
+    'region' => 'postscript_fourth',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
   $theme['search-form'] = array(
     'module' => 'search',
     'delta' => 'form',
@@ -123,6 +183,21 @@ function artesis_frontend_default_fe_block_settings() {
   // bartik
   $theme = array();
 
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => 4,
+    'i18n_mode' => '0',
+  );
+
   $theme['ding_library-library_address'] = array(
     'module' => 'ding_library',
     'delta' => 'library_address',
@@ -171,6 +246,51 @@ function artesis_frontend_default_fe_block_settings() {
   $theme['menu-menu-footer-menu-1'] = array(
     'module' => 'menu',
     'delta' => 'menu-footer-menu-1',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-2'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-2',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-3'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-3',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-4'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-4',
     'theme' => 'bartik',
     'status' => 0,
     'weight' => '0',
@@ -233,6 +353,21 @@ function artesis_frontend_default_fe_block_settings() {
   // seven
   $theme = array();
 
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => 4,
+    'i18n_mode' => '0',
+  );
+
   $theme['ding_library-library_address'] = array(
     'module' => 'ding_library',
     'delta' => 'library_address',
@@ -281,6 +416,51 @@ function artesis_frontend_default_fe_block_settings() {
   $theme['menu-menu-footer-menu-1'] = array(
     'module' => 'menu',
     'delta' => 'menu-footer-menu-1',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-2'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-2',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-3'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-3',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-4'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-4',
     'theme' => 'seven',
     'status' => 0,
     'weight' => '0',
