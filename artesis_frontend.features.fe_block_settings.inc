@@ -13,6 +13,21 @@ function artesis_frontend_default_fe_block_settings() {
   // alpha_basetheme
   $theme = array();
 
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'alpha_basetheme',
+    'status' => '1',
+    'weight' => '1',
+    'region' => 'menu',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => 4,
+    'i18n_mode' => '0',
+  );
+
   $theme['ding_library-library_address'] = array(
     'module' => 'ding_library',
     'delta' => 'library_address',
@@ -168,6 +183,21 @@ function artesis_frontend_default_fe_block_settings() {
   // bartik
   $theme = array();
 
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => 4,
+    'i18n_mode' => '0',
+  );
+
   $theme['ding_library-library_address'] = array(
     'module' => 'ding_library',
     'delta' => 'library_address',
@@ -322,6 +352,21 @@ function artesis_frontend_default_fe_block_settings() {
 
   // seven
   $theme = array();
+
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => 4,
+    'i18n_mode' => '0',
+  );
 
   $theme['ding_library-library_address'] = array(
     'module' => 'ding_library',
