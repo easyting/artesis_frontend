@@ -148,6 +148,21 @@ function artesis_frontend_default_fe_block_settings() {
     'i18n_mode' => '0',
   );
 
+  $theme['system-main'] = array(
+    'module' => 'system',
+    'delta' => 'main',
+    'theme' => 'alpha_basetheme',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'content',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
   $theme['system-user-menu'] = array(
     'module' => 'system',
     'delta' => 'user-menu',
@@ -174,6 +189,21 @@ function artesis_frontend_default_fe_block_settings() {
     'visibility' => '0',
     'pages' => '',
     'title' => 'User login',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['workbench-block'] = array(
+    'module' => 'workbench',
+    'delta' => 'block',
+    'theme' => 'alpha_basetheme',
+    'status' => 0,
+    'weight' => '-27',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
     'cache' => -1,
     'i18n_mode' => '0',
   );
