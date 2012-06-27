@@ -73,6 +73,21 @@ function artesis_frontend_default_fe_block_settings() {
     'i18n_mode' => '0',
   );
 
+  $theme['locale-language'] = array(
+    'module' => 'locale',
+    'delta' => 'language',
+    'theme' => 'alpha_basetheme',
+    'status' => 0,
+    'weight' => '1',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
   $theme['menu-menu-footer-menu-1'] = array(
     'module' => 'menu',
     'delta' => 'menu-footer-menu-1',
