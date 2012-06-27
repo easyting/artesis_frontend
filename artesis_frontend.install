@@ -25,7 +25,7 @@ function artesis_frontend_install() {
     db_insert('date_format_type')->fields(array(
       'type'  => $name,
       'title' => ucfirst(str_replace('_', ' ', $name)),
-      'locked'=> 0
+      'locked' => 0
     ))->execute();
 
     // Create date format settings.
@@ -61,8 +61,7 @@ function artesis_frontend_uninstall() {
 }
 
 function artesis_frontend_get_date_formats() {
-  return
-    array(
+  return array(
       'year_only'     => 'Y',
       'reverse_date'  => 'Y-m-d',
       'month_only'    => 'F',
