@@ -73,51 +73,6 @@ function artesis_frontend_default_fe_block_settings() {
     'i18n_mode' => '0',
   );
 
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'alpha_basetheme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'alpha_basetheme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'alpha_basetheme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
   $theme['search-form'] = array(
     'module' => 'search',
     'delta' => 'form',
@@ -228,51 +183,6 @@ function artesis_frontend_default_fe_block_settings() {
     'i18n_mode' => '0',
   );
 
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
   $theme['search-form'] = array(
     'module' => 'search',
     'delta' => 'form',
@@ -371,51 +281,6 @@ function artesis_frontend_default_fe_block_settings() {
   $theme['menu-menu-footer-menu-1'] = array(
     'module' => 'menu',
     'delta' => 'menu-footer-menu-1',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
     'theme' => 'seven',
     'status' => 0,
     'weight' => '0',
