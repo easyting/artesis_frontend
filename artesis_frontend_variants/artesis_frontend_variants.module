@@ -1,87 +1,5 @@
 <?php
 /**
- * Implements hook_taxonomy_term_insert().
- */
-function artesis_frontend_variants_taxonomy_term_insert($term) {
-  $voc = taxonomy_vocabulary_machine_name_load('eddb_editorial_base');
-  // Fire logic only for editorial base vocabulary.
-  if ($voc->vid == $term->vid) {
-    // Add a menu link
-    $link = array();
-    $link['link_path'] = 'taxonomy/term/' . $term->tid;
-    $link['link_title'] = $term->name;
-    $link['menu_name'] = 'main-menu';
-
-    $parent = array_pop($term->parent);
-    if ($parent) {
-      $parent_term = taxonomy_term_load($parent);
-      $plid = artesis_frontend_variants_get_menu_item_mlid($parent_term->name, 'main-menu');
-
-      if ($plid) {
-        $link['plid'] = $plid;
-      }
-    }
-
-    menu_link_save($link);
-    menu_cache_clear_all();
-
-    // Add a new variant for the given term
-    ctools_include('plugins');
-    $handler = _artesis_frontend_variants_create_variant($term);
-    if ($handler) {
-      drupal_set_message(t('Variant created for term \'!term\'', array('!term' => $term->name)));
-    }
-  }
-}
-
-/**
- * Implements hook_taxonomy_term_delete().
- *
- * Since the taxonomy and the menus can be renamed without affecting each other,
- * this will delete only the menus matching the taxonomy term by name.
- */
-function artesis_frontend_variants_taxonomy_term_delete($term) {
-  $voc = taxonomy_vocabulary_machine_name_load('eddb_editorial_base');
-  // Fire logic only for editorial base vocabulary.
-  if ($voc->vid == $term->vid) {
-    $mlid = artesis_frontend_variants_get_menu_item_mlid($term->name, 'main-menu');
-
-    // Delete menu item
-    if ($mlid) {
-      menu_link_delete($mlid);
-    }
-
-    // Delete variant
-    $handler_name = 'term_view_term_id_' . $term->tid;
-    $handler = new stdClass;
-    $handler->name = $handler_name;
-    $handler->handler = 'panel_context';
-    ctools_include('plugins');
-    page_manager_delete_task_handler($handler);
-  }
-}
-
-/**
- * Get menu item id by it's name.
- *
- * @param $name
- *   Menu name to seek.
- * @return
- *   Menu id (mlid), or 0.
- */
-function artesis_frontend_variants_get_menu_item_mlid($name, $menu = 'main-menu') {
-  $menu_links = menu_load_links($menu);
-
-  foreach ($menu_links as $link) {
-    if ($link['link_title'] == $name) {
-      return $link['mlid'];
-    }
-  }
-
-  return 0;
-}
-
-/**
  * Helper function that returns an empty variant ready to be set up
  */
 function _artesis_frontend_variants_create_variant($term = NULL) {
@@ -239,6 +157,90 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   // Save the handler
   page_manager_save_task_handler($handler);
   return TRUE;
+}
+
+/**
+ * Implements hook_taxonomy_term_insert().
+ */
+function artesis_frontend_variants_taxonomy_term_insert($term) {
+  $voc = taxonomy_vocabulary_machine_name_load('eddb_editorial_base');
+  // Fire logic only for editorial base vocabulary.
+  if ($voc->vid == $term->vid) {
+    // Add a menu link
+    $link = array();
+    $link['link_path'] = 'taxonomy/term/' . $term->tid;
+    $link['link_title'] = $term->name;
+    $link['menu_name'] = 'main-menu';
+
+    $parent = array_pop($term->parent);
+    if ($parent) {
+      $parent_term = taxonomy_term_load($parent);
+      $plid = artesis_frontend_variants_get_menu_item_mlid($parent_term->name, 'main-menu');
+
+      if ($plid) {
+        $link['plid'] = $plid;
+      }
+    }
+
+    menu_link_save($link);
+    menu_cache_clear_all();
+
+    // Add a new variant for the given term.
+    ctools_include('plugins');
+    $handler = _artesis_frontend_variants_create_variant($term);
+    if ($handler) {
+      drupal_set_message(t('Variant created for term \'!term\'.', array('!term' => $term->name)));
+    }
+  }
+}
+
+/**
+ * Implements hook_taxonomy_term_delete().
+ *
+ * Since the taxonomy and the menus can be renamed without affecting each other,
+ * this will delete only the menus matching the taxonomy term by name.
+ */
+function artesis_frontend_variants_taxonomy_term_delete($term) {
+  $voc = taxonomy_vocabulary_machine_name_load('eddb_editorial_base');
+  // Fire logic only for editorial base vocabulary.
+  if ($voc->vid == $term->vid) {
+    $mlid = artesis_frontend_variants_get_menu_item_mlid($term->name, 'main-menu');
+
+    // Delete menu item
+    if ($mlid) {
+      menu_link_delete($mlid);
+    }
+
+    // Delete variant
+    $handler_name = 'term_view_term_id_' . $term->tid;
+    $handler = new stdClass;
+    $handler->name = $handler_name;
+    $handler->handler = 'panel_context';
+    ctools_include('plugins');
+    page_manager_delete_task_handler($handler);
+    drupal_set_message(t('Variant for term \'!term\' deleted.', array('!term' => $term->name)));
+
+  }
+}
+
+/**
+ * Get menu item id by it's name.
+ *
+ * @param $name
+ *   Menu name to seek.
+ * @return
+ *   Menu id (mlid), or 0.
+ */
+function artesis_frontend_variants_get_menu_item_mlid($name, $menu = 'main-menu') {
+  $menu_links = menu_load_links($menu);
+
+  foreach ($menu_links as $link) {
+    if ($link['link_title'] == $name) {
+      return $link['mlid'];
+    }
+  }
+
+  return 0;
 }
 
 /**

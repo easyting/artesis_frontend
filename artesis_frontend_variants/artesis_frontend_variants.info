@@ -1,6 +1,8 @@
 core = "7.x"
 dependencies[] = "artesis_frontend"
 dependencies[] = "panels"
+dependencies[] = "ctools"
+dependencies[] = "page_manager"
 name = "Artesis Frontend Variants"
 description = "Adds extra panels variants functionality for artesis frontend."
 package = "Alpha"
