@@ -18,6 +18,7 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   );
   $left_panel_pane = 'new-l-' . $term->tid;
   $right_panel_pane = 'new-r-' . $term->tid;
+  $pipeline = module_exists('panels_ipe') ? 'ipe' : 'standard';
 
   // Create a new variant based on an existing term
   $handler = new stdClass;
@@ -31,7 +32,7 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   $handler->conf = array(
     'title' => $variant_title,
     'no_blocks' => 0,
-    'pipeline' => 'standard',
+    'pipeline' => $pipeline,
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
     'css_id' => '',
@@ -59,13 +60,17 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
     ),
   );
   $display = new panels_display;
-  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout = 'omega_12_mainpage_complex';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
-      'left' => NULL,
-      'right' => NULL,
+      'top_left' => NULL,
+      'top_right' => NULL,
+      'middle' => NULL,
+      'bottom_left_small' => NULL,
+      'bottom_right_small' => NULL,
+      'bottom_medium_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -76,7 +81,7 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   // Left panel pane - Menu
     $pane = new stdClass;
     $pane->pid = $left_panel_pane;
-    $pane->panel = 'left';
+    $pane->panel = 'top_left';
     $pane->type = 'views';
     $pane->subtype = 'parent_vocabulary_terms';
     $pane->shown = TRUE;
@@ -110,12 +115,12 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
     $pane->position = 0;
     $pane->locks = array();
     $display->content[$left_panel_pane] = $pane;
-    $display->panels['left'][0] = $left_panel_pane;
+    $display->panels['top_left'][0] = $left_panel_pane;
 
     // Right panel pane - Content
     $pane = new stdClass;
     $pane->pid = $right_panel_pane;
-    $pane->panel = 'right';
+    $pane->panel = 'top_right';
     $pane->type = 'views';
     $pane->subtype = 'taxonomy_term';
     $pane->shown = TRUE;
@@ -149,7 +154,7 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
     $pane->position = 0;
     $pane->locks = array();
     $display->content[$right_panel_pane] = $pane;
-    $display->panels['right'][0] = $right_panel_pane;
+    $display->panels['top_right'][0] = $right_panel_pane;
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = $right_panel_pane;
   $handler->conf['display'] = $display;
