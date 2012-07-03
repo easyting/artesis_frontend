@@ -47,6 +47,10 @@ function artesis_frontend_views_default_views() {
   $handler->display->display_options['fields']['name']['hide_empty'] = 0;
   $handler->display->display_options['fields']['name']['empty_zero'] = 0;
   $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 1;
+  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   /* Contextual filter: Taxonomy vocabulary: Vocabulary ID */
   $handler->display->display_options['arguments']['vid']['id'] = 'vid';
   $handler->display->display_options['arguments']['vid']['table'] = 'taxonomy_vocabulary';
@@ -65,6 +69,44 @@ return $term->vid;';
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
   $handler->display->display_options['block_description'] = 'Parent vocabulary term';
+
+  /* Display: EB Block */
+  $handler = $view->new_display('block', 'EB Block', 'block_1');
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taxonomy vocabulary: Vocabulary ID */
+  $handler->display->display_options['arguments']['vid']['id'] = 'vid';
+  $handler->display->display_options['arguments']['vid']['table'] = 'taxonomy_vocabulary';
+  $handler->display->display_options['arguments']['vid']['field'] = 'vid';
+  $handler->display->display_options['arguments']['vid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['vid']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['vid']['default_argument_options']['code'] = '$term = taxonomy_term_load($argument);
+return $term->vid;';
+  $handler->display->display_options['arguments']['vid']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['vid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['vid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['vid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['vid']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['vid']['not'] = 0;
+  /* Contextual filter: Taxonomy term: Parent term */
+  $handler->display->display_options['arguments']['parent_1']['id'] = 'parent_1';
+  $handler->display->display_options['arguments']['parent_1']['table'] = 'taxonomy_term_hierarchy';
+  $handler->display->display_options['arguments']['parent_1']['field'] = 'parent';
+  $handler->display->display_options['arguments']['parent_1']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['parent_1']['default_argument_type'] = 'php';
+  $handler->display->display_options['arguments']['parent_1']['default_argument_options']['code'] = '$tid = arg(2);
+$parents = taxonomy_get_parents($tid);
+if (empty($parents)) {
+  return $tid;
+}
+$parent = array_pop($parents);
+return $parent->tid;';
+  $handler->display->display_options['arguments']['parent_1']['default_argument_skip_url'] = 0;
+  $handler->display->display_options['arguments']['parent_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['parent_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['parent_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['parent_1']['break_phrase'] = 0;
+  $handler->display->display_options['arguments']['parent_1']['not'] = 0;
+  $handler->display->display_options['block_description'] = 'Parent vocabulary term';
   $translatables['parent_vocabulary_terms'] = array(
     t('Master'),
     t('Parent vocabulary terms'),
@@ -77,6 +119,7 @@ return $term->vid;';
     t('All'),
     t('Block'),
     t('Parent vocabulary term'),
+    t('EB Block'),
   );
   $export['parent_vocabulary_terms'] = $view;
 
