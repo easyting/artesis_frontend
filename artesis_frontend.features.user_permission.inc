@@ -10,6 +10,16 @@
 function artesis_frontend_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: change layouts in place editing
+  $permissions['change layouts in place editing'] = array(
+    'name' => 'change layouts in place editing',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'editor',
+    ),
+    'module' => 'panels',
+  );
+
   // Exported permission: use panels in place editing
   $permissions['use panels in place editing'] = array(
     'name' => 'use panels in place editing',
