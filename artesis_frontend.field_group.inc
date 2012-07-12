@@ -91,8 +91,6 @@ function artesis_frontend_field_group_info() {
       1 => 'ting_type',
       2 => 'ting_author',
       3 => 'ting_subjects',
-      4 => 'ting_details_description',
-      5 => 'group_material_details',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -100,12 +98,12 @@ function artesis_frontend_field_group_info() {
       'instance_settings' => array(
         'classes' => 'content-1',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $export['group_content|ting_object|ting_object|default'] = $field_group;
@@ -126,9 +124,6 @@ function artesis_frontend_field_group_info() {
       0 => 'ting_series',
       1 => 'ting_author',
       2 => 'ting_subjects',
-      3 => 'ting_details_description',
-      4 => 'ting_details_genre',
-      5 => 'ting_details_type',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -158,12 +153,16 @@ function artesis_frontend_field_group_info() {
       0 => 'ting_cover',
       1 => 'group_content',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => 'top',
       'instance_settings' => array(
         'classes' => '',
         'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
       ),
       'formatter' => 'open',
     ),
