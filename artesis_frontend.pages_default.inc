@@ -17,7 +17,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -30;
+  $handler->weight = -35;
   $handler->conf = array(
     'title' => 'Artesis article',
     'no_blocks' => 0,
@@ -252,7 +252,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -28;
+  $handler->weight = -35;
   $handler->conf = array(
     'title' => 'Artesis library (organic group)',
     'no_blocks' => 0,
@@ -480,7 +480,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -29;
+  $handler->weight = -35;
   $handler->conf = array(
     'title' => 'Artesis event',
     'no_blocks' => 0,
