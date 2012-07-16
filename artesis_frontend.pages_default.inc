@@ -905,6 +905,212 @@ function artesis_frontend_default_page_manager_handlers() {
   $handler = new stdClass;
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
+  $handler->name = 'node_view_panel_context_6';
+  $handler->task = 'node_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -27;
+  $handler->conf = array(
+    'title' => 'Artesis page',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass;
+    $pane->pid = 'new-75';
+    $pane->panel = 'left';
+    $pane->type = 'ding_nodelist';
+    $pane->subtype = 'ding_nodelist';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'content_type' => 'ding_news',
+      'override_title_text' => '',
+      'selected_nodes' => array(
+        0 => array(
+          'node' => 'Test news article #1 [nid:1]',
+          'nid' => '1',
+          'type' => 'ding_news',
+          'weight' => '1',
+          'node_delete_0' => 'Delete',
+        ),
+      ),
+      'taxonomy_filters' => array(),
+      'content_filter_promoted' => 0,
+      'limit' => '5',
+      'columns' => 'full',
+      'widget_type' => 'single',
+      'item_template' => 'ding_nodelist.ding_news.single',
+      'sort_field' => 'created',
+      'sort_order' => 'desc',
+      'sort_sticky' => 0,
+      'more_links' => array(),
+    );
+    $pane->cache = array(
+      'method' => 'simple',
+      'settings' => array(
+        'lifetime' => '15',
+        'granularity' => 'context',
+      ),
+    );
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-75'] = $pane;
+    $display->panels['left'][0] = 'new-75';
+    $pane = new stdClass;
+    $pane->pid = 'new-76';
+    $pane->panel = 'right';
+    $pane->type = 'node_title';
+    $pane->subtype = 'node_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 0,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-76'] = $pane;
+    $display->panels['right'][0] = 'new-76';
+    $pane = new stdClass;
+    $pane->pid = 'new-77';
+    $pane->panel = 'right';
+    $pane->type = 'node_author';
+    $pane->subtype = 'node_author';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'link' => 1,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-77'] = $pane;
+    $display->panels['right'][1] = 'new-77';
+    $pane = new stdClass;
+    $pane->pid = 'new-78';
+    $pane->panel = 'right';
+    $pane->type = 'node_created';
+    $pane->subtype = 'node_created';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'format' => 'medium',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-78'] = $pane;
+    $display->panels['right'][2] = 'new-78';
+    $pane = new stdClass;
+    $pane->pid = 'new-79';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_main_image';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'image',
+      'formatter_settings' => array(
+        'image_style' => 'medium',
+        'image_link' => '',
+      ),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-79'] = $pane;
+    $display->panels['right'][3] = 'new-79';
+    $pane = new stdClass;
+    $pane->pid = 'new-80';
+    $pane->panel = 'right';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_ding_body';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'text_default',
+      'formatter_settings' => array(),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $display->content['new-80'] = $pane;
+    $display->panels['right'][4] = 'new-80';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-76';
+  $handler->conf['display'] = $display;
+  $export['node_view_panel_context_6'] = $handler;
+
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
   $handler->name = 'search_ting_search_panel_context_2';
   $handler->task = 'search';
   $handler->subtask = 'ting_search';

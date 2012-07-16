@@ -170,5 +170,34 @@ function artesis_frontend_field_group_info() {
   );
   $export['group_top|ting_object|ting_object|default'] = $field_group;
 
+  $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_user_list_content|ting_object|ting_object|user_list';
+  $field_group->group_name = 'group_user_list_content';
+  $field_group->entity_type = 'ting_object';
+  $field_group->bundle = 'ting_object';
+  $field_group->mode = 'user_list';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'User list content',
+    'weight' => '1',
+    'children' => array(
+      0 => 'ting_title',
+      1 => 'ting_type',
+      2 => 'ting_author',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'User list content',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_user_list_content|ting_object|ting_object|user_list'] = $field_group;
+
   return $export;
 }
