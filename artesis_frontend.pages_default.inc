@@ -2921,5 +2921,818 @@ function artesis_frontend_default_page_manager_handlers() {
   $handler->conf['display'] = $display;
   $export['ting_object_panel_context_2'] = $handler;
 
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'user_edit_panel_context_2';
+  $handler->task = 'user_edit';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Artesis edit profile',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass;
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'primary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => 'You presonal info',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'user-page-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass;
+  $pane->pid = 'new-2';
+  $pane->panel = 'right';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'secondary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'secondary-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['right'][0] = 'new-2';
+  $pane = new stdClass;
+  $pane->pid = 'new-3';
+  $pane->panel = 'right';
+  $pane->type = 'form';
+  $pane->subtype = 'form';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_user_edit_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'edit-user-profile',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['right'][1] = 'new-3';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-1';
+  $handler->conf['display'] = $display;
+  $export['user_edit_panel_context_2'] = $handler;
+
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'user_view_panel_context_2';
+  $handler->task = 'user_view';
+  $handler->subtask = '';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Artesis user',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass;
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'primary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => 'You personal info',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'user-page-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass;
+  $pane->pid = 'new-2';
+  $pane->panel = 'right';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'secondary',
+    'id' => 'tabs',
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['right'][0] = 'new-2';
+  $pane = new stdClass;
+  $pane->pid = 'new-3';
+  $pane->panel = 'right';
+  $pane->type = 'user_profile';
+  $pane->subtype = 'user_profile';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:user_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['right'][1] = 'new-3';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['user_view_panel_context_2'] = $handler;
+
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_user_debts_panel_context_2';
+  $handler->task = 'page';
+  $handler->subtask = 'user_debts';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Artesis user status',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass;
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'primary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => 'Your personal info',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'user-page-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass;
+  $pane->pid = 'new-2';
+  $pane->panel = 'right';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'secondary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'secondary-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['right'][0] = 'new-2';
+  $pane = new stdClass;
+  $pane->pid = 'new-3';
+  $pane->panel = 'right';
+  $pane->type = 'debts';
+  $pane->subtype = 'debts';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:user_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['right'][1] = 'new-3';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-1';
+  $handler->conf['display'] = $display;
+  $export['page_user_debts_panel_context_2'] = $handler;
+
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_user_loans_panel_context_2';
+  $handler->task = 'page';
+  $handler->subtask = 'user_loans';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Artesis loans',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass;
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'primary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => 'Your personal info',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'user-page-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass;
+  $pane->pid = 'new-2';
+  $pane->panel = 'right';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'secondary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'secondary-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['right'][0] = 'new-2';
+  $pane = new stdClass;
+  $pane->pid = 'new-3';
+  $pane->panel = 'right';
+  $pane->type = 'loans';
+  $pane->subtype = 'loans';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:user_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['right'][1] = 'new-3';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-1';
+  $handler->conf['display'] = $display;
+  $export['page_user_loans_panel_context_2'] = $handler;
+
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_user_reservations_panel_context_2';
+  $handler->task = 'page';
+  $handler->subtask = 'user_reservations';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Artesis reservation',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass;
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'primary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => 'Your personal info',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'user-page-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass;
+  $pane->pid = 'new-2';
+  $pane->panel = 'right';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'secondary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'secondary-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['right'][0] = 'new-2';
+  $pane = new stdClass;
+  $pane->pid = 'new-3';
+  $pane->panel = 'right';
+  $pane->type = 'reservations';
+  $pane->subtype = 'reservations';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:user_1',
+    'override_title' => 1,
+    'reservation_type_list' => 'not_ready_for_pickup',
+    'form_build_id' => 'form-Xk4e-mYCxgXG1NUL7LZpA1CdV5r17_CIebZIUnD-d4w',
+    'form_token' => 'bvWmNpQ0Zefkgdo76VAqaGwCEZxHAPySZc9kZcu9qCI',
+    'form_id' => 'ding_reservation_reservations_content_type_edit_form',
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['right'][1] = 'new-3';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-1';
+  $handler->conf['display'] = $display;
+  $export['page_user_reservations_panel_context_2'] = $handler;
+
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_user_bookmarks_panel_context';
+  $handler->task = 'page';
+  $handler->subtask = 'user_bookmarks';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Artesis bookmark',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass;
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'primary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => 'Your personal info',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'user-page-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass;
+  $pane->pid = 'new-2';
+  $pane->panel = 'right';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'secondary',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'secondary-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['right'][0] = 'new-2';
+  $pane = new stdClass;
+  $pane->pid = 'new-3';
+  $pane->panel = 'right';
+  $pane->type = 'bookmarks';
+  $pane->subtype = 'bookmarks';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:user_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['right'][1] = 'new-3';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-1';
+  $handler->conf['display'] = $display;
+  $export['page_user_bookmarks_panel_context'] = $handler;
+
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ding_libraries_panel_context_2';
+  $handler->task = 'page';
+  $handler->subtask = 'ding_libraries';
+  $handler->handler = 'panel_context';
+  $handler->weight = -30;
+  $handler->conf = array(
+    'title' => 'Artesis ding libraries',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display;
+  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'left' => NULL,
+      'right' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Libraries';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass;
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'block';
+  $pane->subtype = 'ding_library-ding_sidebar_menu';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => 'See more',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass;
+  $pane->pid = 'new-2';
+  $pane->panel = 'right';
+  $pane->type = 'page_title';
+  $pane->subtype = 'page_title';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'markup' => 'h1',
+    'class' => '',
+    'id' => '',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['right'][0] = 'new-2';
+  $pane = new stdClass;
+  $pane->pid = 'new-3';
+  $pane->panel = 'right';
+  $pane->type = 'openlayers_map';
+  $pane->subtype = 'ding_library_map';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['right'][1] = 'new-3';
+  $pane = new stdClass;
+  $pane->pid = 'new-4';
+  $pane->panel = 'right';
+  $pane->type = 'views';
+  $pane->subtype = 'ding_library';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '0',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'default',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $display->content['new-4'] = $pane;
+  $display->panels['right'][2] = 'new-4';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['page_ding_libraries_panel_context_2'] = $handler;
+
   return $export;
 }
