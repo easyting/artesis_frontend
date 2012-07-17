@@ -382,6 +382,21 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => -1,
   );
 
+  $theme['locale-language'] = array(
+    'module' => 'locale',
+    'delta' => 'language',
+    'theme' => 'alpha_basetheme',
+    'status' => '1',
+    'weight' => '1',
+    'region' => 'header_second',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
   $theme['search-form'] = array(
     'module' => 'search',
     'delta' => 'form',
