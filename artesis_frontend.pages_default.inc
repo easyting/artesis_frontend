@@ -2426,12 +2426,12 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-10';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_description';
+  $pane->subtype = 'ting_object:ting_abstract';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'label' => 'title',
-    'formatter' => 'ting_details_single',
+    'label' => 'hidden',
+    'formatter' => 'ting_abstract_default',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
     'override_title' => 1,
@@ -2451,12 +2451,12 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-11';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_subjects';
-  $pane->shown = TRUE;
+  $pane->subtype = 'ting_object:ting_details_description';
+  $pane->shown = FALSE;
   $pane->access = array();
   $pane->configuration = array(
-    'label' => 'above',
-    'formatter' => 'ting_subjects_default',
+    'label' => 'title',
+    'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
     'override_title' => 1,
@@ -2476,12 +2476,12 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-12';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_type';
+  $pane->subtype = 'ting_object:ting_subjects';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'label' => 'inline',
-    'formatter' => 'ting_details_single',
+    'label' => 'above',
+    'formatter' => 'ting_subjects_default',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
     'override_title' => 1,
@@ -2491,10 +2491,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array(
-    'css_id' => '',
-    'css_class' => 'materials',
-  );
+  $pane->css = array();
   $pane->extras = array();
   $pane->position = 5;
   $pane->locks = array();
@@ -2504,7 +2501,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-13';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_format';
+  $pane->subtype = 'ting_object:ting_details_type';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2532,7 +2529,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-14';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_ispartof';
+  $pane->subtype = 'ting_object:ting_details_format';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2560,7 +2557,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-15';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_language';
+  $pane->subtype = 'ting_object:ting_details_ispartof';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2588,7 +2585,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-16';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_spoken';
+  $pane->subtype = 'ting_object:ting_details_classification';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2616,7 +2613,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-17';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_subtitles';
+  $pane->subtype = 'ting_object:ting_details_language';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2644,7 +2641,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-18';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_genre';
+  $pane->subtype = 'ting_object:ting_details_spoken';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2672,7 +2669,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-19';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_classification';
+  $pane->subtype = 'ting_object:ting_details_subtitles';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2700,7 +2697,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-20';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_spatial';
+  $pane->subtype = 'ting_object:ting_details_genre';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2728,7 +2725,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-21';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_contributor';
+  $pane->subtype = 'ting_object:ting_details_spatial';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2756,7 +2753,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-22';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_musician';
+  $pane->subtype = 'ting_object:ting_details_contributor';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2784,7 +2781,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-23';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_tracks';
+  $pane->subtype = 'ting_object:ting_details_musician';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2812,7 +2809,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-24';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_referenced';
+  $pane->subtype = 'ting_object:ting_details_tracks';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2840,7 +2837,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-25';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_source';
+  $pane->subtype = 'ting_object:ting_details_referenced';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2868,7 +2865,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-26';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_replaces';
+  $pane->subtype = 'ting_object:ting_details_source';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2896,7 +2893,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-27';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_replaced_by';
+  $pane->subtype = 'ting_object:ting_details_replaces';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2924,7 +2921,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-28';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_isbn';
+  $pane->subtype = 'ting_object:ting_details_replaced_by';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2952,7 +2949,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-29';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_uri';
+  $pane->subtype = 'ting_object:ting_details_isbn';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -2980,7 +2977,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-30';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_version';
+  $pane->subtype = 'ting_object:ting_details_uri';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -3008,7 +3005,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-31';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_extent';
+  $pane->subtype = 'ting_object:ting_details_version';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -3036,7 +3033,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-32';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_publisher';
+  $pane->subtype = 'ting_object:ting_details_extent';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -3064,7 +3061,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-33';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_rights';
+  $pane->subtype = 'ting_object:ting_details_publisher';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -3092,7 +3089,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-34';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_audience';
+  $pane->subtype = 'ting_object:ting_details_rights';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -3120,7 +3117,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-35';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_age';
+  $pane->subtype = 'ting_object:ting_details_audience';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -3148,7 +3145,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-36';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_details_pegi';
+  $pane->subtype = 'ting_object:ting_details_age';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
@@ -3176,12 +3173,12 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-37';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ding_periodical_issues';
+  $pane->subtype = 'ting_object:ting_details_pegi';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'inline',
-    'formatter' => 'ding_periodical_issues_default',
+    'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
     'override_title' => 1,
@@ -3204,12 +3201,12 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-38';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
-  $pane->subtype = 'ting_object:ting_series';
+  $pane->subtype = 'ting_object:ding_periodical_issues';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'inline',
-    'formatter' => 'ting_series_default',
+    'formatter' => 'ding_periodical_issues_default',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
     'override_title' => 1,
@@ -3232,6 +3229,34 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->pid = 'new-39';
   $pane->panel = 'top_right_medium';
   $pane->type = 'entity_field';
+  $pane->subtype = 'ting_object:ting_series';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'inline',
+    'formatter' => 'ting_series_default',
+    'formatter_settings' => array(),
+    'context' => 'argument_ting_object_id_17',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'materials',
+  );
+  $pane->extras = array();
+  $pane->position = 32;
+  $pane->locks = array();
+  $display->content['new-39'] = $pane;
+  $display->panels['top_right_medium'][32] = 'new-39';
+  $pane = new stdClass;
+  $pane->pid = 'new-40';
+  $pane->panel = 'top_right_medium';
+  $pane->type = 'entity_field';
   $pane->subtype = 'ting_object:ding_entity_buttons';
   $pane->shown = TRUE;
   $pane->access = array();
@@ -3249,12 +3274,12 @@ function artesis_frontend_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 32;
+  $pane->position = 33;
   $pane->locks = array();
-  $display->content['new-39'] = $pane;
-  $display->panels['top_right_medium'][32] = 'new-39';
+  $display->content['new-40'] = $pane;
+  $display->panels['top_right_medium'][33] = 'new-40';
   $pane = new stdClass;
-  $pane->pid = 'new-40';
+  $pane->pid = 'new-41';
   $pane->panel = 'top_right_small';
   $pane->type = 'entity_field';
   $pane->subtype = 'ting_object:ting_cover';
@@ -3278,10 +3303,10 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $display->content['new-40'] = $pane;
-  $display->panels['top_right_small'][0] = 'new-40';
+  $display->content['new-41'] = $pane;
+  $display->panels['top_right_small'][0] = 'new-41';
   $pane = new stdClass;
-  $pane->pid = 'new-41';
+  $pane->pid = 'new-42';
   $pane->panel = 'top_right_small';
   $pane->type = 'entity_field';
   $pane->subtype = 'ting_object:ding_availability_holdings';
@@ -3303,10 +3328,10 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $display->content['new-41'] = $pane;
-  $display->panels['top_right_small'][1] = 'new-41';
+  $display->content['new-42'] = $pane;
+  $display->panels['top_right_small'][1] = 'new-42';
   $pane = new stdClass;
-  $pane->pid = 'new-42';
+  $pane->pid = 'new-43';
   $pane->panel = 'top_right_small';
   $pane->type = 'entity_field';
   $pane->subtype = 'ting_object:ding_entity_buttons';
@@ -3328,8 +3353,8 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 2;
   $pane->locks = array();
-  $display->content['new-42'] = $pane;
-  $display->panels['top_right_small'][2] = 'new-42';
+  $display->content['new-43'] = $pane;
+  $display->panels['top_right_small'][2] = 'new-43';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
