@@ -222,7 +222,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
-  $export ['page_ding_frontpage_panel_context_2'] = $handler;
+  $export['page_ding_frontpage_panel_context_2'] = $handler;
 
   $handler = new stdClass;
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
