@@ -122,8 +122,9 @@ function artesis_frontend_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'ting_series',
-      1 => 'ting_author',
-      2 => 'ting_subjects',
+      1 => 'ting_abstract',
+      2 => 'ting_author',
+      3 => 'ting_subjects
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
