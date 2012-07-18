@@ -91,8 +91,6 @@ function artesis_frontend_field_group_info() {
       1 => 'ting_type',
       2 => 'ting_author',
       3 => 'ting_subjects',
-      4 => 'ting_details_description',
-      5 => 'group_material_details',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -100,12 +98,12 @@ function artesis_frontend_field_group_info() {
       'instance_settings' => array(
         'classes' => 'content-1',
         'description' => '',
-        'show_label' => '1',
+        'show_label' => '0',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'fast',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'open',
     ),
   );
   $export['group_content|ting_object|ting_object|default'] = $field_group;
@@ -124,11 +122,9 @@ function artesis_frontend_field_group_info() {
     'weight' => '1',
     'children' => array(
       0 => 'ting_series',
-      1 => 'ting_author',
-      2 => 'ting_subjects',
-      3 => 'ting_details_description',
-      4 => 'ting_details_genre',
-      5 => 'ting_details_type',
+      1 => 'ting_abstract',
+      2 => 'ting_author',
+      3 => 'ting_subjects',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -158,9 +154,42 @@ function artesis_frontend_field_group_info() {
       0 => 'ting_cover',
       1 => 'group_content',
     ),
-    'format_type' => 'fieldset',
+    'format_type' => 'div',
     'format_settings' => array(
       'label' => 'top',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'fast',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_top|ting_object|ting_object|default'] = $field_group;
+
+  $field_group = new stdClass;
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_user_list_content|ting_object|ting_object|user_list';
+  $field_group->group_name = 'group_user_list_content';
+  $field_group->entity_type = 'ting_object';
+  $field_group->bundle = 'ting_object';
+  $field_group->mode = 'user_list';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'User list content',
+    'weight' => '1',
+    'children' => array(
+      0 => 'ting_title',
+      1 => 'ting_type',
+      2 => 'ting_author',
+    ),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'label' => 'User list content',
       'instance_settings' => array(
         'classes' => '',
         'description' => '',
@@ -168,7 +197,7 @@ function artesis_frontend_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_top|ting_object|ting_object|default'] = $field_group;
+  $export['group_user_list_content|ting_object|ting_object|user_list'] = $field_group;
 
   return $export;
 }
