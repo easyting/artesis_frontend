@@ -34,6 +34,7 @@ function artesis_frontend_search_extra_form_alter(&$form, &$form_state, $form_id
         //'callback' => 'artesis_frontend_search_extra_js_call',
       ),
     );
+    $form['actions']['submit']['#validate'] = $form['#validate'];
 
     $form['actions']['submit']['#submit'] = array('artesis_frontend_search_extra_search_form_submit');
   }
@@ -44,15 +45,23 @@ function artesis_frontend_search_extra_form_alter(&$form, &$form_state, $form_id
  */
 function artesis_frontend_search_extra_search_form_submit($form, &$form_state) {
   $keywords = trim($form_state['values'][$form['form_id']['#value']]);
-  $path = 'search/' . $form_state['values']['artesis_activated_search'] . '/' . $keywords;
-  $form_state['redirect'] = array(
-    $path,
-    array(
-      'query' => array(
-        'text' => $keywords,
+  if ($keywords == '') {
+    form_set_error($form['form_id']['#value'], t('Please enter some keywords.'));
+    // Fall through to the form redirect.
+  }
+
+  $path = 'search/' . $form_state['values']['artesis_activated_search'];
+  if (!empty($keywords)) {
+    $path .= '/' . $keywords;
+    $form_state['redirect'] = array(
+      $path,
+      array(
+        'query' => array(
+          'text' => $keywords,
+        ),
       ),
-    ),
-  );
+    );
+  }
 }
 
 /**
