@@ -1,0 +1,81 @@
+<?php
+/**
+ * Implements hook_form_alter().
+ */
+function artesis_frontend_search_extra_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'search_block_form') {
+    $options = array();
+    $default = variable_get('search_default_module', 'node');
+
+    $search_providers = search_get_info(TRUE);
+    $active_providers = variable_get('search_active_modules', array());
+    foreach ($search_providers as $provider_name => $provider_info) {
+      if (isset($active_providers[$provider_name]) && ($active_providers[$provider_name] !== 0)) {
+        $options[$provider_info['path']] = t($provider_info['title']);
+        if ($provider_name == $default) {
+          $default = $provider_info['path'];
+        }
+      }
+    }
+
+    // Check if we are on a search page
+    $search_path = arg(1);
+    if (arg(0) == 'search' && !empty($search_path)) {
+      $default = $search_path;
+    }
+
+    $form['artesis_activated_search'] = array(
+      '#type'          => 'radios',
+      '#options'       => $options,
+      '#default_value' => $default,
+      '#ajax'          => array(
+        // TODO: Remove comment if we ever need redirect on radio button check
+        // not on submit button click
+        //'callback' => 'artesis_frontend_search_extra_js_call',
+      ),
+    );
+
+    $form['actions']['submit']['#submit'] = array('artesis_frontend_search_extra_search_form_submit');
+  }
+}
+
+/**
+ * Custom submit function for the search block
+ */
+function artesis_frontend_search_extra_search_form_submit($form, &$form_state) {
+  $keywords = trim($form_state['values'][$form['form_id']['#value']]);
+  $path = 'search/' . $form_state['values']['artesis_activated_search'] . '/' . $keywords;
+  $form_state['redirect'] = array(
+    $path,
+    array(
+      'query' => array(
+        'text' => $keywords,
+      ),
+    ),
+  );
+}
+
+/**
+ * Ajax call to correctly redirect when radios are checked
+ */
+function artesis_frontend_search_extra_js_call(&$form, &$form_state) {
+  if ($form_state['triggering_element']['#name'] == 'artesis_activated_search') {
+    $path = $_GET['q'];
+    $path = 'search/' . $form_state['triggering_element']['#value'];
+    $keywords = trim($form_state['values'][$form['form_id']['#value']]);
+    if (!empty($keywords)) {
+      $path .= '/' . $keywords;
+      $query_options = array(
+        'query' => array(
+          'text' => $keywords
+        ),
+      );
+    }
+
+    ctools_include('ajax');
+    ctools_add_js('ajax-responder');
+    $commands[] = ctools_ajax_command_redirect($path, 0, $query_options);
+    print ajax_render($commands);
+    exit;
+  }
+}
