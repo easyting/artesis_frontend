@@ -262,6 +262,31 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane = new stdClass;
   $pane->pid = 'new-5';
   $pane->panel = 'left';
+  $pane->type = 'ding_related_items';
+  $pane->subtype = 'ding_related_items';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => 'See the title',
+  );
+  $pane->cache = array(
+    'method' => '0',
+    'settings' => array(),
+  );
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $display->content['new-5'] = $pane;
+  $display->panels['left'][4] = 'new-5';
+  $pane = new stdClass;
+  $pane->pid = 'new-6';
+  $pane->panel = 'left';
   $pane->type = 'node_comments';
   $pane->subtype = 'node_comments';
   $pane->shown = TRUE;
@@ -279,12 +304,12 @@ function artesis_frontend_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 4;
+  $pane->position = 5;
   $pane->locks = array();
-  $display->content['new-5'] = $pane;
-  $display->panels['left'][4] = 'new-5';
+  $display->content['new-6'] = $pane;
+  $display->panels['left'][5] = 'new-6';
   $pane = new stdClass;
-  $pane->pid = 'new-6';
+  $pane->pid = 'new-7';
   $pane->panel = 'left';
   $pane->type = 'node_comment_form';
   $pane->subtype = 'node_comment_form';
@@ -302,12 +327,12 @@ function artesis_frontend_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 5;
+  $pane->position = 6;
   $pane->locks = array();
-  $display->content['new-6'] = $pane;
-  $display->panels['left'][5] = 'new-6';
+  $display->content['new-7'] = $pane;
+  $display->panels['left'][6] = 'new-7';
   $pane = new stdClass;
-  $pane->pid = 'new-7';
+  $pane->pid = 'new-8';
   $pane->panel = 'right';
   $pane->type = 'category_menu';
   $pane->subtype = 'category_menu';
@@ -330,10 +355,10 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $display->content['new-7'] = $pane;
-  $display->panels['right'][0] = 'new-7';
+  $display->content['new-8'] = $pane;
+  $display->panels['right'][0] = 'new-8';
   $pane = new stdClass;
-  $pane->pid = 'new-8';
+  $pane->pid = 'new-9';
   $pane->panel = 'right';
   $pane->type = 'campaign';
   $pane->subtype = 'campaign';
@@ -359,8 +384,8 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $display->content['new-8'] = $pane;
-  $display->panels['right'][1] = 'new-8';
+  $display->content['new-9'] = $pane;
+  $display->panels['right'][1] = 'new-9';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -701,9 +726,9 @@ function artesis_frontend_default_page_manager_handlers() {
     ),
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Events
-    %node:title',
+      %node:title',
     'panels_breadcrumbs_paths' => 'events
-    <none>',
+      <none>',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
   );
@@ -813,7 +838,7 @@ function artesis_frontend_default_page_manager_handlers() {
       'multiple_number' => '',
       'multiple_from' => '',
       'multiple_to' => '',
-      'fromto' => 'value',
+      'fromto' => 'both',
     ),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
@@ -843,11 +868,11 @@ function artesis_frontend_default_page_manager_handlers() {
     'label' => 'title',
     'formatter' => 'date_default',
     'formatter_settings' => array(
-      'format_type' => 'short_month_only',
+      'format_type' => 'month_only',
       'multiple_number' => '',
       'multiple_from' => '',
       'multiple_to' => '',
-      'fromto' => 'value',
+      'fromto' => 'both',
     ),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 0,
@@ -887,6 +912,31 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane = new stdClass;
   $pane->pid = 'new-7';
   $pane->panel = 'left';
+  $pane->type = 'ding_related_items';
+  $pane->subtype = 'ding_related_items';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => 'Related material',
+  );
+  $pane->cache = array(
+    'method' => '0',
+    'settings' => array(),
+  );
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $display->content['new-7'] = $pane;
+  $display->panels['left'][6] = 'new-7';
+  $pane = new stdClass;
+  $pane->pid = 'new-8';
+  $pane->panel = 'left';
   $pane->type = 'node_comments';
   $pane->subtype = 'node_comments';
   $pane->shown = TRUE;
@@ -904,12 +954,12 @@ function artesis_frontend_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 6;
+  $pane->position = 7;
   $pane->locks = array();
-  $display->content['new-7'] = $pane;
-  $display->panels['left'][6] = 'new-7';
+  $display->content['new-8'] = $pane;
+  $display->panels['left'][7] = 'new-8';
   $pane = new stdClass;
-  $pane->pid = 'new-8';
+  $pane->pid = 'new-9';
   $pane->panel = 'left';
   $pane->type = 'node_comment_form';
   $pane->subtype = 'node_comment_form';
@@ -927,12 +977,12 @@ function artesis_frontend_default_page_manager_handlers() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 7;
+  $pane->position = 8;
   $pane->locks = array();
-  $display->content['new-8'] = $pane;
-  $display->panels['left'][7] = 'new-8';
+  $display->content['new-9'] = $pane;
+  $display->panels['left'][8] = 'new-9';
   $pane = new stdClass;
-  $pane->pid = 'new-9';
+  $pane->pid = 'new-10';
   $pane->panel = 'right';
   $pane->type = 'category_menu';
   $pane->subtype = 'category_menu';
@@ -955,10 +1005,10 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $display->content['new-9'] = $pane;
-  $display->panels['right'][0] = 'new-9';
+  $display->content['new-10'] = $pane;
+  $display->panels['right'][0] = 'new-10';
   $pane = new stdClass;
-  $pane->pid = 'new-10';
+  $pane->pid = 'new-11';
   $pane->panel = 'right';
   $pane->type = 'campaign';
   $pane->subtype = 'campaign';
@@ -984,8 +1034,8 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $display->content['new-10'] = $pane;
-  $display->panels['right'][1] = 'new-10';
+  $display->content['new-11'] = $pane;
+  $display->panels['right'][1] = 'new-11';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -1196,6 +1246,31 @@ function artesis_frontend_default_page_manager_handlers() {
   $pane->locks = array();
   $display->content['new-7'] = $pane;
   $display->panels['right'][4] = 'new-7';
+  $pane = new stdClass;
+  $pane->pid = 'new-8';
+  $pane->panel = 'right';
+  $pane->type = 'ding_related_items';
+  $pane->subtype = 'ding_related_items';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => 'Related materials',
+  );
+  $pane->cache = array(
+    'method' => '0',
+    'settings' => array(),
+  );
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $display->content['new-8'] = $pane;
+  $display->panels['right'][5] = 'new-8';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-3';
   $handler->conf['display'] = $display;
