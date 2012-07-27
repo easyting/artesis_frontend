@@ -726,9 +726,9 @@ function artesis_frontend_default_page_manager_handlers() {
     ),
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Events
-      %node:title',
+        %node:title',
     'panels_breadcrumbs_paths' => 'events
-      <none>',
+        <none>',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
   );
@@ -838,7 +838,7 @@ function artesis_frontend_default_page_manager_handlers() {
       'multiple_number' => '',
       'multiple_from' => '',
       'multiple_to' => '',
-      'fromto' => 'both',
+      'fromto' => 'value',
     ),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 1,
@@ -868,11 +868,11 @@ function artesis_frontend_default_page_manager_handlers() {
     'label' => 'title',
     'formatter' => 'date_default',
     'formatter_settings' => array(
-      'format_type' => 'month_only',
+      'format_type' => 'short_month_only',
       'multiple_number' => '',
       'multiple_from' => '',
       'multiple_to' => '',
-      'fromto' => 'both',
+      'fromto' => 'value',
     ),
     'context' => 'argument_entity_id:node_1',
     'override_title' => 0,
