@@ -25,10 +25,10 @@ function artesis_frontend_search_extra_form_alter(&$form, &$form_state, $form_id
     }
 
     $form['artesis_activated_search'] = array(
-      '#type'          => 'radios',
-      '#options'       => $options,
+      '#type' => 'radios',
+      '#options' => $options,
       '#default_value' => $default,
-      '#ajax'          => array(
+      '#ajax' => array(
         // TODO: Remove comment if we ever need redirect on radio button check
         // not on submit button click
         //'callback' => 'artesis_frontend_search_extra_js_call',
@@ -76,7 +76,7 @@ function artesis_frontend_search_extra_js_call(&$form, &$form_state) {
       $path .= '/' . $keywords;
       $query_options = array(
         'query' => array(
-          'text' => $keywords
+          'text' => $keywords,
         ),
       );
     }
