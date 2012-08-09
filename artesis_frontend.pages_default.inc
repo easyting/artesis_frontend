@@ -1846,9 +1846,9 @@ function artesis_frontend_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'type' => 'news',
+      'type' => 'category',
       'context' => array(
-        0 => 'empty',
+        0 => 'argument_term_1',
         1 => 'empty',
       ),
       'override_title' => 1,
