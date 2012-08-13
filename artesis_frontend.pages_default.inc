@@ -182,7 +182,7 @@ function artesis_frontend_default_page_manager_handlers() {
     $pane->configuration = array(
       'context' => 'argument_entity_id:node_1',
       'override_title' => 1,
-      'override_title_text' => 'See the title',
+      'override_title_text' => 'Materials',
     );
     $pane->cache = array(
       'method' => '0',
