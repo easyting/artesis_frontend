@@ -252,7 +252,7 @@ function artesis_frontend_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'type' => 'news',
+      'type' => 'category',
       'context' => array(
         0 => 'empty',
         1 => 'empty',
@@ -645,7 +645,7 @@ function artesis_frontend_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'type' => 'events',
+      'type' => 'category',
       'context' => array(
         0 => 'empty',
         1 => 'empty',
