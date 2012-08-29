@@ -3905,5 +3905,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
 
+  $export['ting_object_panel_context_2'] = $handler;
+
   return $export;
 }
