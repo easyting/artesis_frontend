@@ -1560,7 +1560,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $handler->conf['display'] = $display;
   $export['search_node_panel_context_2'] = $handler;
 
-  $handler = new stdClass;
+  $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
   $handler->name = 'search_ting_search_panel_context_2';
@@ -1579,7 +1579,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'contexts' => array(),
     'relationships' => array(),
   );
-  $display = new panels_display;
+  $display = new panels_display();
   $display->layout = 'omega_12_twocol_4_8';
   $display->layout_settings = array();
   $display->panel_settings = array(
@@ -1593,204 +1593,219 @@ function artesis_frontend_default_page_manager_handlers() {
   $display->title = '';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass;
-    $pane->pid = 'new-172';
-    $pane->panel = 'left';
-    $pane->type = 'ding_facetbrowser';
-    $pane->subtype = 'ding_facetbrowser';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-172'] = $pane;
-    $display->panels['left'][0] = 'new-172';
-    $pane = new stdClass;
-    $pane->pid = 'new-173';
-    $pane->panel = 'left';
-    $pane->type = 'campaign';
-    $pane->subtype = 'campaign';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
-      'context' => array(
-        0 => 'empty',
-        1 => 'empty',
-        2 => 'empty',
-        3 => 'empty',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-173'] = $pane;
-    $display->panels['left'][1] = 'new-173';
-    $pane = new stdClass;
-    $pane->pid = 'new-174';
-    $pane->panel = 'right';
-    $pane->type = 'ting_search';
-    $pane->subtype = 'ting_search';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-174'] = $pane;
-    $display->panels['right'][0] = 'new-174';
-    $pane = new stdClass;
-    $pane->pid = 'new-175';
-    $pane->panel = 'right';
-    $pane->type = 'page_tabs';
-    $pane->subtype = 'page_tabs';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'type' => 'both',
-      'id' => 'tabs',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'search-results-tabs',
-    );
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-175'] = $pane;
-    $display->panels['right'][1] = 'new-175';
-    $pane = new stdClass;
-    $pane->pid = 'new-176';
-    $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'ting_search-sort-form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-176'] = $pane;
-    $display->panels['right'][2] = 'new-176';
-    $pane = new stdClass;
-    $pane->pid = 'new-177';
-    $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'ding_toggle_format-toggle';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
-    );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $display->content['new-177'] = $pane;
-    $display->panels['right'][3] = 'new-177';
-    $pane = new stdClass;
-    $pane->pid = 'new-178';
-    $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'ding_availability-legend';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $display->content['new-178'] = $pane;
-    $display->panels['right'][4] = 'new-178';
-    $pane = new stdClass;
-    $pane->pid = 'new-179';
-    $pane->panel = 'right';
-    $pane->type = 'search_result';
-    $pane->subtype = 'search_result';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'type' => 'ting_search',
-      'log' => 1,
-      'override_empty' => 0,
-      'empty_title' => '',
-      'empty' => '',
-      'empty_format' => 'plain_text',
-      'override_no_key' => 0,
-      'no_key_title' => '',
-      'no_key' => '',
-      'no_key_format' => 'plain_text',
-      'context' => 'argument_string_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
-    );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $display->content['new-179'] = $pane;
-    $display->panels['right'][5] = 'new-179';
+  $pane = new stdClass();
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'ding_facetbrowser';
+  $pane->subtype = 'ding_facetbrowser';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass();
+  $pane->pid = 'new-2';
+  $pane->panel = 'left';
+  $pane->type = 'campaign';
+  $pane->subtype = 'campaign';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'ding_campaign_count' => 3,
+    'ding_campaign_offset' => 0,
+    'context' => array(
+      0 => 'empty',
+      1 => 'empty',
+      2 => 'empty',
+      3 => 'empty',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['left'][1] = 'new-2';
+  $pane = new stdClass();
+  $pane->pid = 'new-3';
+  $pane->panel = 'right';
+  $pane->type = 'ting_search';
+  $pane->subtype = 'ting_search';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['right'][0] = 'new-3';
+  $pane = new stdClass();
+  $pane->pid = 'new-4';
+  $pane->panel = 'right';
+  $pane->type = 'page_tabs';
+  $pane->subtype = 'page_tabs';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'both',
+    'id' => 'tabs',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'search-results-tabs',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-4'] = $pane;
+  $display->panels['right'][1] = 'new-4';
+  $pane = new stdClass();
+  $pane->pid = 'new-5';
+  $pane->panel = 'right';
+  $pane->type = 'block';
+  $pane->subtype = 'ting_search-sort-form';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $display->content['new-5'] = $pane;
+  $display->panels['right'][2] = 'new-5';
+  $pane = new stdClass();
+  $pane->pid = 'new-6';
+  $pane->panel = 'right';
+  $pane->type = 'block';
+  $pane->subtype = 'ding_toggle_format-toggle';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $display->content['new-6'] = $pane;
+  $display->panels['right'][3] = 'new-6';
+  $pane = new stdClass();
+  $pane->pid = 'new-7';
+  $pane->panel = 'right';
+  $pane->type = 'block';
+  $pane->subtype = 'ding_availability-legend';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $display->content['new-7'] = $pane;
+  $display->panels['right'][4] = 'new-7';
+  $pane = new stdClass();
+  $pane->pid = 'new-8';
+  $pane->panel = 'right';
+  $pane->type = 'block';
+  $pane->subtype = 'ting_search-records-per-page';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $display->content['new-8'] = $pane;
+  $display->panels['right'][5] = 'new-8';
+  $pane = new stdClass();
+  $pane->pid = 'new-9';
+  $pane->panel = 'right';
+  $pane->type = 'search_result';
+  $pane->subtype = 'search_result';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'type' => 'ting_search',
+    'log' => 1,
+    'override_empty' => 0,
+    'empty_title' => '',
+    'empty' => '',
+    'empty_format' => 'plain_text',
+    'override_no_key' => 0,
+    'no_key_title' => '',
+    'no_key' => '',
+    'no_key_format' => 'plain_text',
+    'context' => 'argument_string_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $display->content['new-9'] = $pane;
+  $display->panels['right'][6] = 'new-9';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
