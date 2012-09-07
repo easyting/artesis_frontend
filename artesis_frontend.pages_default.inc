@@ -651,7 +651,7 @@ function artesis_frontend_default_page_manager_handlers() {
         1 => 'empty',
       ),
       'override_title' => 1,
-      'override_title_text' => 'Categories',
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
