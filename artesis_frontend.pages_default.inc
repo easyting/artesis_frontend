@@ -697,7 +697,7 @@ function artesis_frontend_default_page_manager_handlers() {
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_6'] = $handler;
 
-  $handler = new stdClass;
+  $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
   $handler->name = 'node_view_panel_context_7';
@@ -731,7 +731,7 @@ function artesis_frontend_default_page_manager_handlers() {
       'logic' => 'and',
     ),
   );
-  $display = new panels_display;
+  $display = new panels_display();
   $display->layout = 'omega_12_twocol_4_8';
   $display->layout_settings = array();
   $display->panel_settings = array(
@@ -745,233 +745,261 @@ function artesis_frontend_default_page_manager_handlers() {
   $display->title = '';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass;
-    $pane->pid = 'new-22';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'ding_library-ding_sidebar_menu';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['left'][0] = 'new-22';
-    $pane = new stdClass;
-    $pane->pid = 'new-23';
-    $pane->panel = 'left';
-    $pane->type = 'campaign';
-    $pane->subtype = 'campaign';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
-      'context' => array(
-        0 => 'empty',
-        1 => 'empty',
-        2 => 'empty',
-        3 => 'empty',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['left'][1] = 'new-23';
-    $pane = new stdClass;
-    $pane->pid = 'new-24';
-    $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'opening_hours-week';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-24'] = $pane;
-    $display->panels['left'][2] = 'new-24';
-    $pane = new stdClass;
-    $pane->pid = 'new-25';
-    $pane->panel = 'right';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'markup' => 'h1',
-      'class' => '',
-      'id' => '',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-25'] = $pane;
-    $display->panels['right'][0] = 'new-25';
-    $pane = new stdClass;
-    $pane->pid = 'new-26';
-    $pane->panel = 'right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_main_image';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'formatter_settings' => array(
-        'image_style' => 'ding_library_header',
-        'image_link' => '',
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-26'] = $pane;
-    $display->panels['right'][1] = 'new-26';
-    $pane = new stdClass;
-    $pane->pid = 'new-27';
-    $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ding_library-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'library-contact-info-teaser',
-    );
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-27'] = $pane;
-    $display->panels['right'][2] = 'new-27';
-    $pane = new stdClass;
-    $pane->pid = 'new-28';
-    $pane->panel = 'right';
-    $pane->type = 'openlayers_map';
-    $pane->subtype = 'ding_library_map';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $display->content['new-28'] = $pane;
-    $display->panels['right'][3] = 'new-28';
-    $pane = new stdClass;
-    $pane->pid = 'new-29';
-    $pane->panel = 'right';
-    $pane->type = 'views';
-    $pane->subtype = 'ding_event';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 0,
-      'nodes_per_page' => '6',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 0,
-      'link_to_view' => 0,
-      'args' => '',
-      'url' => '',
-      'display' => 'ctools_context_library_teaser',
-      'context' => array(
-        0 => 'argument_entity_id:node_1.nid',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $display->content['new-29'] = $pane;
-    $display->panels['right'][4] = 'new-29';
-    $pane = new stdClass;
-    $pane->pid = 'new-30';
-    $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'contact_info_teaser-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $display->content['new-30'] = $pane;
-    $display->panels['right'][5] = 'new-30';
+  $pane = new stdClass();
+  $pane->pid = 'new-1';
+  $pane->panel = 'left';
+  $pane->type = 'block';
+  $pane->subtype = 'ding_library-ding_sidebar_menu';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-1'] = $pane;
+  $display->panels['left'][0] = 'new-1';
+  $pane = new stdClass();
+  $pane->pid = 'new-2';
+  $pane->panel = 'left';
+  $pane->type = 'campaign';
+  $pane->subtype = 'campaign';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'ding_campaign_count' => 3,
+    'ding_campaign_offset' => 0,
+    'context' => array(
+      0 => 'empty',
+      1 => 'empty',
+      2 => 'empty',
+      3 => 'empty',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-2'] = $pane;
+  $display->panels['left'][1] = 'new-2';
+  $pane = new stdClass();
+  $pane->pid = 'new-3';
+  $pane->panel = 'left';
+  $pane->type = 'block';
+  $pane->subtype = 'opening_hours-week';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $display->content['new-3'] = $pane;
+  $display->panels['left'][2] = 'new-3';
+  $pane = new stdClass();
+  $pane->pid = 'new-4';
+  $pane->panel = 'right';
+  $pane->type = 'page_title';
+  $pane->subtype = 'page_title';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'markup' => 'h1',
+    'class' => '',
+    'id' => '',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $display->content['new-4'] = $pane;
+  $display->panels['right'][0] = 'new-4';
+  $pane = new stdClass();
+  $pane->pid = 'new-5';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_main_image';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'image',
+    'formatter_settings' => array(
+      'image_style' => 'ding_library_header',
+      'image_link' => '',
+    ),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $display->content['new-5'] = $pane;
+  $display->panels['right'][1] = 'new-5';
+  $pane = new stdClass();
+  $pane->pid = 'new-6';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:field_ding_body';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'title',
+    'formatter' => 'text_default',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(),
+    'context' => 'argument_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $display->content['new-6'] = $pane;
+  $display->panels['right'][2] = 'new-6';
+  $pane = new stdClass();
+  $pane->pid = 'new-7';
+  $pane->panel = 'right';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'ding_library-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 0,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'library-contact-info-teaser',
+  );
+  $pane->extras = array();
+  $pane->position = 3;
+  $pane->locks = array();
+  $display->content['new-7'] = $pane;
+  $display->panels['right'][3] = 'new-7';
+  $pane = new stdClass();
+  $pane->pid = 'new-8';
+  $pane->panel = 'right';
+  $pane->type = 'openlayers_map';
+  $pane->subtype = 'ding_library_map';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 4;
+  $pane->locks = array();
+  $display->content['new-8'] = $pane;
+  $display->panels['right'][4] = 'new-8';
+  $pane = new stdClass();
+  $pane->pid = 'new-9';
+  $pane->panel = 'right';
+  $pane->type = 'views';
+  $pane->subtype = 'ding_event';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 0,
+    'nodes_per_page' => '6',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 0,
+    'args' => '',
+    'url' => '',
+    'display' => 'ctools_context_library_teaser',
+    'context' => array(
+      0 => 'argument_entity_id:node_1.nid',
+    ),
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 5;
+  $pane->locks = array();
+  $display->content['new-9'] = $pane;
+  $display->panels['right'][5] = 'new-9';
+  $pane = new stdClass();
+  $pane->pid = 'new-10';
+  $pane->panel = 'right';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'contact_info_teaser-panel_pane_2';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_title' => 1,
+    'override_title_text' => '',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 6;
+  $pane->locks = array();
+  $display->content['new-10'] = $pane;
+  $display->panels['right'][6] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-22';
+  $display->title_pane = 'new-1';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_7'] = $handler;
 
@@ -2892,7 +2920,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_subjects_default',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -2917,7 +2945,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -2945,7 +2973,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -2973,7 +3001,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3001,7 +3029,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3029,7 +3057,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3057,7 +3085,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3085,7 +3113,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3113,7 +3141,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3141,7 +3169,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3169,7 +3197,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3197,7 +3225,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3225,7 +3253,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3253,7 +3281,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3281,7 +3309,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3309,7 +3337,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3337,7 +3365,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3365,7 +3393,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3393,7 +3421,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3421,7 +3449,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3449,7 +3477,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3477,7 +3505,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3505,7 +3533,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3533,7 +3561,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3561,7 +3589,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3589,7 +3617,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_details_single',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3617,7 +3645,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ding_periodical_issues_default',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3645,7 +3673,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ting_series_default',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
@@ -3673,7 +3701,7 @@ function artesis_frontend_default_page_manager_handlers() {
     'formatter' => 'ding_entity_buttons_default',
     'formatter_settings' => array(),
     'context' => 'argument_ting_object_id_17',
-    'override_title' => 1,
+    'override_title' => 0,
     'override_title_text' => '',
   );
   $pane->cache = array();
