@@ -1,0 +1,17 @@
+div.panels-ipe-newblock {
+  z-index: 1
+}
+
+div.ipe-popup {
+  display: none;
+  position: absolute;
+  z-index: 99
+}
+
+div.ipe-popup .item-list {
+  position: absolute
+}
+
+div.ipe-popup .item-list ul li {
+  margin: 0
+}

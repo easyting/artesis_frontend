@@ -8,7 +8,6 @@
       'offset': '0 3'
     };
     $(links).fadeToggle('fast').position(options);
-//    $(this).addClass();
     return false;
   });
 
