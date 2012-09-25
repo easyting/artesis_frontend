@@ -78,7 +78,11 @@ function artesis_frontend_user_default_permissions() {
   // Exported permission: change user role.
   $permissions['change user role'] = array(
     'name' => 'change user role',
-    'roles' => array(),
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'local administrator',
+      2 => 'editor',
+    ),
     'module' => 'artesis_frontend',
   );
 
