@@ -150,7 +150,8 @@ function _artesis_frontend_panels_ipe_add_pane_button($vars) {
 
   $region_id  = $vars['region_id'];
   $renderer   = $vars['renderer'];
-  $attributes = array('class' => 'ctools-use-modal', 'style' => 'width: 150px; height: auto');
+  $menu_width = 150;
+  $attributes = array('class' => 'ctools-use-modal', 'style' => 'width: ' . $menu_width . 'px; height: auto');
 
   $plugins = _artesis_frontend_get_allowed_plugins();
   $blocks = array_keys($plugins, 'block');
@@ -185,6 +186,7 @@ function _artesis_frontend_panels_ipe_add_pane_button($vars) {
 
   if (!$assets_loaded) {
     $mod_path = drupal_get_path('module', 'artesis_frontend');
+    drupal_add_js('var ipe_popup_width = ' . $menu_width . ';', 'inline');
     drupal_add_js($mod_path . '/js/ipe.js', 'file');
     drupal_add_css($mod_path . '/css/ipe.css', 'file');
     $assets_loaded = TRUE;

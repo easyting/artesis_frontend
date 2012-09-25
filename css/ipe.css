@@ -9,9 +9,9 @@ div.ipe-popup {
 }
 
 div.ipe-popup .item-list {
-  position: absolute
+  position: absolute;
 }
 
 div.ipe-popup .item-list ul li {
-  margin: 0
+  margin: 0;
 }
