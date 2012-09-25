@@ -14,7 +14,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['administer advanced pane settings'] = array(
     'name' => 'administer advanced pane settings',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'panels',
   );
@@ -23,7 +23,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['administer page manager'] = array(
     'name' => 'administer page manager',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'page_manager',
   );
@@ -32,7 +32,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['administer pane access'] = array(
     'name' => 'administer pane access',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'panels',
   );
@@ -41,7 +41,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'panels',
   );
@@ -50,7 +50,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['administer panels styles'] = array(
     'name' => 'administer panels styles',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'panels',
   );
@@ -59,7 +59,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['administer views'] = array(
     'name' => 'administer views',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'views',
   );
@@ -68,8 +68,8 @@ function artesis_frontend_user_default_permissions() {
   $permissions['change layouts in place editing'] = array(
     'name' => 'change layouts in place editing',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Local administrator',
+      0 => 'administrator',
+      1 => 'local administrator',
       2 => 'editor',
     ),
     'module' => 'panels',
@@ -86,7 +86,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['use page manager'] = array(
     'name' => 'use page manager',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'page_manager',
   );
@@ -95,7 +95,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['use panels caching features'] = array(
     'name' => 'use panels caching features',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'panels',
   );
@@ -104,7 +104,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['use panels dashboard'] = array(
     'name' => 'use panels dashboard',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'panels',
   );
@@ -113,8 +113,8 @@ function artesis_frontend_user_default_permissions() {
   $permissions['use panels in place editing'] = array(
     'name' => 'use panels in place editing',
     'roles' => array(
-      0 => 'Administrator',
-      1 => 'Local administrator',
+      0 => 'administrator',
+      1 => 'local administrator',
       2 => 'editor',
     ),
     'module' => 'panels',
@@ -124,7 +124,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['use panels locks'] = array(
     'name' => 'use panels locks',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'panels',
   );
@@ -133,7 +133,7 @@ function artesis_frontend_user_default_permissions() {
   $permissions['view pane admin links'] = array(
     'name' => 'view pane admin links',
     'roles' => array(
-      0 => 'Administrator',
+      0 => 'administrator',
     ),
     'module' => 'panels',
   );
