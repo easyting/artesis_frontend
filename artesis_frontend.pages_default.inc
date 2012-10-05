@@ -1021,6 +1021,21 @@ function artesis_frontend_default_page_manager_handlers() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'node_type',
+          'settings' => array(
+            'type' => array(
+              'ding_campaign' => 'ding_campaign',
+            ),
+          ),
+          'context' => 'argument_entity_id:node_1',
+          'not' => TRUE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display;
   $display->layout = 'omega_12_twocol_4_8';
