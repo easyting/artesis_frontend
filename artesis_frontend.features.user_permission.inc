@@ -522,15 +522,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: administer uuid.
-  $permissions['administer uuid'] = array(
-    'name' => 'administer uuid',
-    'roles' => array(
-      0 => 'Administrator',
-    ),
-    'module' => 'uuid',
-  );
-
   // Exported permission: administer views.
   $permissions['administer views'] = array(
     'name' => 'administer views',
