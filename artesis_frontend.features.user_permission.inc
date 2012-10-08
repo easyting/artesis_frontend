@@ -35,6 +35,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'local administrator',
+      2 => 'editor',
     ),
     'module' => 'node',
   );
