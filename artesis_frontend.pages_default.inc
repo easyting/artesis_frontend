@@ -235,8 +235,8 @@ function artesis_frontend_default_page_manager_handlers() {
         0 => 'empty',
         1 => 'empty',
       ),
-      'override_title' => 1,
-      'override_title_text' => 'Categories',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -1944,8 +1944,8 @@ function artesis_frontend_default_page_manager_handlers() {
         0 => 'argument_term_1',
         1 => 'empty',
       ),
-      'override_title' => 1,
-      'override_title_text' => 'Categories',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -2154,8 +2154,8 @@ function artesis_frontend_default_page_manager_handlers() {
         0 => 'empty',
         1 => 'empty',
       ),
-      'override_title' => 1,
-      'override_title_text' => 'Categories',
+      'override_title' => 0,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
