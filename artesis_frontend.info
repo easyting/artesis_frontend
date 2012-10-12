@@ -1,9 +1,9 @@
 name = Artesis Frontend
 description = Artesis-specific frontend settings
 core = 7.x
-package = Alpha
+package = Artesis
 php = 5.2.4
-version = 7.x-1.6
+version = 7.x-1.7
 project = artesis_frontend
 dependencies[] = contextual
 dependencies[] = ctools
