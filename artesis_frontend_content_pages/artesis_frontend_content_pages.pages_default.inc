@@ -259,7 +259,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
       'ding_campaign_count' => 3,
       'ding_campaign_offset' => 0,
       'context' => array(
-        0 => 'empty',
+        0 => 'argument_entity_id:node_1',
         1 => 'empty',
         2 => 'empty',
         3 => 'empty',
@@ -653,7 +653,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
       'ding_campaign_count' => 3,
       'ding_campaign_offset' => 0,
       'context' => array(
-        0 => 'empty',
+        0 => 'argument_entity_id:node_1',
         1 => 'empty',
         2 => 'empty',
         3 => 'empty',
@@ -757,7 +757,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     'ding_campaign_offset' => 0,
     'context' => array(
       0 => 'empty',
-      1 => 'empty',
+      1 => 'argument_entity_id:node_1',
       2 => 'empty',
       3 => 'empty',
     ),
@@ -1062,7 +1062,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
       'ding_campaign_count' => 3,
       'ding_campaign_offset' => 0,
       'context' => array(
-        0 => 'empty',
+        0 => 'argument_entity_id:node_1',
         1 => 'empty',
         2 => 'empty',
         3 => 'empty',

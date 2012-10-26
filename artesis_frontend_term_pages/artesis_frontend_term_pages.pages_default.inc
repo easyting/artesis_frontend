@@ -148,7 +148,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
         0 => 'empty',
         1 => 'empty',
         2 => 'empty',
-        3 => 'empty',
+        3 => 'argument_term_1',
       ),
       'override_title' => 1,
       'override_title_text' => '',
@@ -358,7 +358,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
         0 => 'empty',
         1 => 'empty',
         2 => 'empty',
-        3 => 'empty',
+        3 => 'argument_term_1',
       ),
       'override_title' => 1,
       'override_title_text' => '',
@@ -414,6 +414,6 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
   $display->title_pane = 'new-64';
   $handler->conf['display'] = $display;
   $export['term_view_panel_context_2'] = $handler;
-  
+
   return $export;
 }

@@ -77,7 +77,7 @@ function artesis_frontend_search_pages_default_page_manager_handlers() {
       'context' => array(
         0 => 'empty',
         1 => 'empty',
-        2 => 'empty',
+        2 => 'argument_string_1',
         3 => 'empty',
       ),
       'override_title' => 1,
@@ -253,7 +253,7 @@ function artesis_frontend_search_pages_default_page_manager_handlers() {
       'context' => array(
         0 => 'empty',
         1 => 'empty',
-        2 => 'empty',
+        2 => 'argument_string_1',
         3 => 'empty',
       ),
       'override_title' => 1,
@@ -427,7 +427,7 @@ function artesis_frontend_search_pages_default_page_manager_handlers() {
       'context' => array(
         0 => 'empty',
         1 => 'empty',
-        2 => 'empty',
+        2 => 'argument_string_1',
         3 => 'empty',
       ),
       'override_title' => 1,
