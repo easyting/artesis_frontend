@@ -419,7 +419,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->panel = 'middle_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'ting_object:ting_sfx';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'title',
@@ -1103,7 +1103,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->panel = 'top_right_medium';
     $pane->type = 'entity_field';
     $pane->subtype = 'ting_object:ting_details_uri';
-    $pane->shown = TRUE;
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'inline',
