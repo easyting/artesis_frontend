@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Artesis frontend node fieldgroups feature.
+ */
+
+include_once 'artesis_frontend_node_fieldgroups.features.inc';
