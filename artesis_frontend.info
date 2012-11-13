@@ -66,6 +66,7 @@ features[fe_block_settings][] = workbench-block
 features[features_api][] = api:1
 features[image][] = ding_node_page
 features[menu_custom][] = menu-secondary-menu
+features[openlayers_maps][] = geofield_formatter_map_artesis
 features[user_permission][] = access administration pages
 features[user_permission][] = access all views
 features[user_permission][] = access content overview
