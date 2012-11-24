@@ -203,7 +203,7 @@ function _artesis_frontend_panels_ipe_add_pane_button($vars) {
  */
 function artesis_frontend_preprocess_panels_ipe_pane_wrapper($vars) {
   $pane = $vars['pane'];
-  $protected_panes = &drupal_static('artesis_frontend_ipe');
+  $protected_panes = &drupal_static('artesis_frontend_ipe', array());
   $allowed_panes = _artesis_frontend_get_allowed_plugins();
   if (!(in_array($pane->type, array_values($allowed_panes)) && in_array($pane->subtype, array_keys($allowed_panes)))) {
     $protected_panes[] = $pane->pid;
@@ -215,11 +215,11 @@ function artesis_frontend_preprocess_panels_ipe_pane_wrapper($vars) {
  * Removes delete button on non-nodelist panes for
  * certain use role (IPE_RESTRICTED_ROLE).
  */
-function ding_nodelist_preprocess_page($page) {
+function artesis_frontend_preprocess_page($page) {
   global $user;
 
   if (in_array(IPE_RESTRICTED_ROLE, $user->roles)) {
-    $protected_panes = drupal_static('artesis_frontend_ipe');
+    $protected_panes = drupal_static('artesis_frontend_ipe', array());
     $panes_selector = array();
     foreach ($protected_panes as $pane_id) {
       $panes_selector[] = 'pane-delete-panel-pane-' . $pane_id;
