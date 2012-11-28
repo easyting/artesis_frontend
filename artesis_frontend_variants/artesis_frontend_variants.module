@@ -170,7 +170,7 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
 function artesis_frontend_variants_taxonomy_term_insert($term) {
   $voc = taxonomy_vocabulary_machine_name_load('eddb_editorial_base');
   // Fire logic only for editorial base vocabulary.
-  if ($voc->vid == $term->vid) {
+  if ($voc && $voc->vid == $term->vid) {
     // Add a menu link
     $link = array();
     $link['link_path'] = 'taxonomy/term/' . $term->tid;
