@@ -10,7 +10,7 @@
 function artesis_frontend_term_pages_default_page_manager_handlers() {
   $export = array();
 
-  $handler = new stdClass;
+  $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
   $handler->name = 'term_view_panel_context';
@@ -37,7 +37,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
       ),
     ),
   );
-  $display = new panels_display;
+  $display = new panels_display();
   $display->layout = 'omega_12_twocol_4_8';
   $display->layout_settings = array();
   $display->panel_settings = array(
@@ -51,8 +51,8 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
   $display->title = '';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass;
-    $pane->pid = 'new-55';
+    $pane = new stdClass();
+    $pane->pid = 'new-1';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'parent_vocabulary_terms';
@@ -85,10 +85,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-55'] = $pane;
-    $display->panels['left'][0] = 'new-55';
-    $pane = new stdClass;
-    $pane->pid = 'new-56';
+    $display->content['new-1'] = $pane;
+    $display->panels['left'][0] = 'new-1';
+    $pane = new stdClass();
+    $pane->pid = 'new-2';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'ding_library-ding_sidebar_menu';
@@ -106,10 +106,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-56'] = $pane;
-    $display->panels['left'][1] = 'new-56';
-    $pane = new stdClass;
-    $pane->pid = 'new-57';
+    $display->content['new-2'] = $pane;
+    $display->panels['left'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
     $pane->panel = 'left';
     $pane->type = 'category_menu';
     $pane->subtype = 'category_menu';
@@ -132,10 +132,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-57'] = $pane;
-    $display->panels['left'][2] = 'new-57';
-    $pane = new stdClass;
-    $pane->pid = 'new-58';
+    $display->content['new-3'] = $pane;
+    $display->panels['left'][2] = 'new-3';
+    $pane = new stdClass();
+    $pane->pid = 'new-4';
     $pane->panel = 'left';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
@@ -161,10 +161,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-58'] = $pane;
-    $display->panels['left'][3] = 'new-58';
-    $pane = new stdClass;
-    $pane->pid = 'new-59';
+    $display->content['new-4'] = $pane;
+    $display->panels['left'][3] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'taxonomy_term';
@@ -178,13 +178,14 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
       'offset' => '0',
       'more_link' => 0,
       'feed_icons' => 0,
-      'panel_args' => 0,
+      'panel_args' => 1,
       'link_to_view' => 0,
-      'args' => '',
+      'args' => '1',
       'url' => '',
       'display' => 'page',
       'context' => array(
         0 => 'argument_term_1.tid',
+        1 => '',
       ),
       'override_title' => 0,
       'override_title_text' => '',
@@ -197,14 +198,14 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-59'] = $pane;
-    $display->panels['right'][0] = 'new-59';
+    $display->content['new-5'] = $pane;
+    $display->panels['right'][0] = 'new-5';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['term_view_panel_context'] = $handler;
 
-  $handler = new stdClass;
+  $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
   $handler->name = 'term_view_panel_context_2';
@@ -246,7 +247,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
       'logic' => 'and',
     ),
   );
-  $display = new panels_display;
+  $display = new panels_display();
   $display->layout = 'omega_12_twocol_4_8';
   $display->layout_settings = array();
   $display->panel_settings = array(
@@ -260,8 +261,8 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
   $display->title = '%term:parent';
   $display->content = array();
   $display->panels = array();
-    $pane = new stdClass;
-    $pane->pid = 'new-60';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
     $pane->panel = 'left';
     $pane->type = 'views';
     $pane->subtype = 'parent_vocabulary_terms';
@@ -295,10 +296,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-60'] = $pane;
-    $display->panels['left'][0] = 'new-60';
-    $pane = new stdClass;
-    $pane->pid = 'new-61';
+    $display->content['new-6'] = $pane;
+    $display->panels['left'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'ding_library-ding_sidebar_menu';
@@ -316,10 +317,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-61'] = $pane;
-    $display->panels['left'][1] = 'new-61';
-    $pane = new stdClass;
-    $pane->pid = 'new-62';
+    $display->content['new-7'] = $pane;
+    $display->panels['left'][1] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
     $pane->panel = 'left';
     $pane->type = 'category_menu';
     $pane->subtype = 'category_menu';
@@ -342,10 +343,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-62'] = $pane;
-    $display->panels['left'][2] = 'new-62';
-    $pane = new stdClass;
-    $pane->pid = 'new-63';
+    $display->content['new-8'] = $pane;
+    $display->panels['left'][2] = 'new-8';
+    $pane = new stdClass();
+    $pane->pid = 'new-9';
     $pane->panel = 'left';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
@@ -371,10 +372,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-63'] = $pane;
-    $display->panels['left'][3] = 'new-63';
-    $pane = new stdClass;
-    $pane->pid = 'new-64';
+    $display->content['new-9'] = $pane;
+    $display->panels['left'][3] = 'new-9';
+    $pane = new stdClass();
+    $pane->pid = 'new-10';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'taxonomy_term';
@@ -408,10 +409,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-64'] = $pane;
-    $display->panels['right'][0] = 'new-64';
+    $display->content['new-10'] = $pane;
+    $display->panels['right'][0] = 'new-10';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-64';
+  $display->title_pane = 'new-10';
   $handler->conf['display'] = $display;
   $export['term_view_panel_context_2'] = $handler;
 
