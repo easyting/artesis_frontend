@@ -232,3 +232,14 @@ function artesis_frontend_preprocess_page($page) {
     }
   }
 }
+
+/**
+ * Implements hook_entity_view_alter().
+ *
+ * Remove History section from user profile.
+ */
+function artesis_frontend_entity_view_alter(&$build, $type) {
+  if ($type == 'user') {
+    unset($build['summary']);
+  }
+}
