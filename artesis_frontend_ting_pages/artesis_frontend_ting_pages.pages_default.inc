@@ -1359,7 +1359,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'ding_entity_buttons_default',
+      'formatter' => 'ding_entity_buttons_ajax',
       'formatter_settings' => array(),
       'context' => 'argument_ting_object_id_17',
       'override_title' => 0,
@@ -1427,31 +1427,6 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-51'] = $pane;
     $display->panels['top_right_small'][1] = 'new-51';
-    $pane = new stdClass();
-    $pane->pid = 'new-52';
-    $pane->panel = 'top_right_small';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'ting_object:ding_entity_buttons';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'ding_entity_buttons_default',
-      'formatter_settings' => array(),
-      'context' => 'argument_ting_object_id_17',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-52'] = $pane;
-    $display->panels['top_right_small'][2] = 'new-52';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
