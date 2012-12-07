@@ -1,7 +1,7 @@
 name = Artesis Frontend Ting Pages
 description = Artesis-specific Ting object/collection view pages
 core = 7.x
-package = Alpha
+package = Artesis
 php = 5.2.4
 version = 7.x-1.6
 project = artesis_frontend_ting_pages
