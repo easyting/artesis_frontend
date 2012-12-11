@@ -160,7 +160,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
-      'override_title_text' => 'Materials',
+      'override_title_text' => '',
     );
     $pane->cache = array(
       'method' => '0',
@@ -553,7 +553,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
-      'override_title_text' => 'Related material',
+      'override_title_text' => '',
     );
     $pane->cache = array(
       'method' => '0',
@@ -1224,7 +1224,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
-      'override_title_text' => 'Related materials',
+      'override_title_text' => '',
     );
     $pane->cache = array(
       'method' => '0',
