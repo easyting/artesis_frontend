@@ -586,7 +586,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'change layouts in place editing',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
     ),
     'module' => 'panels',
   );
@@ -1327,7 +1326,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'use panels in place editing',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'local administrator',
     ),
     'module' => 'panels',
   );
