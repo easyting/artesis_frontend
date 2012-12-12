@@ -1,7 +1,7 @@
 name = Artesis Frontend Content Pages
 description = Artesis-specific node view pages
 core = 7.x
-package = Alpha
+package = Artesis
 php = 5.2.4
 version = 7.x-1.6
 project = artesis_frontend_content_pages
