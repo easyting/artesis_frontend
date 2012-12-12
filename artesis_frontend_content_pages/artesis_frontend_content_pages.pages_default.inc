@@ -160,7 +160,8 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
-      'override_title_text' => 'Materials',
+      'override_title_text' => '',
+      'item_list_custom_title' => 'Related materials',
     );
     $pane->cache = array(
       'method' => '0',
@@ -553,7 +554,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
-      'override_title_text' => 'Related material',
+      'override_title_text' => '',
     );
     $pane->cache = array(
       'method' => '0',
@@ -1115,52 +1116,6 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-34';
     $pane->panel = 'right';
-    $pane->type = 'node_author';
-    $pane->subtype = 'node_author';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'link' => 1,
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-34'] = $pane;
-    $display->panels['right'][1] = 'new-34';
-    $pane = new stdClass();
-    $pane->pid = 'new-35';
-    $pane->panel = 'right';
-    $pane->type = 'node_created';
-    $pane->subtype = 'node_created';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'format' => 'medium',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-35'] = $pane;
-    $display->panels['right'][2] = 'new-35';
-    $pane = new stdClass();
-    $pane->pid = 'new-36';
-    $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_main_image';
     $pane->shown = TRUE;
@@ -1182,12 +1137,12 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-36'] = $pane;
-    $display->panels['right'][3] = 'new-36';
+    $display->content['new-34'] = $pane;
+    $display->panels['right'][1] = 'new-34';
     $pane = new stdClass();
-    $pane->pid = 'new-37';
+    $pane->pid = 'new-35';
     $pane->panel = 'right';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
@@ -1210,12 +1165,12 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-37'] = $pane;
-    $display->panels['right'][4] = 'new-37';
+    $display->content['new-35'] = $pane;
+    $display->panels['right'][2] = 'new-35';
     $pane = new stdClass();
-    $pane->pid = 'new-38';
+    $pane->pid = 'new-36';
     $pane->panel = 'right';
     $pane->type = 'ding_related_items';
     $pane->subtype = 'ding_related_items';
@@ -1224,7 +1179,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
-      'override_title_text' => 'Related materials',
+      'override_title_text' => '',
     );
     $pane->cache = array(
       'method' => '0',
@@ -1235,10 +1190,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-38'] = $pane;
-    $display->panels['right'][5] = 'new-38';
+    $display->content['new-36'] = $pane;
+    $display->panels['right'][3] = 'new-36';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-33';
   $handler->conf['display'] = $display;
