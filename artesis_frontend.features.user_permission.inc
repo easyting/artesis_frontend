@@ -1326,7 +1326,8 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'use panels in place editing',
     'roles' => array(
       0 => 'administrator',
-      1 => 'local administrator',
+      1 => 'editor',
+      2 => 'local administrator',
     ),
     'module' => 'panels',
   );
