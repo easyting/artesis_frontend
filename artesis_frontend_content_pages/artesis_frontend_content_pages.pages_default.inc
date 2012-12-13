@@ -1150,7 +1150,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'links' => 1,
-      'no_extras' => 1,
+      'no_extras' => 0,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
