@@ -69,5 +69,6 @@ function artesis_frontend_get_date_formats() {
     'date_with_day_of_week' => 'D, j.m.Y',
     'date_and_month_only' => 'j F',
     'short_month_only' => 'M',
+    'date_combined' => 'd/m-Y'
   );
 }
