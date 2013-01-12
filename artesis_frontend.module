@@ -243,3 +243,19 @@ function artesis_frontend_entity_view_alter(&$build, $type) {
     unset($build['summary']);
   }
 }
+
+/**
+ * Implements hook node_content_view(), which is a low level one and it is called by node_build_content().
+ * We use it because we want to strip any inline images from content that is shown
+ * in teaser view mode (e.g. search result page) before text field formatter is applied.
+ */
+function node_content_view($node, $view_mode, $langcode) {
+  if (in_array($node->type, array('ding_page', 'ding_news', 'ding_event')) && $view_mode == 'teaser') {
+    $lng = isset($node->field_ding_body[$langcode]) ? $langcode : LANGUAGE_NONE;
+    $node->field_ding_body[$lng][0]['safe_value'] = preg_replace('/<img[^>]+>/i', '', $node->field_ding_body[$lng][0]['safe_value']);
+    // Remove empty p's since they prevent from displaying actual content.
+    $node->field_ding_body[$lng][0]['safe_value'] = str_replace('<p></p>', '', $node->field_ding_body[$lng][0]['safe_value']);
+  }
+
+  return $node;
+}
