@@ -1114,34 +1114,6 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $display->content['new-33'] = $pane;
     $display->panels['right'][0] = 'new-33';
     $pane = new stdClass();
-    $pane->pid = 'new-34';
-    $pane->panel = 'right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_main_image';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'formatter_settings' => array(
-        'image_style' => 'medium',
-        'image_link' => '',
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-34'] = $pane;
-    $display->panels['right'][1] = 'new-34';
-    $pane = new stdClass();
     $pane->pid = 'new-35';
     $pane->panel = 'right';
     $pane->type = 'node_content';
