@@ -2195,8 +2195,251 @@ function artesis_frontend_default_fe_block_settings() {
 
   $export['herbib_theme'] = $theme;
 
+  // halbib_theme
+  
+  $theme = array();
 
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'halbib_theme',
+    'status' => 0,
+    'weight' => '1',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => 4,
+    'i18n_mode' => '0',
+  );
 
+  $theme['ding_library-library_address'] = array(
+    'module' => 'ding_library',
+    'delta' => 'library_address',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '5',
+    'region' => 'footer_second',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => 8,
+    'i18n_mode' => '0',
+  );
+
+  $theme['ding_user_frontend-ding-user-loan-number'] = array(
+    'module' => 'ding_user_frontend',
+    'delta' => 'ding-user-loan-number',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-27',
+    'region' => 'user_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'Ding loan, reservation, and debt count',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['ding_user_frontend-ding-username'] = array(
+    'module' => 'ding_user_frontend',
+    'delta' => 'ding-username',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-28',
+    'region' => 'user_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'Ding user name',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['locale-language'] = array(
+    'module' => 'locale',
+    'delta' => 'language',
+    'theme' => 'halbib_theme',
+    'status' => 0,
+    'weight' => '1',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-1'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-1',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '1',
+    'region' => 'postscript_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-2'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-2',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '2',
+    'region' => 'postscript_second',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-3'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-3',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '3',
+    'region' => 'postscript_third',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-footer-menu-4'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-4',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '4',
+    'region' => 'postscript_fourth',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['menu-menu-secondary-menu'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-secondary-menu',
+    'theme' => 'halbib_theme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['search-form'] = array(
+    'module' => 'search',
+    'delta' => 'form',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-24',
+    'region' => 'header_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['system-main'] = array(
+    'module' => 'system',
+    'delta' => 'main',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'content',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['system-main-menu'] = array(
+    'module' => 'system',
+    'delta' => 'main-menu',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'menu',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['system-user-menu'] = array(
+    'module' => 'system',
+    'delta' => 'user-menu',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-26',
+    'region' => 'user_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'User menu',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['user-login'] = array(
+    'module' => 'user',
+    'delta' => 'login',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-29',
+    'region' => 'user_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'User login',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $theme['workbench-block'] = array(
+    'module' => 'workbench',
+    'delta' => 'block',
+    'theme' => 'halbib_theme',
+    'status' => 0,
+    'weight' => '-25',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+    'i18n_mode' => '0',
+  );
+
+  $export['halbib_theme'] = $theme;
 
   // bartik
   $theme = array();

@@ -17,7 +17,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -35;
+  $handler->weight = -29;
   $handler->conf = array(
     'title' => 'Artesis article',
     'no_blocks' => 0,
@@ -290,7 +290,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -35;
+  $handler->weight = -28;
   $handler->conf = array(
     'title' => 'Artesis event',
     'no_blocks' => 0,
@@ -701,7 +701,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -35;
+  $handler->weight = -27;
   $handler->conf = array(
     'title' => 'Artesis library (organic group)',
     'no_blocks' => 0,
@@ -1017,7 +1017,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -27;
+  $handler->weight = -26;
   $handler->conf = array(
     'title' => 'Artesis page',
     'no_blocks' => 0,
@@ -1158,7 +1158,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-35'] = $pane;
-    $display->panels['right'][2] = 'new-35';
+    $display->panels['right'][1] = 'new-35';
     $pane = new stdClass();
     $pane->pid = 'new-36';
     $pane->panel = 'right';
@@ -1183,7 +1183,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->position = 3;
     $pane->locks = array();
     $display->content['new-36'] = $pane;
-    $display->panels['right'][3] = 'new-36';
+    $display->panels['right'][2] = 'new-36';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-34';
   $handler->conf['display'] = $display;
@@ -1196,7 +1196,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $handler->task = 'node_view';
   $handler->subtask = '';
   $handler->handler = 'panel_context';
-  $handler->weight = -40;
+  $handler->weight = -30;
   $handler->conf = array(
     'title' => 'Halbib landing page',
     'no_blocks' => 0,
@@ -1277,7 +1277,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-37';
     $pane->panel = 'center';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
@@ -1302,10 +1302,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['center'][0] = 'new-1';
+    $display->content['new-37'] = $pane;
+    $display->panels['center'][0] = 'new-37';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-38';
     $pane->panel = 'center';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_materials';
@@ -1336,10 +1336,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['center'][1] = 'new-2';
+    $display->content['new-38'] = $pane;
+    $display->panels['center'][1] = 'new-38';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-39';
     $pane->panel = 'center';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
@@ -1360,10 +1360,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['center'][2] = 'new-3';
+    $display->content['new-39'] = $pane;
+    $display->panels['center'][2] = 'new-39';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-40';
     $pane->panel = 'center';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
@@ -1383,10 +1383,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['center'][3] = 'new-4';
+    $display->content['new-40'] = $pane;
+    $display->panels['center'][3] = 'new-40';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
+    $pane->pid = 'new-41';
     $pane->panel = 'left';
     $pane->type = 'category_menu';
     $pane->subtype = 'category_menu';
@@ -1409,10 +1409,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left'][0] = 'new-5';
+    $display->content['new-41'] = $pane;
+    $display->panels['left'][0] = 'new-41';
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-42';
     $pane->panel = 'left';
     $pane->type = 'ding_nodelist';
     $pane->subtype = 'ding_nodelist';
@@ -1472,10 +1472,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left'][1] = 'new-6';
+    $display->content['new-42'] = $pane;
+    $display->panels['left'][1] = 'new-42';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-43';
     $pane->panel = 'right';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
@@ -1501,10 +1501,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['right'][0] = 'new-7';
+    $display->content['new-43'] = $pane;
+    $display->panels['right'][0] = 'new-43';
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-44';
     $pane->panel = 'right';
     $pane->type = 'ding_related_items';
     $pane->subtype = 'ding_related_items';
@@ -1529,10 +1529,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][1] = 'new-8';
+    $display->content['new-44'] = $pane;
+    $display->panels['right'][1] = 'new-44';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-45';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'similarterms-eddb_editorial_base';
@@ -1550,10 +1550,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['right'][2] = 'new-9';
+    $display->content['new-45'] = $pane;
+    $display->panels['right'][2] = 'new-45';
     $pane = new stdClass();
-    $pane->pid = 'new-10';
+    $pane->pid = 'new-46';
     $pane->panel = 'right';
     $pane->type = 'block';
     $pane->subtype = 'similarterms-all';
@@ -1571,11 +1571,12 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right'][3] = 'new-10';
+    $display->content['new-46'] = $pane;
+    $display->panels['right'][3] = 'new-46';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
+  $export['node_view_panel_context_9'] = $handler;
 
   return $export;
 }
