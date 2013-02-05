@@ -1412,7 +1412,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'label' => 'hidden',
-      'formatter' => 'ding_entity_buttons_default',
+      'formatter' => 'ding_entity_buttons_ajax',
       'formatter_settings' => array(),
       'context' => 'argument_ting_object_id_17',
       'override_title' => 0,
