@@ -35,7 +35,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_front';
-  $strongarm->value = '[site:name] | [site:slogan]';
+  $strongarm->value = '[site:name]';
   $export['page_title_front'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -49,7 +49,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_ding_campaign';
-  $strongarm->value = '[node:title]';
+  $strongarm->value = '[node:title] | [site:name]';
   $export['page_title_type_ding_campaign'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -63,7 +63,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_ding_event';
-  $strongarm->value = '[node:title]';
+  $strongarm->value = '[node:title] | [site:name]';
   $export['page_title_type_ding_event'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -77,7 +77,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_ding_library';
-  $strongarm->value = '[node:title]';
+  $strongarm->value = '[node:title] | [site:name]';
   $export['page_title_type_ding_library'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -91,7 +91,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_ding_news';
-  $strongarm->value = '[node:title]';
+  $strongarm->value = '[node:title] | [site:name]';
   $export['page_title_type_ding_news'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -105,7 +105,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_ding_page';
-  $strongarm->value = '[node:title]';
+  $strongarm->value = '[node:title] | [site:name]';
   $export['page_title_type_ding_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -119,7 +119,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_type_mkdru';
-  $strongarm->value = '[node:title]';
+  $strongarm->value = '[node:title] | [site:name]';
   $export['page_title_type_mkdru'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -133,7 +133,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_user';
-  $strongarm->value = '[user:name]';
+  $strongarm->value = '[user:name] | [site:name]';
   $export['page_title_user'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -147,7 +147,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_category';
-  $strongarm->value = '[term:name]';
+  $strongarm->value = '[term:name] | [site:name]';
   $export['page_title_vocab_category'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -161,7 +161,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_dams_category';
-  $strongarm->value = '[term:name]';
+  $strongarm->value = '[term:name] | [site:name]';
   $export['page_title_vocab_dams_category'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -175,7 +175,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_ding_content_tags';
-  $strongarm->value = '[term:name]';
+  $strongarm->value = '[term:name] | [site:name]';
   $export['page_title_vocab_ding_content_tags'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -189,7 +189,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_eddb_audience';
-  $strongarm->value = '[term:name]';
+  $strongarm->value = '[term:name] | [site:name]';
   $export['page_title_vocab_eddb_audience'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -203,7 +203,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_eddb_editorial_base';
-  $strongarm->value = '[term:name]';
+  $strongarm->value = '[term:name] | [site:name]';
   $export['page_title_vocab_eddb_editorial_base'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -217,7 +217,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_eddb_genre';
-  $strongarm->value = '[term:name]';
+  $strongarm->value = '[term:name] | [site:name]';
   $export['page_title_vocab_eddb_genre'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -231,7 +231,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_eddb_material_type';
-  $strongarm->value = '[term:name]';
+  $strongarm->value = '[term:name] | [site:name]';
   $export['page_title_vocab_eddb_material_type'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -245,7 +245,7 @@ function artesis_frontend_page_titles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'page_title_vocab_eddb_type';
-  $strongarm->value = '[term:name]';
+  $strongarm->value = '[term:name] | [site:name]';
   $export['page_title_vocab_eddb_type'] = $strongarm;
 
   $strongarm = new stdClass();
