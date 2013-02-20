@@ -1,10 +1,11 @@
 name = Artesis Frontend Taxonomy Pages
 description = Artesis-specific taxonomy view pages
 core = 7.x
-package = Artesis 
+package = Artesis
 php = 5.2.4
 version = 7.x-1.6
 project = artesis_frontend_term_pages
+dependencies[] = ctools
 dependencies[] = page_manager
 features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:1
