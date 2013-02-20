@@ -43,6 +43,12 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
         ),
       ),
     ),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'News
+%node:title',
+    'panels_breadcrumbs_paths' => 'news
+<none>',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'omega_12_twocol_8_4';
