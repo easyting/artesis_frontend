@@ -269,7 +269,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%ting_object:title_full';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -1480,7 +1480,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-53'] = $pane;
     $display->panels['top_right_small'][2] = 'new-53';
-  $display->hide_title = PANELS_TITLE_NONE;
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ting_object_panel_context_2'] = $handler;
