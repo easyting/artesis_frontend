@@ -31,7 +31,8 @@ function artesis_frontend_search_pages_default_page_manager_handlers() {
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Search
 E-ressources',
-    'panels_breadcrumbs_paths' => 'search',
+    'panels_breadcrumbs_paths' => '<none>
+<none>',
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
@@ -225,7 +226,8 @@ E-ressources',
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Search
 Website',
-    'panels_breadcrumbs_paths' => 'search',
+    'panels_breadcrumbs_paths' => '<none>
+<none>',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
     'panels_breadcrumbs_home' => 1,
@@ -386,7 +388,8 @@ Website',
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Search
 Materials',
-    'panels_breadcrumbs_paths' => 'search',
+    'panels_breadcrumbs_paths' => '<none>
+<none>',
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
