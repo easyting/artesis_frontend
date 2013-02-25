@@ -727,7 +727,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%node:title';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
