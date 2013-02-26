@@ -745,7 +745,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%node:title';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -993,10 +993,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-29'] = $pane;
-    $display->panels['right'][5] = 'new-29';
+    $display->content['new-30'] = $pane;
+    $display->panels['right'][5] = 'new-30';
     $pane = new stdClass();
-    $pane->pid = 'new-30';
+    $pane->pid = 'new-31';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_geocode';
@@ -1024,29 +1024,8 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-30'] = $pane;
-    $display->panels['right'][6] = 'new-30';
-    $pane = new stdClass();
-    $pane->pid = 'new-31';
-    $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'contact_info_teaser-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 7;
-    $pane->locks = array();
     $display->content['new-31'] = $pane;
-    $display->panels['right'][7] = 'new-31';
+    $display->panels['right'][6] = 'new-31';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-22';
   $handler->conf['display'] = $display;
