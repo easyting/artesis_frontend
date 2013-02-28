@@ -224,4 +224,5 @@ features[user_permission][] = view pane admin links
 features[user_permission][] = view revisions
 features[variable][] = extlink_target
 features[variable][] = theme_alpha_basetheme_settings
+features[variable][] = date_format_day_month_year
 features[views_view][] = parent_vocabulary_terms
