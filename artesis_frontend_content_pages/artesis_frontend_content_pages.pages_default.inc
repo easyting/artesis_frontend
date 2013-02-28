@@ -46,7 +46,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'News
 %node:title',
-    'panels_breadcrumbs_paths' => 'news
+    'panels_breadcrumbs_paths' => '<none>
 <none>',
     'panels_breadcrumbs_home' => 1,
   );
@@ -368,7 +368,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Events
         %node:title',
-    'panels_breadcrumbs_paths' => 'events
+    'panels_breadcrumbs_paths' => '<none>
         <none>',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
@@ -727,7 +727,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%node:title';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();

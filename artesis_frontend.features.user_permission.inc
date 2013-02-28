@@ -216,13 +216,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'field_group',
   );
 
-  // Exported permission: administer file types.
-  $permissions['administer file types'] = array(
-    'name' => 'administer file types',
-    'roles' => array(),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: administer filters.
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
@@ -482,6 +475,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'administer themes',
     'roles' => array(
       0 => 'administrator',
+      1 => 'local administrator',
     ),
     'module' => 'system',
   );
@@ -555,15 +549,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'system',
-  );
-
-  // Exported permission: bypass file access.
-  $permissions['bypass file access'] = array(
-    'name' => 'bypass file access',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'file_entity',
   );
 
   // Exported permission: bypass node access.
@@ -668,18 +653,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create files.
-  $permissions['create files'] = array(
-    'name' => 'create files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: create metasearch interface.
   $permissions['create metasearch interface'] = array(
     'name' => 'create metasearch interface',
@@ -753,15 +726,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any files.
-  $permissions['delete any files'] = array(
-    'name' => 'delete any files',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: delete any mkdru content.
   $permissions['delete any mkdru content'] = array(
     'name' => 'delete any mkdru content',
@@ -803,18 +767,6 @@ function artesis_frontend_user_default_permissions() {
       3 => 'local administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: delete own files.
-  $permissions['delete own files'] = array(
-    'name' => 'delete own files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'file_entity',
   );
 
   // Exported permission: delete own mkdru content.
@@ -935,30 +887,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: download any files.
-  $permissions['download any files'] = array(
-    'name' => 'download any files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: download own files.
-  $permissions['download own files'] = array(
-    'name' => 'download own files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: edit any ding_campaign content.
   $permissions['edit any ding_campaign content'] = array(
     'name' => 'edit any ding_campaign content',
@@ -993,18 +921,6 @@ function artesis_frontend_user_default_permissions() {
       3 => 'local administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: edit any files.
-  $permissions['edit any files'] = array(
-    'name' => 'edit any files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'file_entity',
   );
 
   // Exported permission: edit any metasearch interface.
@@ -1083,18 +999,6 @@ function artesis_frontend_user_default_permissions() {
       3 => 'local administrator',
     ),
     'module' => 'node',
-  );
-
-  // Exported permission: edit own files.
-  $permissions['edit own files'] = array(
-    'name' => 'edit own files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'file_entity',
   );
 
   // Exported permission: edit own metasearch interface.
@@ -1447,17 +1351,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'panels',
   );
 
-  // Exported permission: view files.
-  $permissions['view files'] = array(
-    'name' => 'view files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'anonymous user',
-      2 => 'authenticated user',
-    ),
-    'module' => 'file_entity',
-  );
-
   // Exported permission: view full ding_page premium content.
   $permissions['view full ding_page premium content'] = array(
     'name' => 'view full ding_page premium content',
@@ -1466,30 +1359,6 @@ function artesis_frontend_user_default_permissions() {
       1 => 'authenticated user',
     ),
     'module' => 'nopremium',
-  );
-
-  // Exported permission: view own files.
-  $permissions['view own files'] = array(
-    'name' => 'view own files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: view own private files.
-  $permissions['view own private files'] = array(
-    'name' => 'view own private files',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'file_entity',
   );
 
   // Exported permission: view pane admin links.
