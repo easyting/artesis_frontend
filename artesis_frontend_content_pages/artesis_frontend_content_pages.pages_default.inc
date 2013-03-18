@@ -43,6 +43,12 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
         ),
       ),
     ),
+    'panels_breadcrumbs_state' => 1,
+    'panels_breadcrumbs_titles' => 'News
+%node:title',
+    'panels_breadcrumbs_paths' => '<none>
+<none>',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'omega_12_twocol_8_4';
@@ -362,7 +368,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     'panels_breadcrumbs_state' => 1,
     'panels_breadcrumbs_titles' => 'Events
         %node:title',
-    'panels_breadcrumbs_paths' => 'events
+    'panels_breadcrumbs_paths' => '<none>
         <none>',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => '',
@@ -739,7 +745,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%node:title';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -896,30 +902,6 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-28';
     $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ding_library-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'library-contact-info-teaser',
-    );
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $display->content['new-28'] = $pane;
-    $display->panels['right'][3] = 'new-28';
-    $pane = new stdClass();
-    $pane->pid = 'new-29';
-    $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'ding_event';
     $pane->shown = TRUE;
@@ -949,12 +931,72 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-28'] = $pane;
+    $display->panels['right'][3] = 'new-28';
+    $pane = new stdClass();
+    $pane->pid = 'new-29';
+    $pane->panel = 'right';
+    $pane->type = 'views';
+    $pane->subtype = 'ding_news';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '6',
+      'pager_id' => '0',
+      'offset' => '',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'ctools_context_library_news',
+      'context' => array(
+        0 => 'argument_entity_id:node_1.nid',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
     $display->content['new-29'] = $pane;
     $display->panels['right'][4] = 'new-29';
     $pane = new stdClass();
     $pane->pid = 'new-30';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ding_library-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'library-contact-info-teaser',
+    );
+    $pane->extras = array();
+    $pane->position = 5;
+    $pane->locks = array();
+    $display->content['new-30'] = $pane;
+    $display->panels['right'][5] = 'new-30';
+    $pane = new stdClass();
+    $pane->pid = 'new-31';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_geocode';
@@ -972,27 +1014,6 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
       ),
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $display->content['new-30'] = $pane;
-    $display->panels['right'][5] = 'new-30';
-    $pane = new stdClass();
-    $pane->pid = 'new-31';
-    $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'contact_info_teaser-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();

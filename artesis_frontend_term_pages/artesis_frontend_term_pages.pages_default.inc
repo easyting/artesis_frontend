@@ -36,6 +36,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
         'id' => 1,
       ),
     ),
+    'panels_breadcrumbs_state' => 0,
+    'panels_breadcrumbs_titles' => '',
+    'panels_breadcrumbs_paths' => '',
+    'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
   $display->layout = 'omega_12_twocol_4_8';
