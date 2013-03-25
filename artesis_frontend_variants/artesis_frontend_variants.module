@@ -176,6 +176,7 @@ function artesis_frontend_variants_taxonomy_term_insert($term) {
     $link['link_path'] = 'taxonomy/term/' . $term->tid;
     $link['link_title'] = $term->name;
     $link['menu_name'] = 'main-menu';
+    $link['weight'] = $term->weight;
 
     $parent = array_pop($term->parent);
     if ($parent) {
@@ -255,5 +256,173 @@ function artesis_frontend_variants_ctools_plugin_api() {
   list($module, $api) = func_get_args();
   if ($module == "page_manager" && $api == "pages_default") {
     return array("version" => "1");
+  }
+}
+
+/**
+ * Implements hook_taxonomy_term_update().
+ * Update menu link item when modifying term.
+ */
+function artesis_frontend_variants_taxonomy_term_update($term) {
+  // Check if the term belongs to 'Section' vocabulary.
+  $voc = taxonomy_vocabulary_machine_name_load('eddb_editorial_base');
+  if (!empty($voc) && $voc->vid != $term->vid) {
+    return;
+  }
+  unset($voc);
+
+  // Get menu link by term path
+  $link = menu_link_get_preferred($term->path['source']);
+
+  if ($link) {
+    // Modify menu link
+    $link['link_title'] = $term->name;
+    $link['weight'] = $term->weight;
+
+    // Update parent
+    $parent = array_pop($term->parent);
+    if ($parent) {
+      $parent_term = taxonomy_term_load($parent);
+      $plid = artesis_frontend_variants_get_menu_item_mlid($parent_term->name, 'main-menu');
+      unset($parent_term);
+
+      if ($plid) {
+        $link['plid'] = $plid;
+      }
+    }
+    else {
+      // Parent is root
+      $link['plid'] = 0;
+
+      // Update parents
+      $link['p1'] = $link['mlid'];
+      for ($i=2; $i<10; $i++) {
+        $link['p' . $i] = 0;
+      }
+
+    }
+
+    // Save modified menu link
+    menu_link_save($link);
+
+    // Clear menu cache
+    menu_cache_clear_all();
+    unset($link);
+  }
+  else {
+    watchdog('artesis_frontend_variants',
+      t('Menu link for :term was not found', array(':term' => $tern->name))
+    );
+  }
+}
+
+/**
+ * Implementation of hook_form_alter()
+ */
+function artesis_frontend_variants_form_alter(&$form, &$form_state, $form_id) {
+  // Apply only to 'Section' vocabulary
+  if ($form_id == 'taxonomy_overview_terms' && $form['#vocabulary']->machine_name == 'eddb_editorial_base') {
+    $form['#submit'][] = '_artesis_frontend_variants_reorder_menu';
+  }
+}
+
+/**
+ * Reorder menu items based on new term weights and parents
+ */
+function _artesis_frontend_variants_reorder_menu($form, &$form_state) {
+  // Get term weights and parents.
+  $terms = array();
+  $tree = array();
+  foreach ($form_state['values'] as $k => $v) {
+    if (strpos($k, 'tid:') === 0) {
+      $terms[$v['tid']] = array(
+        'tid' => $v['tid'],
+        'parent' => $v['parent'],
+        'weight' => $v['weight'],
+        'depth' => $v['depth'],
+      );
+
+      // Build partial tree.
+      $tree[$v['parent']][] = $v['tid'];
+    }
+  }
+
+  // Load menu items.
+  $menu = menu_tree_all_data('main-menu');
+
+  // Set new weight/parent for each item.
+  $min_weight = -50;
+  foreach ($menu as $v) {
+    // Get minimal weight for term links in main menu.
+    if ($v['link']['router_path'] != 'taxonomy/term/%') {
+      $min_weight = $v['link']['weight'];
+    }
+  }
+  unset($menu);
+
+  // Rebuild menu items.
+  foreach ($tree[0] as $tid) {
+    _artesis_frontend_variants_reorder_menu_item($terms[$tid], $tree, $min_weight, $terms);
+  }
+
+  // All done, clear cache
+  menu_cache_clear_all();
+}
+
+/**
+ * Update menu item
+ */
+function _artesis_frontend_variants_reorder_menu_item($item, $tree, $min_weight = NULL, $terms) {
+  $tid = $item['tid'];
+  $link = menu_link_get_preferred('taxonomy/term/' . $tid, 'main-menu');
+
+  if (empty($link)) {
+    watchdog('artesis_frontend_variants',
+      t('Menu link for :term was not found (reorder menu item)', array(':term' => $tid))
+    );
+    return;
+  }
+
+  // Set new weight
+  $weight = $item['weight'];
+
+  // For root elements set weight depending on $min_weight
+  if ($item['depth'] == 1) {
+    $weight += $min_weight + 1;
+  }
+  $link['weight'] = $weight;
+  $link['depth'] = $item['depth'];
+
+  // Set parents
+  if ($item['parent'] == 0) {
+    // Root item
+    $link['p1'] = $link['mlid'];
+    for ($i=2; $i<10; $i++) {
+      $link['p' . $i] = 0;
+    }
+    $link['plid'] = 0;
+  }
+  else {
+    // Get parent menu item
+    $parent_link = menu_link_get_preferred('taxonomy/term/' . $item['parent'], 'main-menu');
+    $link['plid'] = $parent_link['mlid'];
+
+    // Copy parents from parent
+    for ($i=1; $i<10; $i++) {
+      $link['p' . $i] = $parent_link['p' . $i];
+    }
+
+    // Set current link to parent in proper depth
+    $link['p' . $item['depth']] = $link['mlid'];
+  }
+
+  // Save changes
+  menu_link_save($link);
+
+  // Update child items
+  if (!empty($tree[$tid])) {
+    foreach ($tree[$tid] as $ctid) {
+      _artesis_frontend_variants_reorder_menu_item($terms[$ctid], $tree, NULL, $terms);
+    }
   }
 }
