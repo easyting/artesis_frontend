@@ -1,13 +1,18 @@
 <?php
 /**
- * Helper function that returns an empty variant ready to be set up
+ * @file
+ * Adds extra panels variants functionality for artesis frontend.
+ */
+
+/**
+ * Helper function that returns an empty variant ready to be set up.
  */
 function _artesis_frontend_variants_create_variant($term = NULL) {
   if (is_null($term)) {
     return FALSE;
   }
 
-  // Generate some unique names and other needed info
+  // Generate some unique names and other needed info.
   $handler_name = 'term_view_term_id_' . $term->tid;
   $variant_title = 'Variant for ' . $term->name;
   $access_plugin_settings = array(
@@ -20,9 +25,9 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   $right_panel_pane = 'new-r-' . $term->tid;
   $pipeline = module_exists('panels_ipe') ? 'ipe' : 'standard';
 
-  // Create a new variant based on an existing term
-  $handler = new stdClass;
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  // Create a new variant based on an existing term.
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially. */
   $handler->api_version = 1;
   $handler->name = $handler_name;
   $handler->task = 'term_view';
@@ -59,7 +64,7 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
       'logic' => 'and',
     ),
   );
-  $display = new panels_display;
+  $display = new panels_display();
   $display->layout = 'omega_12_mainpage_complex';
   $display->layout_settings = array();
   $display->panel_settings = array(
@@ -78,8 +83,8 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   $display->content = array();
   $display->panels = array();
 
-  // Left panel pane - Menu
-  $pane = new stdClass;
+  // Left panel pane - Menu.
+  $pane = new stdClass();
   $pane->pid = $left_panel_pane;
   $pane->panel = 'top_left';
   $pane->type = 'views';
@@ -117,8 +122,8 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   $display->content[$left_panel_pane] = $pane;
   $display->panels['top_left'][0] = $left_panel_pane;
 
-  // Right panel pane - Content
-  $pane = new stdClass;
+  // Right panel pane - Content.
+  $pane = new stdClass();
   $pane->pid = $right_panel_pane;
   $pane->panel = 'top_right';
   $pane->type = 'views';
@@ -159,7 +164,7 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   $display->title_pane = $right_panel_pane;
   $handler->conf['display'] = $display;
 
-  // Save the handler
+  // Save the handler.
   page_manager_save_task_handler($handler);
   return TRUE;
 }
@@ -171,7 +176,7 @@ function artesis_frontend_variants_taxonomy_term_insert($term) {
   $voc = taxonomy_vocabulary_machine_name_load('eddb_editorial_base');
   // Fire logic only for editorial base vocabulary.
   if ($voc && $voc->vid == $term->vid) {
-    // Add a menu link
+    // Add a menu link.
     $link = array();
     $link['link_path'] = 'taxonomy/term/' . $term->tid;
     $link['link_title'] = $term->name;
@@ -195,7 +200,7 @@ function artesis_frontend_variants_taxonomy_term_insert($term) {
     ctools_include('plugins');
     $handler = _artesis_frontend_variants_create_variant($term);
     if ($handler) {
-      drupal_set_message(t('Variant created for term \'!term\'.', array('!term' => $term->name)));
+      drupal_set_message(t("Variant created for term '@term'.", array('@term' => $term->name)));
     }
   }
 }
@@ -212,19 +217,19 @@ function artesis_frontend_variants_taxonomy_term_delete($term) {
   if ($voc->vid == $term->vid) {
     $mlid = artesis_frontend_variants_get_menu_item_mlid($term->name, 'main-menu');
 
-    // Delete menu item
+    // Delete menu item.
     if ($mlid) {
       menu_link_delete($mlid);
     }
 
-    // Delete variant
+    // Delete variant.
     $handler_name = 'term_view_term_id_' . $term->tid;
-    $handler = new stdClass;
+    $handler = new stdClass();
     $handler->name = $handler_name;
     $handler->handler = 'panel_context';
     ctools_include('plugins');
     page_manager_delete_task_handler($handler);
-    drupal_set_message(t('Variant for term \'!term\' deleted.', array('!term' => $term->name)));
+    drupal_set_message(t("Variant for term '@term' deleted.", array('@term' => $term->name)));
 
   }
 }
@@ -232,9 +237,10 @@ function artesis_frontend_variants_taxonomy_term_delete($term) {
 /**
  * Get menu item id by it's name.
  *
- * @param $name
+ * @param string $name
  *   Menu name to seek.
- * @return
+ *
+ * @return int
  *   Menu id (mlid), or 0.
  */
 function artesis_frontend_variants_get_menu_item_mlid($name, $menu = 'main-menu') {
@@ -261,6 +267,7 @@ function artesis_frontend_variants_ctools_plugin_api() {
 
 /**
  * Implements hook_taxonomy_term_update().
+ *
  * Update menu link item when modifying term.
  */
 function artesis_frontend_variants_taxonomy_term_update($term) {
@@ -271,15 +278,15 @@ function artesis_frontend_variants_taxonomy_term_update($term) {
   }
   unset($voc);
 
-  // Get menu link by term path
+  // Get menu link by term path.
   $link = menu_link_get_preferred($term->path['source']);
 
   if ($link) {
-    // Modify menu link
+    // Modify menu link.
     $link['link_title'] = $term->name;
     $link['weight'] = $term->weight;
 
-    // Update parent
+    // Update parent.
     $parent = array_pop($term->parent);
     if ($parent) {
       $parent_term = taxonomy_term_load($parent);
@@ -291,43 +298,43 @@ function artesis_frontend_variants_taxonomy_term_update($term) {
       }
     }
     else {
-      // Parent is root
+      // Parent is root.
       $link['plid'] = 0;
 
-      // Update parents
+      // Update parents.
       $link['p1'] = $link['mlid'];
-      for ($i=2; $i<10; $i++) {
+      for ($i = 2; $i < 10; $i++) {
         $link['p' . $i] = 0;
       }
 
     }
 
-    // Save modified menu link
+    // Save modified menu link.
     menu_link_save($link);
 
-    // Clear menu cache
+    // Clear menu cache.
     menu_cache_clear_all();
     unset($link);
   }
   else {
     watchdog('artesis_frontend_variants',
-      t('Menu link for :term was not found', array(':term' => $tern->name))
+      'Menu link for @term was not found', array('@term' => $tern->name)
     );
   }
 }
 
 /**
- * Implementation of hook_form_alter()
+ * Implements hook_form_alter().
  */
 function artesis_frontend_variants_form_alter(&$form, &$form_state, $form_id) {
-  // Apply only to 'Section' vocabulary
+  // Apply only to 'Section' vocabulary.
   if ($form_id == 'taxonomy_overview_terms' && $form['#vocabulary']->machine_name == 'eddb_editorial_base') {
     $form['#submit'][] = '_artesis_frontend_variants_reorder_menu';
   }
 }
 
 /**
- * Reorder menu items based on new term weights and parents
+ * Reorder menu items based on new term weights and parents.
  */
 function _artesis_frontend_variants_reorder_menu($form, &$form_state) {
   // Get term weights and parents.
@@ -362,67 +369,76 @@ function _artesis_frontend_variants_reorder_menu($form, &$form_state) {
 
   // Rebuild menu items.
   foreach ($tree[0] as $tid) {
-    _artesis_frontend_variants_reorder_menu_item($terms[$tid], $tree, $min_weight, $terms);
+    _artesis_frontend_variants_reorder_menu_item($terms[$tid], $tree, $terms, $min_weight);
   }
 
-  // All done, clear cache
+  // All done, clear cache.
   menu_cache_clear_all();
 }
 
 /**
- * Update menu item
+ * Update menu item.
+ *
+ * @param array $item
+ *   Info about current term.
+ * @param array $tree
+ *   Partial tree structure.
+ * @param array $terms
+ *   Info about all terms.
+ * @param int $min_weight
+ *   Minimal weight for root menu links.
  */
-function _artesis_frontend_variants_reorder_menu_item($item, $tree, $min_weight = NULL, $terms) {
+function _artesis_frontend_variants_reorder_menu_item($item, $tree, $terms, $min_weight = NULL) {
   $tid = $item['tid'];
   $link = menu_link_get_preferred('taxonomy/term/' . $tid, 'main-menu');
 
   if (empty($link)) {
     watchdog('artesis_frontend_variants',
-      t('Menu link for :term was not found (reorder menu item)', array(':term' => $tid))
+      'Menu link for @term was not found (reorder menu item)', array('@term' => $tid)
     );
     return;
   }
 
-  // Set new weight
+  // Set new weight.
   $weight = $item['weight'];
 
-  // For root elements set weight depending on $min_weight
+  // For root elements set weight depending on $min_weight.
   if ($item['depth'] == 1) {
     $weight += $min_weight + 1;
   }
   $link['weight'] = $weight;
   $link['depth'] = $item['depth'];
 
-  // Set parents
+  // Set parents.
   if ($item['parent'] == 0) {
-    // Root item
+    // Root item.
     $link['p1'] = $link['mlid'];
-    for ($i=2; $i<10; $i++) {
+    for ($i = 2; $i < 10; $i++) {
       $link['p' . $i] = 0;
     }
     $link['plid'] = 0;
   }
   else {
-    // Get parent menu item
+    // Get parent menu item.
     $parent_link = menu_link_get_preferred('taxonomy/term/' . $item['parent'], 'main-menu');
     $link['plid'] = $parent_link['mlid'];
 
-    // Copy parents from parent
-    for ($i=1; $i<10; $i++) {
+    // Copy parents from parent.
+    for ($i = 1; $i < 10; $i++) {
       $link['p' . $i] = $parent_link['p' . $i];
     }
 
-    // Set current link to parent in proper depth
+    // Set current link to parent in proper depth.
     $link['p' . $item['depth']] = $link['mlid'];
   }
 
-  // Save changes
+  // Save changes.
   menu_link_save($link);
 
-  // Update child items
+  // Update child items.
   if (!empty($tree[$tid])) {
     foreach ($tree[$tid] as $ctid) {
-      _artesis_frontend_variants_reorder_menu_item($terms[$ctid], $tree, NULL, $terms);
+      _artesis_frontend_variants_reorder_menu_item($terms[$ctid], $tree, $terms);
     }
   }
 }
