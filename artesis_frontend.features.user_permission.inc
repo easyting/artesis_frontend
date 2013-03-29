@@ -193,7 +193,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'administer ding provider',
     'roles' => array(
       0 => 'administrator',
-      1 => 'local administrator',
     ),
     'module' => 'ding_provider',
   );
@@ -456,7 +455,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'administer snapengage',
     'roles' => array(
       0 => 'administrator',
-      1 => 'local administrator',
     ),
     'module' => 'snapengage',
   );
@@ -495,9 +493,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'administer tipsy',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
     ),
     'module' => 'tipsy',
   );
@@ -556,9 +551,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -625,8 +617,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -647,8 +638,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -698,8 +688,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -720,8 +709,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -741,8 +729,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -763,8 +750,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -893,8 +879,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -917,8 +902,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -971,8 +955,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -995,8 +978,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
