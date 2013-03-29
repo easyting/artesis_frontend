@@ -127,7 +127,7 @@ function _artesis_frontend_get_allowed_plugins() {
     'parent_vocabulary_terms' => 'views',
     'taxonomy_term' => 'views',
     // Blocks must be declared by 'block' value.
-    'ding_library_opening_hours-ding_library_opened_today' => 'block'
+    'ding_library_opening_hours-ding_library_opened_today' => 'block',
   );
 }
 
@@ -151,7 +151,10 @@ function _artesis_frontend_panels_ipe_add_pane_button($vars) {
   $region_id  = $vars['region_id'];
   $renderer   = $vars['renderer'];
   $menu_width = 150;
-  $attributes = array('class' => 'ctools-use-modal', 'style' => 'width: ' . $menu_width . 'px; height: auto');
+  $attributes = array(
+    'class' => 'ctools-use-modal',
+    'style' => 'width: ' . $menu_width . 'px; height: auto',
+  );
 
   $plugins = _artesis_frontend_get_allowed_plugins();
   $blocks = array_keys($plugins, 'block');
@@ -179,10 +182,7 @@ function _artesis_frontend_panels_ipe_add_pane_button($vars) {
     $buttons[] = l($block_info[$delta]['info'], $renderer->get_url('add-pane', $region_id, 'block', $block), array('attributes' => $attributes));
   }
 
-  $buttons =
-    '<div id="ipe-add-' . $region_id . '" class="panels-ipe-newblock ipe-popup">'
-    . theme('item_list', array('items' => $buttons))
-    . '</div>';
+  $buttons = '<div id="ipe-add-' . $region_id . '" class="panels-ipe-newblock ipe-popup">' . theme('item_list', array('items' => $buttons)) . '</div>';
 
   if (!$assets_loaded) {
     $mod_path = drupal_get_path('module', 'artesis_frontend');
@@ -191,10 +191,7 @@ function _artesis_frontend_panels_ipe_add_pane_button($vars) {
     $assets_loaded = TRUE;
   }
 
-  return '<div class="panels-ipe-newblock panels-ipe-on">' .
-          l(t('Add'), NULL, array('attributes' => array('class' => 'ipe-trigger', 'target_region' => $region_id)))
-          . '</div>'
-          . $buttons;
+  return '<div class="panels-ipe-newblock panels-ipe-on">' .  l(t('Add'), NULL, array('attributes' => array('class' => 'ipe-trigger', 'target_region' => $region_id))) . '</div>' . $buttons;
 }
 
 /**
@@ -225,10 +222,7 @@ function artesis_frontend_preprocess_page($page) {
       $panes_selector[] = 'pane-delete-panel-pane-' . $pane_id;
     }
     if (count($panes_selector)) {
-      drupal_add_js(
-        '(function($) { $(document).ready(function() { $("#'
-        . join(', #', $panes_selector)
-        . '").parent().remove(); }) })(jQuery);', 'inline');
+      drupal_add_js('(function($) { $(document).ready(function() { $("#' . join(', #', $panes_selector) . '").parent().remove(); }) })(jQuery);', 'inline');
     }
   }
 }
