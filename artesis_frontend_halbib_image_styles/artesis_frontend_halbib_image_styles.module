@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Artesis Frontend Halbib Image Styles feature.
+ */
+
+include_once 'artesis_frontend_halbib_image_styles.features.inc';
