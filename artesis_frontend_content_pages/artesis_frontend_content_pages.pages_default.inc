@@ -734,12 +734,12 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->pid = 'new-21';
     $pane->panel = 'left';
     $pane->type = 'block';
-    $pane->subtype = 'ding_library-ding_sidebar_menu';
+    $pane->subtype = 'ding_library_opening_hours-ding_library_opening_hours';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Opening hours',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -754,19 +754,11 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-22';
     $pane->panel = 'left';
-    $pane->type = 'campaign';
-    $pane->subtype = 'campaign';
+    $pane->type = 'block';
+    $pane->subtype = 'ding_library-ding_sidebar_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
-      'context' => array(
-        0 => 'argument_entity_id:node_1',
-        1 => 'empty',
-        2 => 'empty',
-        3 => 'empty',
-      ),
       'override_title' => 1,
       'override_title_text' => '',
     );
@@ -783,12 +775,20 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-23';
     $pane->panel = 'left';
-    $pane->type = 'block';
-    $pane->subtype = 'opening_hours-week';
+    $pane->type = 'campaign';
+    $pane->subtype = 'campaign';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 0,
+      'ding_campaign_count' => 3,
+      'ding_campaign_offset' => 0,
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+        1 => 'empty',
+        2 => 'empty',
+        3 => 'empty',
+      ),
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -1030,7 +1030,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $display->content['new-31'] = $pane;
     $display->panels['right'][7] = 'new-31';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-21';
+  $display->title_pane = 'new-22';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_7'] = $handler;
 
