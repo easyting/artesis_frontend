@@ -253,3 +253,21 @@ function node_content_view($node, $view_mode, $langcode) {
 
   return $node;
 }
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ *
+ * Do not show address field if the address is not fully filled.
+ */
+function artesis_frontend_preprocess_views_view_fields(&$variables) {
+  $view = $variables['view'];
+
+  // panel_pane_3 stands for "Left column data" ding event view display.
+  if ($view->current_display == 'panel_pane_3') {
+    $field_address = $variables['fields']['field_address'];
+    $field_content = $field_address->content;
+    if (strpos($field_content, 'street-block') === FALSE || strpos($field_content, 'locality-block') === FALSE) {
+      unset($variables['fields']['field_address']);
+    }
+  }
+}
