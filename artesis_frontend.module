@@ -288,7 +288,7 @@ function artesis_frontend_block_view($delta = '') {
       // Check if we have RSS link in html head.
       $headers = drupal_add_html_head();
       foreach ($headers as $k => $v) {
-        if ($v['#tag'] == 'link' && $v['#attributes']['rel'] == 'alternate') {
+        if ($v['#tag'] == 'link' && $v['#attributes']['rel'] == 'alternate' && $v['#attributes']['type'] == 'application/rss+xml') {
           $title = $v['#attributes']['title'];
           $url = $v['#attributes']['href'];
           break;
