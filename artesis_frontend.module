@@ -271,3 +271,73 @@ function artesis_frontend_preprocess_views_view_fields(&$variables) {
     }
   }
 }
+
+/**
+ * Implements hook_block_info().
+ */
+function artesis_frontend_block_info() {
+  $blocks = array();
+
+  // RSS Icon block.
+  $blocks['rss_icon'] = array(
+    'info' => t('RSS Icon'),
+    'cache' => DRUPAL_CACHE_PER_PAGE,
+    'status' => 1,
+    'region' => 'content',
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => '',
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function artesis_frontend_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    // RSS Icon block.
+    case 'rss_icon':
+      $url = NULL;
+      $title = NULL;
+
+      // Check if we have RSS link in html head.
+      $headers = drupal_add_html_head();
+      foreach ($headers as $k => $v) {
+        if ($v['#tag'] == 'link' && $v['#attributes']['rel'] == 'alternate' && $v['#attributes']['type'] == 'application/rss+xml') {
+          $title = $v['#attributes']['title'];
+          $url = $v['#attributes']['href'];
+          break;
+        }
+      }
+      // Show the block in case the rss for this page is given.
+      if (!empty($url)) {
+        $text = t('Subscribe to !feed-title', array('!feed-title' => $title));
+        $image = theme('image', array(
+          'path' => 'misc/feed.png',
+          'width' => 16,
+          'height' => 16,
+          'alt' => $text,
+        ));
+
+        $block['subject'] = NULL;
+        $block['content'] = array(
+          '#theme' => 'link',
+          '#text' => $image,
+          '#options'=> array(
+            'html' => TRUE,
+            'attributes' => array(
+              'class' => array('rss-icon'),
+              'title' => $text,
+            ),
+          ),
+          '#path' => $url,
+        );
+      }
+      break;
+  }
+
+  return $block;
+}
