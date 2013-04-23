@@ -607,7 +607,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'anon_links' => 0,
+      'anon_links' => 1,
       'context' => 'argument_entity_id:node_1',
       'override_title' => 0,
       'override_title_text' => '',
