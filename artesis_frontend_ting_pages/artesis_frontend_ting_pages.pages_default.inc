@@ -1465,6 +1465,27 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-53';
     $pane->panel = 'top_right_medium';
+    $pane->type = 'block';
+    $pane->subtype = 'ting_marc-ting_marc_data';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 35;
+    $pane->locks = array();
+    $display->content['new-53'] = $pane;
+    $display->panels['top_right_medium'][35] = 'new-53';
+    $pane = new stdClass();
+    $pane->pid = 'new-54';
+    $pane->panel = 'top_right_medium';
     $pane->type = 'entity_field';
     $pane->subtype = 'ting_object:ding_entity_buttons';
     $pane->shown = TRUE;
@@ -1483,12 +1504,12 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 35;
+    $pane->position = 36;
     $pane->locks = array();
-    $display->content['new-53'] = $pane;
-    $display->panels['top_right_medium'][35] = 'new-53';
+    $display->content['new-54'] = $pane;
+    $display->panels['top_right_medium'][36] = 'new-54';
     $pane = new stdClass();
-    $pane->pid = 'new-54';
+    $pane->pid = 'new-55';
     $pane->panel = 'top_right_small';
     $pane->type = 'entity_field';
     $pane->subtype = 'ting_object:ting_cover';
@@ -1512,10 +1533,10 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-54'] = $pane;
-    $display->panels['top_right_small'][0] = 'new-54';
+    $display->content['new-55'] = $pane;
+    $display->panels['top_right_small'][0] = 'new-55';
     $pane = new stdClass();
-    $pane->pid = 'new-55';
+    $pane->pid = 'new-56';
     $pane->panel = 'top_right_small';
     $pane->type = 'entity_field';
     $pane->subtype = 'ting_object:ding_availability_holdings';
@@ -1537,8 +1558,8 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-55'] = $pane;
-    $display->panels['top_right_small'][1] = 'new-55';
+    $display->content['new-56'] = $pane;
+    $display->panels['top_right_small'][1] = 'new-56';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
