@@ -117,16 +117,16 @@ function artesis_frontend_permission() {
  * on a IPE page by user with IPE_RESTRICTED_ROLE role.
  */
 function _artesis_frontend_get_allowed_plugins() {
+  // Plugin definition follows ctools convention 'module - plugin name'.
+  // Views must be declared by 'views' value.
+  // Blocks must be declared by 'block' value.
   return array(
-    // Plugin definition follows ctools convention 'module - plugin name'.
     'ding_nodelist' => 'ding_nodelist',
-    'campaign' => 'campaign',
-    'carousel' => 'carousel',
     'ding_item_list' => 'ding_item_list',
-    // Views must be declared by 'views' value.
-    'parent_vocabulary_terms' => 'views',
-    'taxonomy_term' => 'views',
-    // Blocks must be declared by 'block' value.
+    'campaign' => 'campaign',
+    'term_description' => 'term_description',
+    'ding_item_viewer-item_viewer' => 'block',
+    'carousel' => 'carousel',
     'ding_library_opening_hours-ding_library_opened_today' => 'block',
   );
 }
