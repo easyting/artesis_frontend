@@ -266,7 +266,7 @@ function artesis_frontend_block_info() {
     'cache' => DRUPAL_CACHE_PER_PAGE,
     'status' => 1,
     'region' => 'content',
-    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'visibility' => BLOCK_VISIBILITY_NOTLISTED,
     'pages' => '',
   );
 
