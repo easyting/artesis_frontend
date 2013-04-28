@@ -72,3 +72,12 @@ function artesis_frontend_get_date_formats() {
     'date_combined' => 'd/m-Y',
   );
 }
+
+/**
+ * Enable default "Taxonomy term" view for feeds.
+ */
+function artesis_frontend_update_7000() {
+  $status = variable_get('views_defaults', array());
+  $status['taxonomy_term'] = FALSE;
+  variable_set('views_defaults', $status);
+}
