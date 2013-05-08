@@ -15,7 +15,7 @@ function artesis_frontend_term_pages_views_default_views() {
   $view->description = 'A view to emulate Drupal core\'s handling of taxonomy/term.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Custom view of Taxonomy term';
+  $view->human_name = 'Artesis taxonomy term';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -78,7 +78,7 @@ function artesis_frontend_term_pages_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  $handler->display->display_options['path'] = 'taxonomy/term/%';
+  $handler->display->display_options['path'] = 'taxonomy/term/%/views';
 
   /* Display: Feed */
   $handler = $view->new_display('feed', 'Feed', 'feed');
