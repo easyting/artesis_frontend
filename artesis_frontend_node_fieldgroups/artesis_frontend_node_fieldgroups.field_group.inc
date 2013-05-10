@@ -460,8 +460,7 @@ function artesis_frontend_node_fieldgroups_field_group_info() {
     'label' => 'Images',
     'weight' => '13',
     'children' => array(
-      0 => 'field_list_image',
-      1 => 'field_main_image',
+      0 => 'field_page_list_image',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
