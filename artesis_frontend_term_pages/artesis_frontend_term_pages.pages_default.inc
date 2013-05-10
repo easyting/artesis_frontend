@@ -404,7 +404,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->pid = 'new-11';
     $pane->panel = 'right';
     $pane->type = 'views';
-    $pane->subtype = 'custom_view_of_taxonomy_term';
+    $pane->subtype = 'artesis_taxonomy_term';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
