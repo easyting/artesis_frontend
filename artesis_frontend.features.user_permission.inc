@@ -597,6 +597,8 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'change user role',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
+      2 => 'local administrator',
     ),
     'module' => 'artesis_frontend',
   );
@@ -1122,6 +1124,8 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'manage item viewer',
     'roles' => array(
       0 => 'administrator',
+      1 => 'editor',
+      2 => 'local administrator',
     ),
     'module' => 'ding_item_viewer',
   );
