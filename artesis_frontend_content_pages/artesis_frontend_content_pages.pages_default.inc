@@ -734,7 +734,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->pid = 'new-21';
     $pane->panel = 'left';
     $pane->type = 'block';
-    $pane->subtype = 'ding_library_opening_hours-ding_library_opening_hours';
+    $pane->subtype = 'opening_hours-week';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
