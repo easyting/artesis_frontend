@@ -1,7 +1,7 @@
 name = Artesis Frontend Node Fieldgroups
 description = News, event, page fieldgroups.
 core = 7.x
-package = Alpha
+package = Artesis
 dependencies[] = ctools
 dependencies[] = field_group
 features[ctools][] = field_group:field_group:1
