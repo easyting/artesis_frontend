@@ -517,24 +517,6 @@ return TRUE;
     $pane = new stdClass();
     $pane->pid = 'new-14';
     $pane->panel = 'left';
-    $pane->type = 'ticketsinfo';
-    $pane->subtype = 'ticketsinfo';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['left'][3] = 'new-13';
-    $pane = new stdClass();
-    $pane->pid = 'new-14';
-    $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_date';
     $pane->shown = TRUE;
