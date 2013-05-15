@@ -119,7 +119,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'links' => 0,
-      'no_extras' => 1,
+      'no_extras' => 0,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
@@ -396,7 +396,23 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->type = 'views_panes';
     $pane->subtype = 'ding_event-panel_pane_2';
     $pane->shown = TRUE;
-    $pane->access = array();
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'Show library when address is filled in. ',
+            'php' => '$address = $contexts[\'argument_entity_id:node_1\']->data->field_address[\'und\'][0];
+if (empty($address[\'locality\']) && empty($address[\'postal_code\']) && empty($address[\'thoroughfare\']) && empty($address[\'premise\'] )){
+  return TRUE;
+}
+return FALSE;
+',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
     $pane->configuration = array();
     $pane->cache = array();
     $pane->style = array(
@@ -410,6 +426,40 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $display->panels['left'][0] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
+    $pane->panel = 'left';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ding_event-panel_pane_4';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'php',
+          'settings' => array(
+            'description' => 'Hide library when address is filled in.',
+            'php' => '$address = $contexts[\'argument_entity_id:node_1\']->data->field_address[\'und\'][0];
+if (empty($address[\'locality\']) && empty($address[\'postal_code\']) && empty($address[\'thoroughfare\']) && empty($address[\'premise\'] )){
+  return FALSE;
+}
+return TRUE;
+',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['left'][1] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
     $pane->panel = 'left';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_main_image';
@@ -432,24 +482,24 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['left'][1] = 'new-11';
+    $display->content['new-12'] = $pane;
+    $display->panels['left'][2] = 'new-12';
     $pane = new stdClass();
-    $pane->pid = 'new-12';
+    $pane->pid = 'new-13';
     $pane->panel = 'left';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'links' => 1,
-      'no_extras' => 1,
+      'links' => 0,
+      'no_extras' => 0,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
-      'link' => 1,
+      'link' => 0,
       'leave_node_title' => 0,
       'build_mode' => 'full',
       'context' => 'argument_entity_id:node_1',
@@ -460,12 +510,12 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['left'][2] = 'new-12';
+    $display->content['new-13'] = $pane;
+    $display->panels['left'][3] = 'new-13';
     $pane = new stdClass();
-    $pane->pid = 'new-13';
+    $pane->pid = 'new-14';
     $pane->panel = 'left';
     $pane->type = 'ticketsinfo';
     $pane->subtype = 'ticketsinfo';
@@ -752,7 +802,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->pid = 'new-22';
     $pane->panel = 'left';
     $pane->type = 'block';
-    $pane->subtype = 'ding_library_opening_hours-ding_library_opening_hours';
+    $pane->subtype = 'opening_hours-week';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -1026,8 +1076,29 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-31'] = $pane;
     $display->panels['right'][6] = 'new-31';
+    $pane = new stdClass();
+    $pane->pid = 'new-32';
+    $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'contact_info_teaser-panel_pane_2';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 7;
+    $pane->locks = array();
+    $display->content['new-32'] = $pane;
+    $display->panels['right'][7] = 'new-32';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-22';
+  $display->title_pane = 'new-23';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_7'] = $handler;
 
@@ -1080,7 +1151,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-32';
+    $pane->pid = 'new-33';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'ding_library-ding_sidebar_menu';
@@ -1098,10 +1169,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-32'] = $pane;
-    $display->panels['left'][0] = 'new-32';
+    $display->content['new-33'] = $pane;
+    $display->panels['left'][0] = 'new-33';
     $pane = new stdClass();
-    $pane->pid = 'new-33';
+    $pane->pid = 'new-34';
     $pane->panel = 'left';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
@@ -1127,10 +1198,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-33'] = $pane;
-    $display->panels['left'][1] = 'new-33';
+    $display->content['new-34'] = $pane;
+    $display->panels['left'][1] = 'new-34';
     $pane = new stdClass();
-    $pane->pid = 'new-34';
+    $pane->pid = 'new-35';
     $pane->panel = 'right';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -1150,22 +1221,22 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-34'] = $pane;
-    $display->panels['right'][0] = 'new-34';
+    $display->content['new-35'] = $pane;
+    $display->panels['right'][0] = 'new-35';
     $pane = new stdClass();
-    $pane->pid = 'new-35';
+    $pane->pid = 'new-36';
     $pane->panel = 'right';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'links' => 1,
+      'links' => 0,
       'no_extras' => 0,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
-      'link' => 1,
+      'link' => 0,
       'leave_node_title' => 0,
       'build_mode' => 'full',
       'context' => 'argument_entity_id:node_1',
@@ -1178,10 +1249,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-35'] = $pane;
-    $display->panels['right'][1] = 'new-35';
+    $display->content['new-36'] = $pane;
+    $display->panels['right'][1] = 'new-36';
     $pane = new stdClass();
-    $pane->pid = 'new-36';
+    $pane->pid = 'new-37';
     $pane->panel = 'right';
     $pane->type = 'ding_related_items';
     $pane->subtype = 'ding_related_items';
@@ -1203,10 +1274,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-36'] = $pane;
-    $display->panels['right'][2] = 'new-36';
+    $display->content['new-37'] = $pane;
+    $display->panels['right'][2] = 'new-37';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-34';
+  $display->title_pane = 'new-35';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_8'] = $handler;
 

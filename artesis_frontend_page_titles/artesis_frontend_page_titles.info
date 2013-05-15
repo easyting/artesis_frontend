@@ -1,6 +1,6 @@
 name = Artesis Frontend Page Titles
 core = 7.x
-package = Features
+package = Artesis
 dependencies[] = ctools
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
