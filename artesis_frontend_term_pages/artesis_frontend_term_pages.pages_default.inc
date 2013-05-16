@@ -240,8 +240,8 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
         0 => array(
           'name' => 'term_vocabulary',
           'settings' => array(
-            'vids' => array(
-              4 => '4',
+            'vocabularies' => array(
+              'eddb_editorial_base' => 'eddb_editorial_base',
             ),
           ),
           'context' => 'relationship_entity_from_schema:vid-taxonomy_term-taxonomy_vocabulary_1',
