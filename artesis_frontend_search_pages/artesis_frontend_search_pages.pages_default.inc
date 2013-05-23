@@ -619,7 +619,7 @@ Materials',
     $pane->locks = array();
     $display->content['new-19'] = $pane;
     $display->panels['right'][6] = 'new-19';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['search_ting_search_panel_context_2'] = $handler;
