@@ -10,7 +10,7 @@
 function artesis_frontend_views_default_views() {
   $export = array();
 
-  $view = new view;
+  $view = new view();
   $view->name = 'parent_vocabulary_terms';
   $view->description = 'Show all the terms from the parent vocabulary of a given term';
   $view->tag = 'default';
@@ -23,48 +23,45 @@ function artesis_frontend_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Parent vocabulary terms';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Udfør';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Gendan';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortér efter';
+  $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
+  $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Taxonomy term: Name */
+  /* Felt: Ord i ordforråd: Navn */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['name']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['name']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = 0;
-  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = 0;
-  $handler->display->display_options['fields']['name']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['name']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['name']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['name']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['name']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = 1;
-  /* Sort criterion: Taxonomy term: Weight */
+  $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  /* Sorteringskriterie: Ord i ordforråd: Vægt */
   $handler->display->display_options['sorts']['weight']['id'] = 'weight';
   $handler->display->display_options['sorts']['weight']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  /* Contextual filter: Taxonomy vocabulary: Vocabulary ID */
+  /* Kontekstuelt filter: Ordforråd: Ordforråd ID */
   $handler->display->display_options['arguments']['vid']['id'] = 'vid';
   $handler->display->display_options['arguments']['vid']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['arguments']['vid']['field'] = 'vid';
   $handler->display->display_options['arguments']['vid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['vid']['exception']['title'] = 'Alle';
   $handler->display->display_options['arguments']['vid']['default_argument_type'] = 'php';
   $handler->display->display_options['arguments']['vid']['default_argument_options']['code'] = '$term = taxonomy_term_load($argument);
 return $term->vid;';
-  $handler->display->display_options['arguments']['vid']['default_argument_skip_url'] = 0;
   $handler->display->display_options['arguments']['vid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['vid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['vid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['vid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['vid']['not'] = 0;
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
@@ -73,25 +70,24 @@ return $term->vid;';
   /* Display: EB Block */
   $handler = $view->new_display('block', 'EB Block', 'block_1');
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Taxonomy vocabulary: Vocabulary ID */
+  /* Kontekstuelt filter: Ordforråd: Ordforråd ID */
   $handler->display->display_options['arguments']['vid']['id'] = 'vid';
   $handler->display->display_options['arguments']['vid']['table'] = 'taxonomy_vocabulary';
   $handler->display->display_options['arguments']['vid']['field'] = 'vid';
   $handler->display->display_options['arguments']['vid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['vid']['exception']['title'] = 'Alle';
   $handler->display->display_options['arguments']['vid']['default_argument_type'] = 'php';
   $handler->display->display_options['arguments']['vid']['default_argument_options']['code'] = '$term = taxonomy_term_load($argument);
 return $term->vid;';
-  $handler->display->display_options['arguments']['vid']['default_argument_skip_url'] = 0;
   $handler->display->display_options['arguments']['vid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['vid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['vid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['vid']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['vid']['not'] = 0;
-  /* Contextual filter: Taxonomy term: Parent term */
+  /* Kontekstuelt filter: Ord i ordforråd: Overordnet ord */
   $handler->display->display_options['arguments']['parent_1']['id'] = 'parent_1';
   $handler->display->display_options['arguments']['parent_1']['table'] = 'taxonomy_term_hierarchy';
   $handler->display->display_options['arguments']['parent_1']['field'] = 'parent';
   $handler->display->display_options['arguments']['parent_1']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['parent_1']['exception']['title'] = 'Alle';
   $handler->display->display_options['arguments']['parent_1']['default_argument_type'] = 'php';
   $handler->display->display_options['arguments']['parent_1']['default_argument_options']['code'] = '$tid = arg(2);
 $parents = taxonomy_get_parents($tid);
@@ -100,23 +96,20 @@ if (empty($parents)) {
 }
 $parent = array_pop($parents);
 return $parent->tid;';
-  $handler->display->display_options['arguments']['parent_1']['default_argument_skip_url'] = 0;
   $handler->display->display_options['arguments']['parent_1']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['parent_1']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['parent_1']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['arguments']['parent_1']['break_phrase'] = 0;
-  $handler->display->display_options['arguments']['parent_1']['not'] = 0;
   $handler->display->display_options['block_description'] = 'Parent vocabulary term';
   $translatables['parent_vocabulary_terms'] = array(
     t('Master'),
     t('Parent vocabulary terms'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('All'),
+    t('mere'),
+    t('Udfør'),
+    t('Gendan'),
+    t('Sortér efter'),
+    t('Stigende'),
+    t('Faldende'),
+    t('Alle'),
     t('Block'),
     t('Parent vocabulary term'),
     t('EB Block'),

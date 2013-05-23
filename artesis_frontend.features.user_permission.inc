@@ -597,6 +597,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'change user role',
     'roles' => array(
       0 => 'administrator',
+      1 => 'local administrator',
     ),
     'module' => 'artesis_frontend',
   );

@@ -87,9 +87,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'menu',
     'delta' => 'menu-footer-menu-1',
     'theme' => 'alpha_basetheme',
-    'status' => 0,
+    'status' => '1',
     'weight' => '1',
-    'region' => '',
+    'region' => 'postscript_first',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -101,9 +101,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'menu',
     'delta' => 'menu-footer-menu-2',
     'theme' => 'alpha_basetheme',
-    'status' => 0,
+    'status' => '1',
     'weight' => '2',
-    'region' => '',
+    'region' => 'postscript_second',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -115,9 +115,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'menu',
     'delta' => 'menu-footer-menu-3',
     'theme' => 'alpha_basetheme',
-    'status' => 0,
+    'status' => '1',
     'weight' => '3',
-    'region' => '',
+    'region' => 'postscript_third',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -129,9 +129,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'menu',
     'delta' => 'menu-footer-menu-4',
     'theme' => 'alpha_basetheme',
-    'status' => 0,
+    'status' => '1',
     'weight' => '4',
-    'region' => '',
+    'region' => 'postscript_fourth',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -238,1964 +238,6 @@ function artesis_frontend_default_fe_block_settings() {
   );
 
   $export['alpha_basetheme'] = $theme;
-
-  // allebib_theme
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'allebib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '5',
-    'region' => 'footer_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'allebib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '-22',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'allebib_theme',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'allebib_theme',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['allebib_theme'] = $theme;
-
-  // tarnbib_theme
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'tarnbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '5',
-    'region' => 'footer_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'tarnbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '-22',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'tarnbib_theme',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'tarnbib_theme',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['tarnbib_theme'] = $theme;
-
-  // slagbib_theme
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'slagbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '5',
-    'region' => 'footer_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'slagbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '-22',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'slagbib_theme',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'slagbib_theme',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['slagbib_theme'] = $theme;
-
-
-  // varbib_theme
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'varbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '5',
-    'region' => 'footer_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'varbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '-22',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'varbib_theme',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'varbib_theme',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['varbib_theme'] = $theme;
-
-
-  // ringbib_theme
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'ringbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '5',
-    'region' => 'footer_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'ringbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '-22',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'ringbib_theme',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'ringbib_theme',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['ringbib_theme'] = $theme;
-
-
-  // faxbib_theme
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'faxbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '5',
-    'region' => 'footer_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'faxbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '-22',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'faxbib_theme',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'faxbib_theme',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['faxbib_theme'] = $theme;
-
-
-  // herbib_theme
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'herbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '5',
-    'region' => 'footer_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'herbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'header_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '-22',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'herbib_theme',
-    'status' => '1',
-    'weight' => '-25',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'herbib_theme',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['herbib_theme'] = $theme;
-
-  // halbib_theme
-  
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'halbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-    'i18n_mode' => '0',
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '5',
-    'region' => 'footer_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-    'i18n_mode' => '0',
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '-27',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '-28',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'halbib_theme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '1',
-    'region' => 'postscript_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '2',
-    'region' => 'postscript_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '3',
-    'region' => 'postscript_third',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '4',
-    'region' => 'postscript_fourth',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'halbib_theme',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'header_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '-26',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'halbib_theme',
-    'status' => '1',
-    'weight' => '-29',
-    'region' => 'user_first',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'halbib_theme',
-    'status' => 0,
-    'weight' => '-25',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
-  $export['halbib_theme'] = $theme;
 
   // bartik
   $theme = array();
@@ -2425,6 +467,235 @@ function artesis_frontend_default_fe_block_settings() {
   );
 
   $export['bartik'] = $theme;
+
+  // halbib_theme
+  $theme = array();
+
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'halbib_theme',
+    'status' => 0,
+    'weight' => '1',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => 4,
+  );
+
+  $theme['ding_library-library_address'] = array(
+    'module' => 'ding_library',
+    'delta' => 'library_address',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '5',
+    'region' => 'footer_second',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => 8,
+  );
+
+  $theme['ding_user_frontend-ding-user-loan-number'] = array(
+    'module' => 'ding_user_frontend',
+    'delta' => 'ding-user-loan-number',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-27',
+    'region' => 'user_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'Ding loan, reservation, and debt count',
+    'cache' => -1,
+  );
+
+  $theme['ding_user_frontend-ding-username'] = array(
+    'module' => 'ding_user_frontend',
+    'delta' => 'ding-username',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-28',
+    'region' => 'user_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'Ding user name',
+    'cache' => -1,
+  );
+
+  $theme['locale-language'] = array(
+    'module' => 'locale',
+    'delta' => 'language',
+    'theme' => 'halbib_theme',
+    'status' => 0,
+    'weight' => '1',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => -1,
+  );
+
+  $theme['menu-menu-footer-menu-1'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-1',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '1',
+    'region' => 'postscript_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['menu-menu-footer-menu-2'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-2',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '2',
+    'region' => 'postscript_second',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['menu-menu-footer-menu-3'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-3',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '3',
+    'region' => 'postscript_third',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['menu-menu-footer-menu-4'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-menu-4',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '4',
+    'region' => 'postscript_fourth',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['menu-menu-secondary-menu'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-secondary-menu',
+    'theme' => 'halbib_theme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => -1,
+  );
+
+  $theme['search-form'] = array(
+    'module' => 'search',
+    'delta' => 'form',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-24',
+    'region' => 'header_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['system-main'] = array(
+    'module' => 'system',
+    'delta' => 'main',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'content',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['system-main-menu'] = array(
+    'module' => 'system',
+    'delta' => 'main-menu',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'menu',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['system-user-menu'] = array(
+    'module' => 'system',
+    'delta' => 'user-menu',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-26',
+    'region' => 'user_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'User menu',
+    'cache' => -1,
+  );
+
+  $theme['user-login'] = array(
+    'module' => 'user',
+    'delta' => 'login',
+    'theme' => 'halbib_theme',
+    'status' => '1',
+    'weight' => '-29',
+    'region' => 'user_first',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => 'User login',
+    'cache' => -1,
+  );
+
+  $theme['workbench-block'] = array(
+    'module' => 'workbench',
+    'delta' => 'block',
+    'theme' => 'halbib_theme',
+    'status' => 0,
+    'weight' => '-25',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $export['halbib_theme'] = $theme;
 
   // seven
   $theme = array();

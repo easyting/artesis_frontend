@@ -15,16 +15,12 @@ function artesis_frontend_menu_default_menu_custom() {
     'menu_name' => 'main-menu',
     'title' => 'Main menu',
     'description' => 'The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.',
-    'language' => 'und',
-    'i18n_mode' => '5',
   );
   // Exported menu: menu-secondary-menu.
   $menus['menu-secondary-menu'] = array(
     'menu_name' => 'menu-secondary-menu',
     'title' => 'Secondary menu',
     'description' => 'Secondary menu located above the login box.',
-    'language' => 'und',
-    'i18n_mode' => '0',
   );
   // Translatables
   // Included for use with string extractors like potx.
