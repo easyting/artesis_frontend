@@ -75,7 +75,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'links' => 0,
       'no_extras' => 1,
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
       'identifier' => '',
       'link' => 0,
@@ -152,11 +152,8 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
       'context' => 'argument_entity_id:node_1',
     );
     $pane->cache = array(
-      'method' => 'simple',
-      'settings' => array(
-        'lifetime' => 28800,
-        'granularity' => 'none',
-      ),
+      'method' => '0',
+      'settings' => array(),
     );
     $pane->style = array(
       'settings' => NULL,
@@ -381,7 +378,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'links' => 1,
       'no_extras' => 1,
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
       'identifier' => '',
       'link' => 1,
@@ -591,6 +588,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
           'settings' => array(
             'type' => array(
               'ding_campaign' => 'ding_campaign',
+              'ding_library' => 'ding_library',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
