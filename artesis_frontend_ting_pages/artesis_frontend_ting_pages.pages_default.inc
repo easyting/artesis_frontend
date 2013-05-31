@@ -44,7 +44,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     ),
   );
   $display->cache = array();
-  $display->title = '';
+  $display->title = '%ting_collection:title_full';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
@@ -230,7 +230,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-8'] = $pane;
     $display->panels['right'][3] = 'new-8';
-  $display->hide_title = PANELS_TITLE_NONE;
+  $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ting_collection_panel_context_4'] = $handler;
