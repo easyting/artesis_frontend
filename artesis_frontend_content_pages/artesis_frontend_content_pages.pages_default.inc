@@ -1104,15 +1104,15 @@ return TRUE;
     'relationships' => array(),
     'access' => array(
       'plugins' => array(
-        0 => array(
+        1 => array(
           'name' => 'node_type',
           'settings' => array(
             'type' => array(
-              'ding_campaign' => 'ding_campaign',
+              'ding_page' => 'ding_page',
             ),
           ),
           'context' => 'argument_entity_id:node_1',
-          'not' => TRUE,
+          'not' => FALSE,
         ),
       ),
       'logic' => 'and',
@@ -1229,7 +1229,7 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-36'] = $pane;
     $display->panels['right'][1] = 'new-36';
@@ -1254,7 +1254,7 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-37'] = $pane;
     $display->panels['right'][2] = 'new-37';
