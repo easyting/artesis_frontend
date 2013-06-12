@@ -274,7 +274,6 @@ function artesis_frontend_preprocess_views_view_fields(&$variables) {
 
     // Required field not found, do nothing.
     if (!isset($variables['fields']['field_address'])) {
-      watchdog('artesis_frontend', 'Address field not set. Please check pane id.', WATCHDOG_DEBUG);
       return;
     }
 
