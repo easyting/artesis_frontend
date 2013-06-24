@@ -11,11 +11,11 @@ function artesis_frontend_term_pages_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'custom_view_of_taxonomy_term';
+  $view->name = 'artesis_category_taxonomy_term';
   $view->description = 'A view to emulate Drupal core\'s handling of taxonomy/term.';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'Artesis taxonomy term';
+  $view->human_name = 'Artesis category taxonomy term';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -31,6 +31,10 @@ function artesis_frontend_term_pages_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'node';
+  /* Sort criterion: Content: Date and time -  start date (field_event_date) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -67,17 +71,6 @@ function artesis_frontend_term_pages_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Content: Date and time -  start date (field_event_date) */
-  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
-  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
-  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
-  $handler->display->display_options['sorts']['field_event_date_value']['order'] = 'DESC';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'taxonomy/term/%/views';
 
   /* Display: Feed */
@@ -91,7 +84,7 @@ function artesis_frontend_term_pages_views_default_views() {
     'page' => 'page',
     'default' => 0,
   );
-  $translatables['custom_view_of_taxonomy_term'] = array(
+  $translatables['artesis_category_taxonomy_term'] = array(
     t('Master'),
     t('more'),
     t('Apply'),
@@ -111,7 +104,7 @@ function artesis_frontend_term_pages_views_default_views() {
     t('Page'),
     t('Feed'),
   );
-  $export['custom_view_of_taxonomy_term'] = $view;
+  $export['artesis_category_taxonomy_term'] = $view;
 
   return $export;
 }
