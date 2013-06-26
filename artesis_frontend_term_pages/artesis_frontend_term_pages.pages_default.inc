@@ -299,7 +299,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
               'eddb_editorial_base' => 'eddb_editorial_base',
             ),
           ),
-          'context' => 'relationship_entity_from_schema:vid-taxonomy_term-taxonomy_vocabulary_1',
+          'context' => 'argument_term_1',
           'not' => FALSE,
         ),
       ),
