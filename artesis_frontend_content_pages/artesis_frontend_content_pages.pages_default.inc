@@ -1214,7 +1214,7 @@ return TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'links' => 0,
-      'no_extras' => 1,
+      'no_extras' => 0,
       'override_title' => 1,
       'override_title_text' => '',
       'identifier' => '',
@@ -1233,31 +1233,6 @@ return TRUE;
     $pane->locks = array();
     $display->content['new-36'] = $pane;
     $display->panels['right'][1] = 'new-36';
-    $pane = new stdClass();
-    $pane->pid = 'new-37';
-    $pane->panel = 'right';
-    $pane->type = 'ding_related_items';
-    $pane->subtype = 'ding_related_items';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
-    );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-37'] = $pane;
-    $display->panels['right'][2] = 'new-37';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = 'new-35';
   $handler->conf['display'] = $display;
