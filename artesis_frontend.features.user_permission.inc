@@ -76,8 +76,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'similarterms',
   );
@@ -96,7 +95,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'access site reports',
     'roles' => array(
       0 => 'administrator',
-      1 => 'local administrator',
     ),
     'module' => 'system',
   );
@@ -153,8 +151,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'comment',
   );
@@ -173,7 +170,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'administer dibs settings',
     'roles' => array(
       0 => 'administrator',
-      1 => 'local administrator',
     ),
     'module' => 'dibs',
   );
@@ -183,7 +179,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'administer dibs transactions',
     'roles' => array(
       0 => 'administrator',
-      1 => 'local administrator',
     ),
     'module' => 'dibs',
   );
@@ -238,6 +233,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'administer google analytics',
     'roles' => array(
       0 => 'administrator',
+      1 => 'local administrator',
     ),
     'module' => 'googleanalytics',
   );
@@ -294,8 +290,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -362,8 +357,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'pathauto',
   );
@@ -483,7 +477,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'administer ting settings',
     'roles' => array(
       0 => 'administrator',
-      1 => 'local administrator',
     ),
     'module' => 'ting',
   );
@@ -503,8 +496,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'path',
   );
@@ -551,6 +543,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       0 => 'administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -608,7 +601,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'configure nodelist',
     'roles' => array(
       0 => 'administrator',
-      1 => 'local administrator',
     ),
     'module' => 'ding_nodelist',
   );
@@ -657,9 +649,7 @@ function artesis_frontend_user_default_permissions() {
   // Exported permission: create mkdru content.
   $permissions['create mkdru content'] = array(
     'name' => 'create mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -719,9 +709,7 @@ function artesis_frontend_user_default_permissions() {
   // Exported permission: delete any mkdru content.
   $permissions['delete any mkdru content'] = array(
     'name' => 'delete any mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -760,9 +748,7 @@ function artesis_frontend_user_default_permissions() {
   // Exported permission: delete own mkdru content.
   $permissions['delete own mkdru content'] = array(
     'name' => 'delete own mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -781,8 +767,7 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      2 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -842,46 +827,12 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: delete terms in 6.
-  $permissions['delete terms in 6'] = array(
-    'name' => 'delete terms in 6',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: delete terms in 7.
-  $permissions['delete terms in 7'] = array(
-    'name' => 'delete terms in 7',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: delete terms in 8.
-  $permissions['delete terms in 8'] = array(
-    'name' => 'delete terms in 8',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: edit any ding_campaign content.
   $permissions['edit any ding_campaign content'] = array(
     'name' => 'edit any ding_campaign content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -891,9 +842,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit any ding_library content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -903,8 +852,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit any ding_page content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -922,9 +870,7 @@ function artesis_frontend_user_default_permissions() {
   // Exported permission: edit any mkdru content.
   $permissions['edit any mkdru content'] = array(
     'name' => 'edit any mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -933,7 +879,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit opening hours for content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
+      1 => 'journalist',
       2 => 'local administrator',
     ),
     'module' => 'opening_hours',
@@ -944,9 +890,8 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit own comments',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      1 => 'journalist',
+      2 => 'local administrator',
     ),
     'module' => 'comment',
   );
@@ -956,8 +901,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit own ding_campaign content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -967,9 +911,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit own ding_library content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -979,8 +921,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit own ding_page content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -998,9 +939,7 @@ function artesis_frontend_user_default_permissions() {
   // Exported permission: edit own mkdru content.
   $permissions['edit own mkdru content'] = array(
     'name' => 'edit own mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -1018,8 +957,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit terms in 1',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'taxonomy',
   );
@@ -1029,8 +967,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit terms in 2',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'taxonomy',
   );
@@ -1040,8 +977,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit terms in 3',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'taxonomy',
   );
@@ -1051,8 +987,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit terms in 4',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'taxonomy',
   );
@@ -1062,41 +997,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'edit terms in 5',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: edit terms in 6.
-  $permissions['edit terms in 6'] = array(
-    'name' => 'edit terms in 6',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: edit terms in 7.
-  $permissions['edit terms in 7'] = array(
-    'name' => 'edit terms in 7',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
-    ),
-    'module' => 'taxonomy',
-  );
-
-  // Exported permission: edit terms in 8.
-  $permissions['edit terms in 8'] = array(
-    'name' => 'edit terms in 8',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'taxonomy',
   );
@@ -1124,8 +1025,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'manage item viewer',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
     ),
     'module' => 'ding_item_viewer',
   );
@@ -1135,9 +1034,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'notify of path changes',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'pathauto',
   );
@@ -1147,6 +1044,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'opt-in or out of tracking',
     'roles' => array(
       0 => 'administrator',
+      1 => 'local administrator',
     ),
     'module' => 'googleanalytics',
   );
@@ -1156,9 +1054,6 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'override ding_page premium option',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
     ),
     'module' => 'nopremium',
   );
@@ -1169,9 +1064,6 @@ function artesis_frontend_user_default_permissions() {
     'roles' => array(
       0 => 'administrator',
       1 => 'authenticated user',
-      2 => 'editor',
-      3 => 'journalist',
-      4 => 'local administrator',
     ),
     'module' => 'dibs',
   );
@@ -1181,9 +1073,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
@@ -1195,9 +1085,8 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
       1 => 'anonymous user',
       2 => 'authenticated user',
-      3 => 'editor',
-      4 => 'journalist',
-      5 => 'local administrator',
+      3 => 'journalist',
+      4 => 'local administrator',
     ),
     'module' => 'search',
   );
@@ -1255,9 +1144,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'translate user-defined strings',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'i18n_string',
   );
@@ -1322,8 +1209,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'use panels in place editing',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'panels',
   );
@@ -1361,9 +1247,7 @@ function artesis_frontend_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
+      1 => 'local administrator',
     ),
     'module' => 'node',
   );
