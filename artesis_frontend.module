@@ -225,6 +225,7 @@ function artesis_frontend_preprocess_page($page) {
   $og_title = '';
   $og_description = '';
   $og_imageurl = '';
+  $og_url = '';
   if (arg(0) == 'ting' && arg(1) == 'object' && arg(2) != NULL) {
     $ting_entity = ting_object_load(arg(2));
     if (count($ting_entity->reply->record['dc:title']) > 0 ) {
@@ -240,6 +241,7 @@ function artesis_frontend_preprocess_page($page) {
         $og_description = $ting_entity->reply->record['dc:description'][0][0];
       }
     }
+    $og_url = url(NULL, array('absolute' => TRUE)) . current_path();
   }
   elseif (arg(0) == 'ting' && arg(1) == 'collection' && arg(2) != NULL) {
     $ting_collection = ting_object_load(arg(2));
@@ -257,10 +259,12 @@ function artesis_frontend_preprocess_page($page) {
         $og_description = $ting_collection->reply->record['dc:description']['dkdcplus:series'][0];
       }
     }
+    $og_url = url(NULL, array('absolute' => TRUE)) . current_path();
   }
   elseif (arg(0) == 'search' && arg(1) == 'ting') {
     $og_title = t('Search results');
     $og_description = arg(2) != NULL ? t('Search results for') . ' ' . arg(2) . '.' : url(NULL, array('absolute' => TRUE)) . current_path();
+    $og_url = url(NULL, array('absolute' => TRUE)) . current_path();
   }
 
   if ($og_title !='') {
@@ -293,15 +297,15 @@ function artesis_frontend_preprocess_page($page) {
       ),
     );
   }
-
-  $og_elements['og_url'] = array(
-    '#tag' => 'meta',
-    '#attributes' => array(
-      'property' => 'og:url',
-      'content' => url(NULL, array('absolute' => TRUE)) . current_path(),
-    ),
-  );
-
+  if ($og_url != '') {
+    $og_elements['og_url'] = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'property' => 'og:url',
+        'content' => $og_url,
+      ),
+    );
+  }
   if (!empty($og_elements)) {
     foreach ($og_elements as $key => $og_element) {
           drupal_add_html_head($og_element, $key);
