@@ -1,0 +1,12 @@
+name = Artesis frontend opengraph metadata
+description = Metadata for event, page, library and news content types
+core = 7.x
+package = Features
+version = 7.x-1.13
+project = artesis_frontend_opengraph_metadata
+dependencies[] = metatag
+features[features_api][] = api:1
+features[metatag][] = node:ding_event
+features[metatag][] = node:ding_library
+features[metatag][] = node:ding_news
+features[metatag][] = node:ding_page
