@@ -228,17 +228,23 @@ function artesis_frontend_preprocess_page($page) {
   $og_url = '';
   if (arg(0) == 'ting' && arg(1) == 'object' && arg(2) != NULL) {
     $ting_entity = ting_object_load(arg(2));
-    if (count($ting_entity->reply->record['dc:title']) > 0 ) {
-      if (is_string($ting_entity->reply->record['dc:title'][0])) {
-        $og_title = $ting_entity->reply->record['dc:title'][0];
-      }
-      elseif (is_array($ting_entity->reply->record['dc:title'][0])) {
-        $og_title = $ting_entity->reply->record['dc:title'][0][0];
+    if (isset($ting_entity->reply->record['dc:title'])) {
+      if (isset($ting_entity->reply->record['dc:title'][0])) {
+        if (is_string($ting_entity->reply->record['dc:title'][0])) {
+         $og_title = $ting_entity->reply->record['dc:title'][0];
+        }
+        elseif (is_array($ting_entity->reply->record['dc:title'][0])) {
+          if (isset($ting_entity->reply->record['dc:title'][0][0])) {
+            $og_title = $ting_entity->reply->record['dc:title'][0][0];
+          }
+        }
       }
     }
-    if (count($ting_entity->reply->record['dc:description']) > 0 ) {
-      if (count($ting_entity->reply->record['dc:description'][0]) > 0) {
-        $og_description = $ting_entity->reply->record['dc:description'][0][0];
+    if (isset($ting_entity->reply->record['dc:description'])) {
+      if (isset($ting_entity->reply->record['dc:description'][0])) {
+        if (count($ting_entity->reply->record['dc:description'][0]) > 0) {
+          $og_description = $ting_entity->reply->record['dc:description'][0][0];
+        }
       }
     }
     $og_url = url(NULL, array('absolute' => TRUE)) . current_path();
@@ -247,16 +253,22 @@ function artesis_frontend_preprocess_page($page) {
     $ting_collection = ting_object_load(arg(2));
     if (count($ting_collection->reply->record['dc:title']) > 0 ) {
       $first_title_element = array_shift(array_values($ting_collection->reply->record['dc:title']));
-      if (is_string($first_title_element[0])) {
-        $og_title = $first_title_element[0];
+      if (isset($first_title_element[0])) {
+        if (is_string($first_title_element[0])) {
+          $og_title = $first_title_element[0];
+        }
       }
-      elseif (is_string($ting_collection->reply->record['dc:title']['dkdcplus:full'][0])) {
-        $og_title = $ting_collection->reply->record['dc:title']['dkdcplus:full'][0];
+      elseif (isset($ting_collection->reply->record['dc:title']['dkdcplus:full'][0])) {
+        if (is_string($ting_collection->reply->record['dc:title']['dkdcplus:full'][0])) {
+          $og_title = $ting_collection->reply->record['dc:title']['dkdcplus:full'][0];
+        }
       }
     }
-    if (count($ting_collection->reply->record['dc:description']['dkdcplus:series']) > 0 ) {
-      if (is_string($ting_collection->reply->record['dc:description']['dkdcplus:series'][0])) {
-        $og_description = $ting_collection->reply->record['dc:description']['dkdcplus:series'][0];
+    if (isset($ting_collection->reply->record['dc:description'])) {
+      if (isset($ting_collection->reply->record['dc:description']['dkdcplus:series'][0])) {
+        if (is_string($ting_collection->reply->record['dc:description']['dkdcplus:series'][0])) {
+          $og_description = $ting_collection->reply->record['dc:description']['dkdcplus:series'][0];
+        }
       }
     }
     $og_url = url(NULL, array('absolute' => TRUE)) . current_path();
