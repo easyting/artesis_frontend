@@ -351,8 +351,7 @@ function alpha_basetheme_preprocess_zone(&$vars) {
     (isset($menu_object->type) && $menu_object->type == 'ding_news') ||
     (isset($menu_object->type) && $menu_object->type == 'ding_library')) {
     $vars['facebookshare']['visible'] = TRUE;
-    $url = url(NULL, array('absolute' => TRUE)) . current_path();
-    $vars['facebookshare']['content'] = theme('facebookshare', array('url' => $url));
+    $vars['facebookshare']['content'] = theme('facebookshare');
   }
   else {
     $vars['facebookshare']['visible'] = FALSE;
