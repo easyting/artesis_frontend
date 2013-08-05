@@ -450,16 +450,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer ting settings.
-  $permissions['administer ting settings'] = array(
-    'name' => 'administer ting settings',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'ting',
-  );
-
   // Exported permission: administer tipsy.
   $permissions['administer tipsy'] = array(
     'name' => 'administer tipsy',
