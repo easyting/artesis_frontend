@@ -4,4 +4,21 @@
  * Drupal requires this file.
  */
 
+/**
+ * Implements hook_views_query_alter().
+ *
+ * Modifying query so that it removes duplicated from ding_node_search.
+ */
+function artesis_frontend_search_pages_query_alter($query) {
+  if (isset($query->alterMetaData)) {
+    if (isset($query->alterMetaData['view'])) {
+      if ($query->alterMetaData['view']->name == 'ding_node_search') {
+        $fields =& $query->getGroupBy();
+        unset($fields['score']);
+        $query->groupBy('nid');
+      }
+    }
+  }
+}
+
 include_once('artesis_frontend_search_pages.features.inc');
