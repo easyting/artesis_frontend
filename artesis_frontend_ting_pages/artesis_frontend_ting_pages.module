@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Drupal requires this file.
- */
-
-include_once('artesis_frontend_ting_pages.features.inc');
