@@ -337,28 +337,6 @@ function artesis_frontend_preprocess_page($page) {
 }
 
 /**
- * Implements theme_preprocess_zone().
- *
- * Allowing rendering of the facebook share button on specific pages.
- */
-function alpha_basetheme_preprocess_zone(&$vars) {
-  $menu_object = menu_get_object();
-  if ((arg(0) == 'ting' && arg(1) == 'object' && arg(2) != NULL) ||
-    (arg(0) == 'ting' && arg(1) == 'collection' && arg(2) != NULL) ||
-    (arg(0) == 'search' && arg(1) == 'ting') ||
-    (isset($menu_object->type) && $menu_object->type == 'ding_page') ||
-    (isset($menu_object->type) && $menu_object->type == 'ding_event') ||
-    (isset($menu_object->type) && $menu_object->type == 'ding_news') ||
-    (isset($menu_object->type) && $menu_object->type == 'ding_library')) {
-    $vars['facebookshare']['visible'] = TRUE;
-    $vars['facebookshare']['content'] = theme('facebookshare');
-  }
-  else {
-    $vars['facebookshare']['visible'] = FALSE;
-  }
-}
-
-/**
  * Implements hook_entity_view_alter().
  *
  * Remove History section from user profile.
