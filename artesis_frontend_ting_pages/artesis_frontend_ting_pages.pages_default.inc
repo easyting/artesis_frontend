@@ -401,7 +401,7 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
       'formatter' => 'ting_reference_reverse_default',
       'formatter_settings' => array(),
       'context' => 'argument_ting_object_id_17',
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
