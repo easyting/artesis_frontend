@@ -62,15 +62,62 @@ function artesis_frontend_term_pages_views_default_views() {
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['term_node_tid_depth_modifier']['specify_validation'] = TRUE;
+  $handler->display->display_options['filter_groups']['operator'] = 'OR';
+  $handler->display->display_options['filter_groups']['groups'] = array(
+    1 => 'AND',
+    2 => 'AND',
+  );
   /* Filter criterion: Content: Published or admin */
   $handler->display->display_options['filters']['status_extra']['id'] = 'status_extra';
   $handler->display->display_options['filters']['status_extra']['table'] = 'node';
   $handler->display->display_options['filters']['status_extra']['field'] = 'status_extra';
-  $handler->display->display_options['filters']['status_extra']['group'] = 0;
-  $handler->display->display_options['filters']['status_extra']['expose']['operator'] = FALSE;
+  $handler->display->display_options['filters']['status_extra']['group'] = 1;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ding_event' => 'ding_event',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Date: Date (node) */
+  $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['table'] = 'node';
+  $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
+  $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
+  $handler->display->display_options['filters']['date_filter']['group'] = 1;
+  $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
+  $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
+    'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
+    'field_data_field_event_date.field_event_date_value2' => 'field_data_field_event_date.field_event_date_value2',
+  );
+  /* Filter criterion: Content: Published or admin */
+  $handler->display->display_options['filters']['status_extra_1']['id'] = 'status_extra_1';
+  $handler->display->display_options['filters']['status_extra_1']['table'] = 'node';
+  $handler->display->display_options['filters']['status_extra_1']['field'] = 'status_extra';
+  $handler->display->display_options['filters']['status_extra_1']['group'] = 2;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type_1']['id'] = 'type_1';
+  $handler->display->display_options['filters']['type_1']['table'] = 'node';
+  $handler->display->display_options['filters']['type_1']['field'] = 'type';
+  $handler->display->display_options['filters']['type_1']['value'] = array(
+    'ding_news' => 'ding_news',
+    'ding_page' => 'ding_page',
+  );
+  $handler->display->display_options['filters']['type_1']['group'] = 2;
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Date and time -  start date (field_event_date) */
+  $handler->display->display_options['sorts']['field_event_date_value']['id'] = 'field_event_date_value';
+  $handler->display->display_options['sorts']['field_event_date_value']['table'] = 'field_data_field_event_date';
+  $handler->display->display_options['sorts']['field_event_date_value']['field'] = 'field_event_date_value';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   $handler->display->display_options['path'] = 'taxonomy/term/%/views';
 
   /* Display: Feed */
