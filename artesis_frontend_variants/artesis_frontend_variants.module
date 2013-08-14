@@ -11,7 +11,18 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   if (is_null($term)) {
     return FALSE;
   }
+  // Fetch all term view variants;
+  $page = 'term_view';
+  $task = page_manager_get_task($page);
+  ctools_get_plugins('page_manager', 'task_handlers', 'panel_context');
 
+  // Choose Artesis taxonomy EB variant.
+  $handlers = page_manager_load_sorted_handlers($task, '', TRUE);
+  $handler = $handlers['term_view_panel_context_2'];
+  if (empty($handler)) {
+    watchdog('Artesis frontend variants', 'Can not find default template for creating a variant for the term %termid.',  array('%termid' => $term->tid));
+    return FALSE;
+  }
   // Generate some unique names and other needed info.
   $handler_name = 'term_view_term_id_' . $term->tid;
   $variant_title = 'Variant for ' . $term->name;
@@ -21,148 +32,13 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
       $term->tid => $term->tid,
     ),
   );
-  $left_panel_pane = 'new-l-' . $term->tid;
-  $right_panel_pane = 'new-r-' . $term->tid;
+
+  // Maintain variables from hardcoded version of variant creation.
   $pipeline = module_exists('panels_ipe') ? 'ipe' : 'standard';
-
-  // Create a new variant based on an existing term.
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially. */
-  $handler->api_version = 1;
   $handler->name = $handler_name;
-  $handler->task = 'term_view';
-  $handler->subtask = '';
-  $handler->handler = 'panel_context';
-  $handler->weight = -50;
-  $handler->conf = array(
-    'title' => $variant_title,
-    'no_blocks' => 0,
-    'pipeline' => $pipeline,
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(
-      0 => array(
-        'identifier' => 'Taxonomy vocabulary from Taxonomy term (on taxonomy_term_data.vocabulary)',
-        'keyword' => 'taxonomy_vocabulary',
-        'name' => 'entity_from_schema:vid-taxonomy_term-taxonomy_vocabulary',
-        'context' => 'argument_term_1',
-        'id' => 1,
-      ),
-    ),
-    'access' => array(
-      'plugins' => array(
-        0 => array(
-          'name' => 'term',
-          'settings' => $access_plugin_settings,
-          'context' => 'argument_term_1',
-          'not' => FALSE,
-        ),
-      ),
-      'logic' => 'and',
-    ),
-  );
-  $display = new panels_display();
-  $display->layout = 'omega_12_mainpage_complex';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'top_left' => NULL,
-      'top_right' => NULL,
-      'middle' => NULL,
-      'bottom_left_small' => NULL,
-      'bottom_right_small' => NULL,
-      'bottom_medium_right' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '%term:parent';
-  $display->content = array();
-  $display->panels = array();
-
-  // Left panel pane - Menu.
-  $pane = new stdClass();
-  $pane->pid = $left_panel_pane;
-  $pane->panel = 'top_left';
-  $pane->type = 'views';
-  $pane->subtype = 'parent_vocabulary_terms';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_pager_settings' => 0,
-    'use_pager' => 0,
-    'nodes_per_page' => '0',
-    'pager_id' => '0',
-    'offset' => '0',
-    'more_link' => 0,
-    'feed_icons' => 0,
-    'panel_args' => 0,
-    'link_to_view' => 0,
-    'args' => '',
-    'url' => '',
-    'display' => 'block_1',
-    'context' => array(
-      0 => 'relationship_entity_from_schema:vid-taxonomy_term-taxonomy_vocabulary_1.vid',
-      1 => '',
-    ),
-    'override_title' => 1,
-    'override_title_text' => '',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $display->content[$left_panel_pane] = $pane;
-  $display->panels['top_left'][0] = $left_panel_pane;
-
-  // Right panel pane - Content.
-  $pane = new stdClass();
-  $pane->pid = $right_panel_pane;
-  $pane->panel = 'top_right';
-  $pane->type = 'views';
-  $pane->subtype = 'taxonomy_term';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_pager_settings' => 0,
-    'use_pager' => 1,
-    'nodes_per_page' => '0',
-    'pager_id' => '0',
-    'offset' => '0',
-    'more_link' => 0,
-    'feed_icons' => 0,
-    'panel_args' => 1,
-    'link_to_view' => 0,
-    'args' => '1',
-    'url' => '',
-    'display' => 'page',
-    'context' => array(
-      0 => 'argument_term_1.tid',
-      1 => '',
-    ),
-    'override_title' => 0,
-    'override_title_text' => '',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $display->content[$right_panel_pane] = $pane;
-  $display->panels['top_right'][0] = $right_panel_pane;
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = $right_panel_pane;
-  $handler->conf['display'] = $display;
+  $handler->conf['title'] = $variant_title;
+  $handler->conf['pipeline'] = $pipeline;
+  $handler->conf['access']['plugins'][0]['settings'] = $access_plugin_settings;
 
   // Save the handler.
   page_manager_save_task_handler($handler);
