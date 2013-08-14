@@ -21,4 +21,41 @@ function artesis_frontend_search_pages_query_alter($query) {
   }
 }
 
+/**
+ * Implements hook_views_pre_execute().
+ *
+ * Overwrites query for ding_node_search. Keeping most of the
+ * elements of the initial query.
+ */
+function artesis_frontend_search_pages_views_pre_execute(&$view) {
+  // Split input string to sub strings if something other than letter or number is met.
+  $search_substrings = preg_split("/[^a-z0-9]+/i", $view->args[0]);
+  $query = db_select('node');
+  $query->addField('node', 'changed', 'node_changed');
+  $query->addField('node', 'nid', 'nid');
+  $query->leftJoin('search_index', 'search_index', 'nid = search_index.sid');
+  $query->leftJoin('search_total', 'search_total', 'search_index.word = search_total.word');
+
+  $and = db_and();
+  $and->condition('node.status', '1', '=');
+  $and->condition('search_index.type', 'node', '=');
+  // Or clause for all the indexed words we will search.
+  $and_or = db_or();
+  for ($i = 0; $i < sizeof($search_substrings); $i++) {
+    // Add if to WHERE condition so that no empty word is added.
+    if (strlen($search_substrings[$i]) > 0) {
+      $and_or->condition('search_index.word', '%' . $search_substrings[$i] . '%', 'like');
+    }
+  }
+  $and->condition($and_or);
+  $and->condition('node.type', 'ding_campaign', '<>');
+  $query->condition($and);
+  $query->groupBy('search_index.sid');
+  $query->groupBy('node_changed');
+  $query->groupBy('nid');
+  $query->orderBy('node_changed', 'DESC');
+  $query->range(0, 10);
+  $variable = explode(' ', $view->build_info['query']);
+  $view->build_info['query'] = $query;
+}
 include_once('artesis_frontend_search_pages.features.inc');
