@@ -126,6 +126,7 @@ function _artesis_frontend_get_allowed_plugins() {
   return array(
     'ding_nodelist' => 'ding_nodelist',
     'ding_item_list' => 'ding_item_list',
+    'alma_item_list' => 'alma_item_list',
     'campaign' => 'campaign',
     'term_description' => 'term_description',
     'ding_item_viewer-item_viewer' => 'block',
