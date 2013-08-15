@@ -154,12 +154,8 @@ function _artesis_frontend_get_allowed_plugins() {
   // Blocks must be declared by 'block' value.
   return array(
     'ding_nodelist' => 'ding_nodelist',
-    'ding_item_list' => 'ding_item_list',
-    'alma_item_list' => 'alma_item_list',
     'campaign' => 'campaign',
     'term_description' => 'term_description',
-    'ding_item_viewer-item_viewer' => 'block',
-    'carousel' => 'carousel',
     'ding_library_opening_hours-ding_library_opened_today' => 'block',
   );
 }
