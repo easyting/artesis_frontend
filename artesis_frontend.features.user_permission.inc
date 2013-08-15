@@ -983,18 +983,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'googleanalytics',
   );
 
-  // Exported permission: override ding_page premium option.
-  $permissions['override ding_page premium option'] = array(
-    'name' => 'override ding_page premium option',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'nopremium',
-  );
-
   // Exported permission: revert revisions.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
