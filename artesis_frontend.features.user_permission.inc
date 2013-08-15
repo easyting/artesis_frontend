@@ -159,26 +159,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer dibs settings.
-  $permissions['administer dibs settings'] = array(
-    'name' => 'administer dibs settings',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'dibs',
-  );
-
-  // Exported permission: administer dibs transactions.
-  $permissions['administer dibs transactions'] = array(
-    'name' => 'administer dibs transactions',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'dibs',
-  );
-
   // Exported permission: administer features.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -942,19 +922,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'googleanalytics',
-  );
-
-  // Exported permission: pay using dibs.
-  $permissions['pay using dibs'] = array(
-    'name' => 'pay using dibs',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'authenticated user',
-      2 => 'editor',
-      3 => 'journalist',
-      4 => 'local administrator',
-    ),
-    'module' => 'dibs',
   );
 
   // Exported permission: revert revisions.
