@@ -179,15 +179,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'dibs',
   );
 
-  // Exported permission: administer ding provider.
-  $permissions['administer ding provider'] = array(
-    'name' => 'administer ding provider',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'ding_provider',
-  );
-
   // Exported permission: administer features.
   $permissions['administer features'] = array(
     'name' => 'administer features',
