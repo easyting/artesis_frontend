@@ -329,15 +329,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: administer profiles.
-  $permissions['administer profiles'] = array(
-    'name' => 'administer profiles',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'profile2',
-  );
-
   // Exported permission: administer relation types.
   $permissions['administer relation types'] = array(
     'name' => 'administer relation types',
