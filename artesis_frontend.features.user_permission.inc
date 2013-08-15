@@ -932,17 +932,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'features',
   );
 
-  // Exported permission: manage item viewer.
-  $permissions['manage item viewer'] = array(
-    'name' => 'manage item viewer',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
-    ),
-    'module' => 'ding_item_viewer',
-  );
-
   // Exported permission: notify of path changes.
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
