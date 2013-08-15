@@ -83,7 +83,6 @@ features[user_permission][] = administer comments
 features[user_permission][] = administer content types
 features[user_permission][] = administer dibs settings
 features[user_permission][] = administer dibs transactions
-features[user_permission][] = administer ding provider
 features[user_permission][] = administer features
 features[user_permission][] = administer fieldgroups
 features[user_permission][] = administer filters
