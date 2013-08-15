@@ -240,16 +240,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'locale',
   );
 
-  // Exported permission: administer metasearch interfaces.
-  $permissions['administer metasearch interfaces'] = array(
-    'name' => 'administer metasearch interfaces',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
   // Exported permission: administer modules.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
@@ -606,24 +596,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create metasearch interface.
-  $permissions['create metasearch interface'] = array(
-    'name' => 'create metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: create mkdru content.
-  $permissions['create mkdru content'] = array(
-    'name' => 'create mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create relations.
   $permissions['create relations'] = array(
     'name' => 'create relations',
@@ -677,15 +649,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any mkdru content.
-  $permissions['delete any mkdru content'] = array(
-    'name' => 'delete any mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete own ding_campaign content.
   $permissions['delete own ding_campaign content'] = array(
     'name' => 'delete own ding_campaign content',
@@ -714,15 +677,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'local administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own mkdru content.
-  $permissions['delete own mkdru content'] = array(
-    'name' => 'delete own mkdru content',
-    'roles' => array(
-      0 => 'administrator',
     ),
     'module' => 'node',
   );
@@ -848,25 +802,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any metasearch interface.
-  $permissions['edit any metasearch interface'] = array(
-    'name' => 'edit any metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: edit any mkdru content.
-  $permissions['edit any mkdru content'] = array(
-    'name' => 'edit any mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit opening hours for content.
   $permissions['edit opening hours for content'] = array(
     'name' => 'edit opening hours for content',
@@ -920,25 +855,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'local administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own metasearch interface.
-  $permissions['edit own metasearch interface'] = array(
-    'name' => 'edit own metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: edit own mkdru content.
-  $permissions['edit own mkdru content'] = array(
-    'name' => 'edit own mkdru content',
-    'roles' => array(
-      0 => 'administrator',
     ),
     'module' => 'node',
   );
