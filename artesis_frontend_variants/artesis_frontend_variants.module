@@ -39,7 +39,17 @@ function _artesis_frontend_variants_create_variant($term = NULL) {
   $handler->conf['title'] = $variant_title;
   $handler->conf['pipeline'] = $pipeline;
   $handler->conf['access']['plugins'][0]['settings'] = $access_plugin_settings;
-
+  $handler->conf['access']['plugins'][0]['name'] = 'term';
+  // Assign weight 'higher' than the default template's.
+  $handler->weight = -50;
+  // Add relationships.
+  $handler->conf['relationships'][0] = array(
+    'identifier' => 'Taxonomy vocabulary from Taxonomy term (on taxonomy_term_data.vocabulary)',
+    'keyword' => 'taxonomy_vocabulary',
+    'name' => 'entity_from_schema:vid-taxonomy_term-taxonomy_vocabulary',
+    'context' => 'argument_term_1',
+    'id' => 1,
+  );
   // Save the handler.
   page_manager_save_task_handler($handler);
   return TRUE;
