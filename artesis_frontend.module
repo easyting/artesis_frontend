@@ -126,6 +126,7 @@ function _artesis_frontend_get_allowed_plugins() {
   return array(
     'ding_nodelist' => 'ding_nodelist',
     'ding_item_list' => 'ding_item_list',
+    'alma_item_list' => 'alma_item_list',
     'campaign' => 'campaign',
     'term_description' => 'term_description',
     'ding_item_viewer-item_viewer' => 'block',
@@ -214,9 +215,115 @@ function artesis_frontend_preprocess_panels_ipe_pane_wrapper($vars) {
  * Implements hook_preprocess_page().
  * Removes delete button on non-nodelist panes for
  * certain use role (IPE_RESTRICTED_ROLE).
+ * Additionally, it adds open graph metadata for
+ * pages searchResult, ting object and ting collection.
  */
 function artesis_frontend_preprocess_page($page) {
   global $user;
+
+  // Detect different pages and add the appropriate open graph metadata.
+  $og_elements = array();
+  $og_title = '';
+  $og_description = '';
+  $og_imageurl = '';
+  $og_url = '';
+  if (arg(0) == 'ting' && arg(1) == 'object' && arg(2) != NULL) {
+    $ting_entity = ting_object_load(arg(2));
+    if (isset($ting_entity->reply->record['dc:title'])) {
+      if (isset($ting_entity->reply->record['dc:title'][0])) {
+        if (is_string($ting_entity->reply->record['dc:title'][0])) {
+         $og_title = $ting_entity->reply->record['dc:title'][0];
+        }
+        elseif (is_array($ting_entity->reply->record['dc:title'][0])) {
+          if (isset($ting_entity->reply->record['dc:title'][0][0])) {
+            $og_title = $ting_entity->reply->record['dc:title'][0][0];
+          }
+        }
+      }
+    }
+    if (isset($ting_entity->reply->record['dc:description'])) {
+      if (isset($ting_entity->reply->record['dc:description'][0])) {
+        if (count($ting_entity->reply->record['dc:description'][0]) > 0) {
+          $og_description = $ting_entity->reply->record['dc:description'][0][0];
+        }
+      }
+    }
+    $og_url = url(NULL, array('absolute' => TRUE)) . current_path();
+  }
+  elseif (arg(0) == 'ting' && arg(1) == 'collection' && arg(2) != NULL) {
+    $ting_collection = ting_object_load(arg(2));
+    if (count($ting_collection->reply->record['dc:title']) > 0 ) {
+      $first_title_element = array_shift(array_values($ting_collection->reply->record['dc:title']));
+      if (isset($first_title_element[0])) {
+        if (is_string($first_title_element[0])) {
+          $og_title = $first_title_element[0];
+        }
+      }
+      elseif (isset($ting_collection->reply->record['dc:title']['dkdcplus:full'][0])) {
+        if (is_string($ting_collection->reply->record['dc:title']['dkdcplus:full'][0])) {
+          $og_title = $ting_collection->reply->record['dc:title']['dkdcplus:full'][0];
+        }
+      }
+    }
+    if (isset($ting_collection->reply->record['dc:description'])) {
+      if (isset($ting_collection->reply->record['dc:description']['dkdcplus:series'][0])) {
+        if (is_string($ting_collection->reply->record['dc:description']['dkdcplus:series'][0])) {
+          $og_description = $ting_collection->reply->record['dc:description']['dkdcplus:series'][0];
+        }
+      }
+    }
+    $og_url = url(NULL, array('absolute' => TRUE)) . current_path();
+  }
+  elseif (arg(0) == 'search' && arg(1) == 'ting') {
+    $og_title = t('Search results');
+    $og_description = arg(2) != NULL ? t('Search results for') . ' ' . arg(2) . '.' : url(NULL, array('absolute' => TRUE)) . current_path();
+    $og_url = url(NULL, array('absolute' => TRUE)) . current_path();
+  }
+
+  if ($og_title !='') {
+    $og_elements['og_title'] = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'property' => 'og:title',
+        'content' => $og_title,
+      ),
+    );
+  }
+
+  if ($og_description != '') {
+    $og_elements['og_description'] = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'property' => 'og:description',
+        'content' => $og_description,
+      ),
+    );
+  }
+
+  // @todo find a way to retrieve this.
+  if ($og_imageurl != '') {
+    $og_elements['og_image'] = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'property' => 'og:image',
+        'content' => $og_imageurl,
+      ),
+    );
+  }
+  if ($og_url != '') {
+    $og_elements['og_url'] = array(
+      '#tag' => 'meta',
+      '#attributes' => array(
+        'property' => 'og:url',
+        'content' => $og_url,
+      ),
+    );
+  }
+  if (!empty($og_elements)) {
+    foreach ($og_elements as $key => $og_element) {
+          drupal_add_html_head($og_element, $key);
+    }
+  }
 
   if (in_array(IPE_RESTRICTED_ROLE, $user->roles)) {
     $protected_panes = drupal_static('artesis_frontend_ipe', array());

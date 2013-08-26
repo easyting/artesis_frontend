@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Install/uninstall file for Artesis Frontend Metadata feature
+ */
+
+/**
+ * Implements hook_install().
+ */
+function artesis_frontend_opengraph_metadata_install() {
+  variable_set('facebookshare_size', 'button_count');
+}
