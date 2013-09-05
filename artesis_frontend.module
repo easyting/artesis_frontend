@@ -21,54 +21,6 @@ function artesis_frontend_views_default_views_alter(&$views) {
 }
 
 /**
- * Helper function to get a list of roles that could be assigned to an user
- */
-function artesis_user_roles($membersonly = FALSE, $permission = NULL, $account = NULL) {
-  $query = db_select('role', 'r');
-  $query->addTag('translatable');
-  $query->fields('r', array('rid', 'name'));
-  $query->orderBy('weight');
-  $query->orderBy('name');
-  if (!empty($account)) {
-    $roles = $account->roles;
-    $authenticated = user_role_load(DRUPAL_AUTHENTICATED_RID);
-    unset($roles[DRUPAL_AUTHENTICATED_RID]);
-    $max_weight = $authenticated->weight;
-    foreach ($roles as $rid => $role_name) {
-      $role = user_role_load($rid);
-      if ($role->weight > $max_weight) {
-        $max_weight = $role->weight;
-      }
-    }
-    $query->condition('weight', $max_weight, '<=');
-  }
-  if (!empty($permission)) {
-    $query->innerJoin('role_permission', 'p', 'r.rid = p.rid');
-    $query->condition('p.permission', $permission);
-  }
-  $result = $query->execute();
-
-  $roles = array();
-  foreach ($result as $role) {
-    switch ($role->rid) {
-      // We only translate the built in role names
-      case DRUPAL_ANONYMOUS_RID:
-        if (!$membersonly) {
-          $roles[$role->rid] = t($role->name);
-        }
-        break;
-      case DRUPAL_AUTHENTICATED_RID:
-        $roles[$role->rid] = t($role->name);
-        break;
-      default:
-        $roles[$role->rid] = $role->name;
-    }
-  }
-
-  return $roles;
-}
-
-/**
  * Permit users to create only roles that do not exceed theirs
  */
 function artesis_frontend_form_alter(&$form, &$forms_state, $form_id) {
