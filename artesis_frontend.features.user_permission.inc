@@ -168,35 +168,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer dibs settings.
-  $permissions['administer dibs settings'] = array(
-    'name' => 'administer dibs settings',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'dibs',
-  );
-
-  // Exported permission: administer dibs transactions.
-  $permissions['administer dibs transactions'] = array(
-    'name' => 'administer dibs transactions',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'dibs',
-  );
-
-  // Exported permission: administer ding provider.
-  $permissions['administer ding provider'] = array(
-    'name' => 'administer ding provider',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'ding_provider',
-  );
-
   // Exported permission: administer features.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -267,16 +238,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'locale',
-  );
-
-  // Exported permission: administer metasearch interfaces.
-  $permissions['administer metasearch interfaces'] = array(
-    'name' => 'administer metasearch interfaces',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
   );
 
   // Exported permission: administer modules.
@@ -375,24 +336,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'user',
-  );
-
-  // Exported permission: administer profile types.
-  $permissions['administer profile types'] = array(
-    'name' => 'administer profile types',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'profile2',
-  );
-
-  // Exported permission: administer profiles.
-  $permissions['administer profiles'] = array(
-    'name' => 'administer profiles',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'profile2',
   );
 
   // Exported permission: administer relation types.
@@ -635,24 +578,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create metasearch interface.
-  $permissions['create metasearch interface'] = array(
-    'name' => 'create metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: create mkdru content.
-  $permissions['create mkdru content'] = array(
-    'name' => 'create mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create relations.
   $permissions['create relations'] = array(
     'name' => 'create relations',
@@ -706,15 +631,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any mkdru content.
-  $permissions['delete any mkdru content'] = array(
-    'name' => 'delete any mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete own ding_campaign content.
   $permissions['delete own ding_campaign content'] = array(
     'name' => 'delete own ding_campaign content',
@@ -743,15 +659,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'local administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own mkdru content.
-  $permissions['delete own mkdru content'] = array(
-    'name' => 'delete own mkdru content',
-    'roles' => array(
-      0 => 'administrator',
     ),
     'module' => 'node',
   );
@@ -843,6 +750,20 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: delete terms in 7.
+  $permissions['delete terms in 7'] = array(
+    'name' => 'delete terms in 7',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 8.
+  $permissions['delete terms in 8'] = array(
+    'name' => 'delete terms in 8',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: edit any ding_campaign content.
   $permissions['edit any ding_campaign content'] = array(
     'name' => 'edit any ding_campaign content',
@@ -873,25 +794,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'local administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit any metasearch interface.
-  $permissions['edit any metasearch interface'] = array(
-    'name' => 'edit any metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: edit any mkdru content.
-  $permissions['edit any mkdru content'] = array(
-    'name' => 'edit any mkdru content',
-    'roles' => array(
-      0 => 'administrator',
     ),
     'module' => 'node',
   );
@@ -949,25 +851,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'local administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own metasearch interface.
-  $permissions['edit own metasearch interface'] = array(
-    'name' => 'edit own metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: edit own mkdru content.
-  $permissions['edit own mkdru content'] = array(
-    'name' => 'edit own mkdru content',
-    'roles' => array(
-      0 => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1047,6 +930,20 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: edit terms in 7.
+  $permissions['edit terms in 7'] = array(
+    'name' => 'edit terms in 7',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 8.
+  $permissions['edit terms in 8'] = array(
+    'name' => 'edit terms in 8',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: export relation types.
   $permissions['export relation types'] = array(
     'name' => 'export relation types',
@@ -1063,17 +960,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'features',
-  );
-
-  // Exported permission: manage item viewer.
-  $permissions['manage item viewer'] = array(
-    'name' => 'manage item viewer',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'local administrator',
-    ),
-    'module' => 'ding_item_viewer',
   );
 
   // Exported permission: notify of path changes.
@@ -1107,19 +993,6 @@ function artesis_frontend_user_default_permissions() {
       3 => 'local administrator',
     ),
     'module' => 'nopremium',
-  );
-
-  // Exported permission: pay using dibs.
-  $permissions['pay using dibs'] = array(
-    'name' => 'pay using dibs',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'authenticated user',
-      2 => 'editor',
-      3 => 'journalist',
-      4 => 'local administrator',
-    ),
-    'module' => 'dibs',
   );
 
   // Exported permission: revert revisions.
