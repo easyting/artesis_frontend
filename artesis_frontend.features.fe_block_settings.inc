@@ -97,6 +97,20 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => -1,
   );
 
+  $theme['system-main-menu'] = array(
+    'module' => 'system',
+    'delta' => 'main-menu',
+    'theme' => 'alpha_basetheme',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
   $theme['system-user-menu'] = array(
     'module' => 'system',
     'delta' => 'user-menu',
@@ -116,7 +130,7 @@ function artesis_frontend_default_fe_block_settings() {
     'delta' => 'login',
     'theme' => 'alpha_basetheme',
     'status' => '1',
-    'weight' => '-25',
+    'weight' => '-24',
     'region' => 'user_second',
     'custom' => '0',
     'visibility' => '0',
@@ -130,7 +144,7 @@ function artesis_frontend_default_fe_block_settings() {
     'delta' => 'block',
     'theme' => 'alpha_basetheme',
     'status' => 0,
-    'weight' => '-25',
+    'weight' => '-24',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
@@ -217,6 +231,20 @@ function artesis_frontend_default_fe_block_settings() {
   $theme['system-main'] = array(
     'module' => 'system',
     'delta' => 'main',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['system-main-menu'] = array(
+    'module' => 'system',
+    'delta' => 'main-menu',
     'theme' => 'seven',
     'status' => 0,
     'weight' => '0',
