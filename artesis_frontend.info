@@ -52,6 +52,7 @@ features[fe_block_settings][] = locale-language
 features[fe_block_settings][] = menu-menu-secondary-menu
 features[fe_block_settings][] = search-form
 features[fe_block_settings][] = system-main
+features[fe_block_settings][] = system-main-menu
 features[fe_block_settings][] = system-user-menu
 features[fe_block_settings][] = user-login
 features[fe_block_settings][] = workbench-block
