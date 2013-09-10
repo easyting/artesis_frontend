@@ -41,34 +41,6 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => 8,
   );
 
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'alpha_basetheme',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'alpha_basetheme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
   $theme['locale-language'] = array(
     'module' => 'locale',
     'delta' => 'language',
@@ -80,62 +52,6 @@ function artesis_frontend_default_fe_block_settings() {
     'visibility' => '0',
     'pages' => '',
     'title' => '<none>',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'alpha_basetheme',
-    'status' => 0,
-    'weight' => '1',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'alpha_basetheme',
-    'status' => 0,
-    'weight' => '2',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'alpha_basetheme',
-    'status' => 0,
-    'weight' => '3',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'alpha_basetheme',
-    'status' => 0,
-    'weight' => '4',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
     'cache' => -1,
   );
 
@@ -185,9 +101,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'system',
     'delta' => 'main-menu',
     'theme' => 'alpha_basetheme',
-    'status' => '1',
+    'status' => 0,
     'weight' => '0',
-    'region' => 'menu',
+    'region' => '',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -214,7 +130,7 @@ function artesis_frontend_default_fe_block_settings() {
     'delta' => 'login',
     'theme' => 'alpha_basetheme',
     'status' => '1',
-    'weight' => '-25',
+    'weight' => '-24',
     'region' => 'user_second',
     'custom' => '0',
     'visibility' => '0',
@@ -228,7 +144,7 @@ function artesis_frontend_default_fe_block_settings() {
     'delta' => 'block',
     'theme' => 'alpha_basetheme',
     'status' => 0,
-    'weight' => '-25',
+    'weight' => '-24',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
@@ -238,235 +154,6 @@ function artesis_frontend_default_fe_block_settings() {
   );
 
   $export['alpha_basetheme'] = $theme;
-
-  // bartik
-  $theme = array();
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User menu',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'bartik',
-    'status' => '1',
-    'weight' => '-99',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['bartik'] = $theme;
 
   // seven
   $theme = array();
@@ -499,93 +186,9 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => 8,
   );
 
-  $theme['ding_user_frontend-ding-user-loan-number'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-user-loan-number',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding loan, reservation, and debt count',
-    'cache' => -1,
-  );
-
-  $theme['ding_user_frontend-ding-username'] = array(
-    'module' => 'ding_user_frontend',
-    'delta' => 'ding-username',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Ding user name',
-    'cache' => -1,
-  );
-
   $theme['locale-language'] = array(
     'module' => 'locale',
     'delta' => 'language',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-1'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-1',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-2'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-2',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-3'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-3',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-footer-menu-4'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-footer-menu-4',
     'theme' => 'seven',
     'status' => 0,
     'weight' => '0',
