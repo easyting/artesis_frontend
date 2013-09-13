@@ -100,6 +100,35 @@ function artesis_frontend_form_alter(&$form, &$forms_state, $form_id) {
         DRUPAL_AUTHENTICATED_RID => $checkbox_authenticated,
       );
     }
+
+    // Assume user profile edit form.
+    if (arg(0) == 'user' && arg(2) == 'edit') {
+      foreach ($form['#validate'] as $k => $v) {
+        // Disable the native user form validator, since it validates the email
+        // for not being empty.
+        if ($v == 'user_account_form_validate') {
+          unset($form['#validate'][$k]);
+          // Add custom mail validate hadler.
+          $form['#validate'][] = 'artesis_frontend_mail_validate';
+          break;
+        }
+      }
+
+      $form['account']['mail']['#required'] = FALSE;
+      $form['account']['mail']['#validate'] = array('artesis_frontend_mail_validate');
+    }
+  }
+}
+
+/**
+ * Custom validate handler for mail address.
+ *
+ * @see artesis_frontend_form_alter,
+ */
+function artesis_frontend_mail_validate($form, &$form_state) {
+  $mail = $form_state['values']['mail'];
+  if (!empty($mail) && !valid_email_address($mail)) {
+    form_set_error('mail', t('E-mail address is not valid.'));
   }
 }
 
