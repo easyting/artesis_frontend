@@ -111,15 +111,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: access workbench.
-  $permissions['access workbench'] = array(
-    'name' => 'access workbench',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'workbench',
-  );
-
   // Exported permission: administer actions.
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
@@ -267,16 +258,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'locale',
-  );
-
-  // Exported permission: administer metasearch interfaces.
-  $permissions['administer metasearch interfaces'] = array(
-    'name' => 'administer metasearch interfaces',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
   );
 
   // Exported permission: administer modules.
@@ -450,15 +431,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer snapengage.
-  $permissions['administer snapengage'] = array(
-    'name' => 'administer snapengage',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'snapengage',
-  );
-
   // Exported permission: administer software updates.
   $permissions['administer software updates'] = array(
     'name' => 'administer software updates',
@@ -526,15 +498,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'views',
-  );
-
-  // Exported permission: administer workbench.
-  $permissions['administer workbench'] = array(
-    'name' => 'administer workbench',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'workbench',
   );
 
   // Exported permission: block IP addresses.
@@ -645,24 +608,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create metasearch interface.
-  $permissions['create metasearch interface'] = array(
-    'name' => 'create metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: create mkdru content.
-  $permissions['create mkdru content'] = array(
-    'name' => 'create mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: create relations.
   $permissions['create relations'] = array(
     'name' => 'create relations',
@@ -716,15 +661,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any mkdru content.
-  $permissions['delete any mkdru content'] = array(
-    'name' => 'delete any mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: delete own ding_campaign content.
   $permissions['delete own ding_campaign content'] = array(
     'name' => 'delete own ding_campaign content',
@@ -753,15 +689,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'local administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: delete own mkdru content.
-  $permissions['delete own mkdru content'] = array(
-    'name' => 'delete own mkdru content',
-    'roles' => array(
-      0 => 'administrator',
     ),
     'module' => 'node',
   );
@@ -876,25 +803,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any metasearch interface.
-  $permissions['edit any metasearch interface'] = array(
-    'name' => 'edit any metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: edit any mkdru content.
-  $permissions['edit any mkdru content'] = array(
-    'name' => 'edit any mkdru content',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: edit opening hours for content.
   $permissions['edit opening hours for content'] = array(
     'name' => 'edit opening hours for content',
@@ -948,25 +856,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
       1 => 'editor',
       2 => 'local administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: edit own metasearch interface.
-  $permissions['edit own metasearch interface'] = array(
-    'name' => 'edit own metasearch interface',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'mkdru',
-  );
-
-  // Exported permission: edit own mkdru content.
-  $permissions['edit own mkdru content'] = array(
-    'name' => 'edit own mkdru content',
-    'roles' => array(
-      0 => 'administrator',
     ),
     'module' => 'node',
   );
@@ -1085,18 +974,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'googleanalytics',
   );
 
-  // Exported permission: override ding_page premium option.
-  $permissions['override ding_page premium option'] = array(
-    'name' => 'override ding_page premium option',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-      2 => 'journalist',
-      3 => 'local administrator',
-    ),
-    'module' => 'nopremium',
-  );
-
   // Exported permission: pay using dibs.
   $permissions['pay using dibs'] = array(
     'name' => 'pay using dibs',
@@ -1196,16 +1073,6 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'i18n_string',
   );
 
-  // Exported permission: use PHP for SnapEngage visibility.
-  $permissions['use PHP for SnapEngage visibility'] = array(
-    'name' => 'use PHP for SnapEngage visibility',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'local administrator',
-    ),
-    'module' => 'snapengage',
-  );
-
   // Exported permission: use PHP for tracking visibility.
   $permissions['use PHP for tracking visibility'] = array(
     'name' => 'use PHP for tracking visibility',
@@ -1269,16 +1136,6 @@ function artesis_frontend_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'panels',
-  );
-
-  // Exported permission: view full ding_page premium content.
-  $permissions['view full ding_page premium content'] = array(
-    'name' => 'view full ding_page premium content',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'authenticated user',
-    ),
-    'module' => 'nopremium',
   );
 
   // Exported permission: view pane admin links.
