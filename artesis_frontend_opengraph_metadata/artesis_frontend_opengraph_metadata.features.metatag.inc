@@ -10,6 +10,81 @@
 function artesis_frontend_opengraph_metadata_metatag_export_default() {
   $config = array();
 
+  // Exported Metatag config instance: global.
+  $config['global'] = array(
+    'instance' => 'global',
+    'config' => array(
+      'title' => array(
+        'value' => '',
+      ),
+      'generator' => array(
+        'value' => '',
+      ),
+      'canonical' => array(
+        'value' => '',
+      ),
+      'shortlink' => array(
+        'value' => '',
+      ),
+      'og:type' => array(
+        'value' => '',
+      ),
+      'og:title' => array(
+        'value' => '',
+      ),
+      'og:site_name' => array(
+        'value' => '',
+      ),
+      'og:url' => array(
+        'value' => '',
+      ),
+    ),
+  );
+
+  // Exported Metatag config instance: global:frontpage.
+  $config['global:frontpage'] = array(
+    'instance' => 'global:frontpage',
+    'config' => array(
+      'title' => array(
+        'value' => '',
+      ),
+      'canonical' => array(
+        'value' => '',
+      ),
+      'shortlink' => array(
+        'value' => '',
+      ),
+      'og:type' => array(
+        'value' => '',
+      ),
+      'og:title' => array(
+        'value' => '',
+      ),
+      'og:url' => array(
+        'value' => '',
+      ),
+    ),
+  );
+
+  // Exported Metatag config instance: node.
+  $config['node'] = array(
+    'instance' => 'node',
+    'config' => array(
+      'title' => array(
+        'value' => '',
+      ),
+      'description' => array(
+        'value' => '',
+      ),
+      'og:title' => array(
+        'value' => '',
+      ),
+      'og:description' => array(
+        'value' => '',
+      ),
+    ),
+  );
+
   // Exported Metatag config instance: node:ding_event.
   $config['node:ding_event'] = array(
     'instance' => 'node:ding_event',
@@ -489,6 +564,41 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
         'value' => '',
       ),
       'og:video:type' => array(
+        'value' => '',
+      ),
+    ),
+  );
+
+  // Exported Metatag config instance: taxonomy_term.
+  $config['taxonomy_term'] = array(
+    'instance' => 'taxonomy_term',
+    'config' => array(
+      'title' => array(
+        'value' => '',
+      ),
+      'description' => array(
+        'value' => '',
+      ),
+      'og:title' => array(
+        'value' => '',
+      ),
+      'og:description' => array(
+        'value' => '',
+      ),
+    ),
+  );
+
+  // Exported Metatag config instance: user.
+  $config['user'] = array(
+    'instance' => 'user',
+    'config' => array(
+      'title' => array(
+        'value' => '',
+      ),
+      'og:type' => array(
+        'value' => '',
+      ),
+      'og:title' => array(
         'value' => '',
       ),
     ),
