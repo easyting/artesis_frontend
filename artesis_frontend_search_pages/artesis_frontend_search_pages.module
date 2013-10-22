@@ -38,22 +38,17 @@ function artesis_frontend_search_pages_views_pre_execute(&$view) {
     $query->leftJoin('search_total', 'search_total', 'search_index.word = search_total.word');
 
     $and = db_and();
-    if (sizeof($search_substrings) > 1) {
+    $number_of_words = sizeof($search_substrings);
+    if ($number_of_words > 1) {
       $query->join('search_dataset', 'search_dataset', 'search_index.sid = search_dataset.sid AND search_index.type = search_dataset.type');
     }
     $and->condition('node.status', '1', '=');
     $and->condition('search_index.type', 'node', '=');
-    $and_and = db_and();
-    for ($i = 0; $i < sizeof($search_substrings); $i++) {
-      // Add if to WHERE condition so that no empty word is added.
-      if (sizeof($search_substrings) > 1) {
-        $and_and->condition('search_dataset.data', '%' . $search_substrings[$i] . '%', 'like');
-      }
-      else {
-        $and_and->condition('search_index.word', '%' . $search_substrings[$i] . '%', 'like');
-      }
+    $and_or = db_or();
+    for ($i = 0; $i < $number_of_words; $i++) {
+      $and_or->condition('search_index.word', '%' . $search_substrings[$i] . '%', 'like');
     }
-    $and->condition($and_and);
+    $and->condition($and_or);
     $and->condition('node.type', 'ding_campaign', '<>');
     $and->condition('node.type', 'ding_library', '<>');
     $query->condition($and);
