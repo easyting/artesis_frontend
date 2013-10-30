@@ -366,6 +366,31 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $display->panels['left'][3] = 'new-12';
     $pane = new stdClass();
     $pane->pid = 'new-13';
+    $pane->panel = 'left';
+    $pane->type = 'ding_item_list_recommendations';
+    $pane->subtype = 'ding_item_list_recommendations';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'recommendations_list_custom_title' => 'Others have borrowed',
+      'recommendations_list_item_list_show' => '10',
+      'context' => array(
+        0 => 'argument_ting_object_id_17',
+        1 => 'empty',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $display->content['new-13'] = $pane;
+    $display->panels['left'][4] = 'new-13';
+    $pane = new stdClass();
+    $pane->pid = 'new-14';
     $pane->panel = 'middle_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'ting_object:ting_relations';
@@ -387,10 +412,10 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-13'] = $pane;
-    $display->panels['middle_right'][0] = 'new-13';
+    $display->content['new-14'] = $pane;
+    $display->panels['middle_right'][0] = 'new-14';
     $pane = new stdClass();
-    $pane->pid = 'new-14';
+    $pane->pid = 'new-15';
     $pane->panel = 'middle_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'ting_object:ting_reference_reverse';
@@ -415,10 +440,10 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['middle_right'][1] = 'new-14';
+    $display->content['new-15'] = $pane;
+    $display->panels['middle_right'][1] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-16';
     $pane->panel = 'middle_right';
     $pane->type = 'entity_field';
     $pane->subtype = 'ting_object:ting_infomedia';
@@ -440,33 +465,8 @@ function artesis_frontend_ting_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['middle_right'][2] = 'new-15';
-    $pane = new stdClass();
-    $pane->pid = 'new-16';
-    $pane->panel = 'middle_right';
-    $pane->type = 'recommendation_list';
-    $pane->subtype = 'recommendation_list';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'argument_ting_object_id_17',
-        1 => 'empty',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
-    $pane->locks = array();
     $display->content['new-16'] = $pane;
-    $display->panels['middle_right'][3] = 'new-16';
+    $display->panels['middle_right'][2] = 'new-16';
     $pane = new stdClass();
     $pane->pid = 'new-17';
     $pane->panel = 'top_right_medium';
