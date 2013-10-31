@@ -342,6 +342,7 @@ function artesis_frontend_node_fieldgroups_field_group_info() {
     'children' => array(
       0 => 'field_materials',
       1 => 'group_audience',
+      2 => 'field_ding_item_list',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -401,12 +402,12 @@ function artesis_frontend_node_fieldgroups_field_group_info() {
     'label' => 'News',
     'weight' => '0',
     'children' => array(
-      0 => 'group_news_images',
-      1 => 'group_news_taxonomies',
-      2 => 'group_news_relations',
-      3 => 'group_news_content',
-      4 => 'group_news_publish',
-      5 => 'group_news_media',
+      0 => 'group_news_content',
+      1 => 'group_news_images',
+      2 => 'group_news_media',
+      3 => 'group_news_publish',
+      4 => 'group_news_relations',
+      5 => 'group_news_taxonomies',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(
