@@ -42,7 +42,6 @@ dependencies[] = views
 dependencies[] = artesis_frontend_content_pages
 dependencies[] = artesis_frontend_search_pages
 dependencies[] = artesis_frontend_term_pages
-dependencies[] = artesis_frontend_ting_pages
 dependencies[] = artesis_frontend_node_fieldgroups
 dependencies[] = page_title
 features[ctools][] = field_group:field_group:1
