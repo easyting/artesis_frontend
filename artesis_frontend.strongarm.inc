@@ -31,5 +31,12 @@ function artesis_frontend_strongarm() {
   $strongarm->value = '100';
   $export['image_jpeg_quality'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pz2_js_path';
+  $strongarm->value = 'http://mkdru.indexdata.com/sites/all/libraries/pazpar2-js/pz2.js';
+  $export['pz2_js_path'] = $strongarm;
+
   return $export;
 }
