@@ -758,6 +758,27 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: delete terms in 6.
+  $permissions['delete terms in 6'] = array(
+    'name' => 'delete terms in 6',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 7.
+  $permissions['delete terms in 7'] = array(
+    'name' => 'delete terms in 7',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: delete terms in 8.
+  $permissions['delete terms in 8'] = array(
+    'name' => 'delete terms in 8',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
   // Exported permission: edit any ding_campaign content.
   $permissions['edit any ding_campaign content'] = array(
     'name' => 'edit any ding_campaign content',
@@ -948,6 +969,27 @@ function artesis_frontend_user_default_permissions() {
       1 => 'editor',
       2 => 'local administrator',
     ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 6.
+  $permissions['edit terms in 6'] = array(
+    'name' => 'edit terms in 6',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 7.
+  $permissions['edit terms in 7'] = array(
+    'name' => 'edit terms in 7',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: edit terms in 8.
+  $permissions['edit terms in 8'] = array(
+    'name' => 'edit terms in 8',
+    'roles' => array(),
     'module' => 'taxonomy',
   );
 

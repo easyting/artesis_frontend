@@ -59,6 +59,7 @@ function artesis_frontend_image_default_styles() {
         'weight' => '1',
       ),
     ),
+    'label' => 'ding_node_page',
   );
 
   return $styles;
