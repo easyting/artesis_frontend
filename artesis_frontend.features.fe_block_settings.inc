@@ -61,11 +61,25 @@ function artesis_frontend_default_fe_block_settings() {
     'theme' => 'alpha_basetheme',
     'status' => '1',
     'weight' => '0',
-    'region' => 'header_second',
+    'region' => '',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
     'title' => '<none>',
+    'cache' => -1,
+  );
+
+  $theme['mkopac-mkopac_user_block'] = array(
+    'module' => 'mkopac',
+    'delta' => 'mkopac_user_block',
+    'theme' => 'alpha_basetheme',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'user_second',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
     'cache' => -1,
   );
 
@@ -200,6 +214,20 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => -1,
   );
 
+  $theme['mkopac-mkopac_user_block'] = array(
+    'module' => 'mkopac',
+    'delta' => 'mkopac_user_block',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
   $theme['search-form'] = array(
     'module' => 'search',
     'delta' => 'form',
@@ -320,6 +348,20 @@ function artesis_frontend_default_fe_block_settings() {
   $theme['menu-menu-secondary-menu'] = array(
     'module' => 'menu',
     'delta' => 'menu-secondary-menu',
+    'theme' => 'seven',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['mkopac-mkopac_user_block'] = array(
+    'module' => 'mkopac',
+    'delta' => 'mkopac_user_block',
     'theme' => 'seven',
     'status' => 0,
     'weight' => '0',
