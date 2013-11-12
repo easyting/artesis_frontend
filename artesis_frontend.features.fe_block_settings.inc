@@ -74,7 +74,7 @@ function artesis_frontend_default_fe_block_settings() {
     'delta' => 'form',
     'theme' => 'alpha_basetheme',
     'status' => '1',
-    'weight' => '-24',
+    'weight' => '-22',
     'region' => 'user_first',
     'custom' => '0',
     'visibility' => '0',
@@ -115,9 +115,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'system',
     'delta' => 'user-menu',
     'theme' => 'alpha_basetheme',
-    'status' => '1',
+    'status' => 0,
     'weight' => '-22',
-    'region' => 'user_second',
+    'region' => '',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -129,9 +129,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'user',
     'delta' => 'login',
     'theme' => 'alpha_basetheme',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'user_second',
+    'status' => 0,
+    'weight' => '-22',
+    'region' => '',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -139,12 +139,45 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => -1,
   );
 
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'alpha_basetheme',
+  $export['alpha_basetheme'] = $theme;
+
+  // bartik
+  $theme = array();
+
+  $theme['ding_library-ding_menu'] = array(
+    'module' => 'ding_library',
+    'delta' => 'ding_menu',
+    'theme' => 'bartik',
     'status' => 0,
-    'weight' => '-24',
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => 4,
+  );
+
+  $theme['ding_library-library_address'] = array(
+    'module' => 'ding_library',
+    'delta' => 'library_address',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => 8,
+  );
+
+  $theme['locale-language'] = array(
+    'module' => 'locale',
+    'delta' => 'language',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
@@ -153,7 +186,91 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => -1,
   );
 
-  $export['alpha_basetheme'] = $theme;
+  $theme['menu-menu-secondary-menu'] = array(
+    'module' => 'menu',
+    'delta' => 'menu-secondary-menu',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['search-form'] = array(
+    'module' => 'search',
+    'delta' => 'form',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['system-main'] = array(
+    'module' => 'system',
+    'delta' => 'main',
+    'theme' => 'bartik',
+    'status' => '1',
+    'weight' => '0',
+    'region' => 'content',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['system-main-menu'] = array(
+    'module' => 'system',
+    'delta' => 'main-menu',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['system-user-menu'] = array(
+    'module' => 'system',
+    'delta' => 'user-menu',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $theme['user-login'] = array(
+    'module' => 'user',
+    'delta' => 'login',
+    'theme' => 'bartik',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => -1,
+  );
+
+  $export['bartik'] = $theme;
 
   // seven
   $theme = array();
@@ -281,20 +398,6 @@ function artesis_frontend_default_fe_block_settings() {
     'visibility' => '0',
     'pages' => '',
     'title' => 'User login',
-    'cache' => -1,
-  );
-
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'seven',
-    'status' => '1',
-    'weight' => '-99',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
     'cache' => -1,
   );
 
