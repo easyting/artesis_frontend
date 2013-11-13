@@ -157,6 +157,7 @@ function _artesis_frontend_get_allowed_plugins() {
     'campaign' => 'campaign',
     'term_description' => 'term_description',
     'ding_library_opening_hours-ding_library_opened_today' => 'block',
+    'bibliofil_item_viewer' => 'bibliofil_item_viewer',
   );
 }
 
