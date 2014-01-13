@@ -157,32 +157,6 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $display->content['new-4'] = $pane;
     $display->panels['left'][3] = 'new-4';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'left';
-    $pane->type = 'ding_related_items';
-    $pane->subtype = 'ding_related_items';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'item_list_custom_title' => 'Related materials',
-    );
-    $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
-    );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left'][4] = 'new-5';
-    $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'left';
     $pane->type = 'node_comments';
@@ -282,34 +256,6 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->locks = array();
     $display->content['new-9'] = $pane;
     $display->panels['right'][1] = 'new-9';
-    $pane = new stdClass();
-    $pane->pid = 'new-10';
-    $pane->panel = 'right';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ding_item_list';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'ding_item_list_field_default',
-      'delta_limit' => 0,
-      'delta_offset' => '0',
-      'delta_reversed' => FALSE,
-      'formatter_settings' => array(),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-10'] = $pane;
-    $display->panels['right'][2] = 'new-10';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -626,31 +572,6 @@ return TRUE;
     $pane->locks = array();
     $display->content['new-17'] = $pane;
     $display->panels['left'][6] = 'new-17';
-    $pane = new stdClass();
-    $pane->pid = 'new-18';
-    $pane->panel = 'left';
-    $pane->type = 'ding_related_items';
-    $pane->subtype = 'ding_related_items';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
-    );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 7;
-    $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['left'][7] = 'new-18';
     $pane = new stdClass();
     $pane->pid = 'new-19';
     $pane->panel = 'left';
