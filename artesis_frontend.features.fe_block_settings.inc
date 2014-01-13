@@ -13,20 +13,6 @@ function artesis_frontend_default_fe_block_settings() {
   // alpha_basetheme
   $theme = array();
 
-  $theme['bibliofil_nopac-nopac_deichbib_login_block'] = array(
-    'module' => 'bibliofil_nopac',
-    'delta' => 'nopac_deichbib_login_block',
-    'theme' => 'alpha_basetheme',
-    'status' => '1',
-    'weight' => '-20',
-    'region' => 'user_second',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '1',
-  );
-
   $theme['ding_library-ding_menu'] = array(
     'module' => 'ding_library',
     'delta' => 'ding_menu',
@@ -157,20 +143,6 @@ function artesis_frontend_default_fe_block_settings() {
 
   // seven
   $theme = array();
-
-  $theme['bibliofil_nopac-nopac_deichbib_login_block'] = array(
-    'module' => 'bibliofil_nopac',
-    'delta' => 'nopac_deichbib_login_block',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '1',
-  );
 
   $theme['ding_library-ding_menu'] = array(
     'module' => 'ding_library',
