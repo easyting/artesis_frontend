@@ -115,9 +115,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'system',
     'delta' => 'main-menu',
     'theme' => 'alpha_basetheme',
-    'status' => '1',
+    'status' => 0,
     'weight' => '0',
-    'region' => 'menu',
+    'region' => '',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -155,151 +155,6 @@ function artesis_frontend_default_fe_block_settings() {
 
   $export['alpha_basetheme'] = $theme;
 
-  // bartik
-  $theme = array();
-
-  $theme['bibliofil_nopac-nopac_deichbib_login_block'] = array(
-    'module' => 'bibliofil_nopac',
-    'delta' => 'nopac_deichbib_login_block',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '1',
-  );
-
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-  );
-
-  $theme['locale-language'] = array(
-    'module' => 'locale',
-    'delta' => 'language',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['menu-menu-secondary-menu'] = array(
-    'module' => 'menu',
-    'delta' => 'menu-secondary-menu',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['search-form'] = array(
-    'module' => 'search',
-    'delta' => 'form',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main'] = array(
-    'module' => 'system',
-    'delta' => 'main',
-    'theme' => 'bartik',
-    'status' => '1',
-    'weight' => '0',
-    'region' => 'content',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-main-menu'] = array(
-    'module' => 'system',
-    'delta' => 'main-menu',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['system-user-menu'] = array(
-    'module' => 'system',
-    'delta' => 'user-menu',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $theme['user-login'] = array(
-    'module' => 'user',
-    'delta' => 'login',
-    'theme' => 'bartik',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-  );
-
-  $export['bartik'] = $theme;
-
   // seven
   $theme = array();
 
@@ -320,20 +175,6 @@ function artesis_frontend_default_fe_block_settings() {
   $theme['ding_library-ding_menu'] = array(
     'module' => 'ding_library',
     'delta' => 'ding_menu',
-    'theme' => 'seven',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 4,
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
     'theme' => 'seven',
     'status' => 0,
     'weight' => '0',
