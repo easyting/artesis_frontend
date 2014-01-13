@@ -21,4 +21,46 @@ function artesis_frontend_search_pages_query_alter($query) {
   }
 }
 
+/**
+ * Implements hook_views_pre_execute().
+ *
+ * Overwrites query for ding_node_search. Keeping most of the
+ * elements of the initial query.
+ */
+function artesis_frontend_search_pages_views_pre_execute(&$view) {
+  // Split input string to sub strings if something other than letter or number is met.
+  if ($view->name == 'ding_node_search') {
+    $search_substrings = preg_split("/[^a-z0-9]+/i", preg_replace('~&([a-z]{1,2})(acute|cedil|circ|grave|lig|orn|ring|slash|th|tilde|uml);~i', '$1', htmlentities($view->args[0], ENT_QUOTES, 'UTF-8')));
+    $query = db_select('node');
+    $query->addField('node', 'changed', 'node_changed');
+    $query->addField('node', 'nid', 'nid');
+    $query->leftJoin('search_index', 'search_index', 'nid = search_index.sid');
+    $query->leftJoin('search_total', 'search_total', 'search_index.word = search_total.word');
+
+    $and = db_and();
+    $number_of_words = sizeof($search_substrings);
+    if ($number_of_words > 1) {
+      $query->join('search_dataset', 'search_dataset', 'search_index.sid = search_dataset.sid AND search_index.type = search_dataset.type');
+    }
+    $and->condition('node.status', '1', '=');
+    $and->condition('search_index.type', 'node', '=');
+    $and_or = db_or();
+    for ($i = 0; $i < $number_of_words; $i++) {
+      $and_or->condition('search_index.word', '%' . $search_substrings[$i] . '%', 'like');
+    }
+    $and->condition($and_or);
+    $and->condition('node.type', 'ding_campaign', '<>');
+    $and->condition('node.type', 'ding_library', '<>');
+    $query->condition($and);
+    $query->addExpression('COUNT(*)', 'ncount');
+    $query->havingCondition('ncount', sizeof($search_substrings)-1, '>=');
+    $query->groupBy('search_index.sid');
+    $query->groupBy('node_changed');
+    $query->groupBy('nid');
+    $query->orderBy('node_changed', 'DESC');
+    $query->range(0, 10);
+    $variable = explode(' ', $view->build_info['query']);
+    $view->build_info['query'] = $query;
+  }
+}
 include_once('artesis_frontend_search_pages.features.inc');
