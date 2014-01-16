@@ -15,28 +15,40 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
     'instance' => 'global',
     'config' => array(
       'title' => array(
-        'value' => '',
+        'value' => '[variable:site_name]',
       ),
-      'generator' => array(
-        'value' => '',
+      'description' => array(
+        'value' => '[variable:site_slogan]',
       ),
-      'canonical' => array(
-        'value' => '',
+      'abstract' => array(
+        'value' => '[variable:site_slogan]',
       ),
-      'shortlink' => array(
-        'value' => '',
-      ),
-      'og:type' => array(
-        'value' => '',
-      ),
-      'og:title' => array(
-        'value' => '',
+      'robots' => array(
+        'value' => array(
+          'index' => 'index',
+          'follow' => 'follow',
+          'noindex' => 0,
+          'nofollow' => 0,
+          'noarchive' => 0,
+          'nosnippet' => 0,
+          'noodp' => 0,
+          'noydir' => 0,
+        ),
       ),
       'og:site_name' => array(
-        'value' => '',
+        'value' => '[variable:site_name]',
+      ),
+      'og:title' => array(
+        'value' => '[variable:site_name]',
+      ),
+      'og:description' => array(
+        'value' => '[variable:site_slogan]',
+      ),
+      'og:image' => array(
+        'value' => 'https://www.slagelsebib.dk/sites/all/themes/slagbib/images/slagbib-title.png',
       ),
       'og:url' => array(
-        'value' => '',
+        'value' => '[current-page:url]',
       ),
     ),
   );
@@ -46,22 +58,25 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
     'instance' => 'global:frontpage',
     'config' => array(
       'title' => array(
-        'value' => '',
+        'value' => '[variable:site_name]',
       ),
-      'canonical' => array(
-        'value' => '',
+      'description' => array(
+        'value' => '[variable:site_slogan]',
       ),
-      'shortlink' => array(
-        'value' => '',
+      'abstract' => array(
+        'value' => '[variable:site_slogan]',
       ),
-      'og:type' => array(
-        'value' => '',
+      'og:site_name' => array(
+        'value' => '[variable:site_name]',
       ),
       'og:title' => array(
-        'value' => '',
+        'value' => '[variable:site_name]',
+      ),
+      'og:description' => array(
+        'value' => '[variable:site_slogan]',
       ),
       'og:url' => array(
-        'value' => '',
+        'value' => '	[current-page:url]',
       ),
     ),
   );
@@ -71,16 +86,10 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
     'instance' => 'node',
     'config' => array(
       'title' => array(
-        'value' => '',
-      ),
-      'description' => array(
-        'value' => '',
+        'value' => '[node:title]',
       ),
       'og:title' => array(
-        'value' => '',
-      ),
-      'og:description' => array(
-        'value' => '',
+        'value' => '[node:title]',
       ),
     ),
   );
@@ -90,16 +99,13 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
     'instance' => 'node:ding_event',
     'config' => array(
       'title' => array(
-        'value' => '',
+        'value' => '[node:title]',
       ),
       'description' => array(
         'value' => '[node:field-ding-body:summary]',
       ),
       'abstract' => array(
         'value' => '[node:field_ding_body]',
-      ),
-      'keywords' => array(
-        'value' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -113,35 +119,8 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
           'noydir' => 0,
         ),
       ),
-      'news_keywords' => array(
-        'value' => '',
-      ),
-      'copyright' => array(
-        'value' => '',
-      ),
       'image_src' => array(
         'value' => '[node:field_list_image]',
-      ),
-      'canonical' => array(
-        'value' => '',
-      ),
-      'shortlink' => array(
-        'value' => '',
-      ),
-      'publisher' => array(
-        'value' => '',
-      ),
-      'author' => array(
-        'value' => '',
-      ),
-      'original-source' => array(
-        'value' => '',
-      ),
-      'fb:admins' => array(
-        'value' => '',
-      ),
-      'fb:app_id' => array(
-        'value' => '',
       ),
       'og:title' => array(
         'value' => '[node:title]',
@@ -149,59 +128,11 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
       'og:description' => array(
         'value' => '[node:field_ding_body]',
       ),
-      'og:type' => array(
-        'value' => '',
-      ),
       'og:image' => array(
         'value' => '[node:field_list_image]',
       ),
       'og:url' => array(
         'value' => '[current-page:url]',
-      ),
-      'og:latitude' => array(
-        'value' => '',
-      ),
-      'og:longitude' => array(
-        'value' => '',
-      ),
-      'og:street-address' => array(
-        'value' => '',
-      ),
-      'og:locality' => array(
-        'value' => '',
-      ),
-      'og:region' => array(
-        'value' => '',
-      ),
-      'og:postal-code' => array(
-        'value' => '',
-      ),
-      'og:country-name' => array(
-        'value' => '',
-      ),
-      'og:email' => array(
-        'value' => '',
-      ),
-      'og:phone_number' => array(
-        'value' => '',
-      ),
-      'og:fax_number' => array(
-        'value' => '',
-      ),
-      'og:video' => array(
-        'value' => '',
-      ),
-      'og:video:secure_url' => array(
-        'value' => '',
-      ),
-      'og:video:width' => array(
-        'value' => '',
-      ),
-      'og:video:height' => array(
-        'value' => '',
-      ),
-      'og:video:type' => array(
-        'value' => '',
       ),
     ),
   );
@@ -211,16 +142,13 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
     'instance' => 'node:ding_library',
     'config' => array(
       'title' => array(
-        'value' => '',
+        'value' => '[node:title]',
       ),
       'description' => array(
         'value' => '[node:field_ding_body]',
       ),
       'abstract' => array(
         'value' => '[node:field_ding_body]',
-      ),
-      'keywords' => array(
-        'value' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -234,35 +162,8 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
           'noydir' => 0,
         ),
       ),
-      'news_keywords' => array(
-        'value' => '',
-      ),
-      'copyright' => array(
-        'value' => '',
-      ),
       'image_src' => array(
         'value' => '[node:field_list_image]',
-      ),
-      'canonical' => array(
-        'value' => '',
-      ),
-      'shortlink' => array(
-        'value' => '',
-      ),
-      'publisher' => array(
-        'value' => '',
-      ),
-      'author' => array(
-        'value' => '',
-      ),
-      'original-source' => array(
-        'value' => '',
-      ),
-      'fb:admins' => array(
-        'value' => '',
-      ),
-      'fb:app_id' => array(
-        'value' => '',
       ),
       'og:title' => array(
         'value' => '[node:title]',
@@ -270,29 +171,17 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
       'og:description' => array(
         'value' => '[node:field_ding_body]',
       ),
-      'og:type' => array(
-        'value' => '',
-      ),
       'og:image' => array(
         'value' => '[node:field_list_image]',
       ),
       'og:url' => array(
         'value' => '[current-page:url]',
       ),
-      'og:latitude' => array(
-        'value' => '',
-      ),
-      'og:longitude' => array(
-        'value' => '',
-      ),
       'og:street-address' => array(
         'value' => '[node:field-address:thoroughfare]',
       ),
       'og:locality' => array(
         'value' => '[node:field-address:locality]',
-      ),
-      'og:region' => array(
-        'value' => '',
       ),
       'og:postal-code' => array(
         'value' => '[node:field-address:postal_code]',
@@ -309,21 +198,6 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
       'og:fax_number' => array(
         'value' => '[node:field_fax]',
       ),
-      'og:video' => array(
-        'value' => '',
-      ),
-      'og:video:secure_url' => array(
-        'value' => '',
-      ),
-      'og:video:width' => array(
-        'value' => '',
-      ),
-      'og:video:height' => array(
-        'value' => '',
-      ),
-      'og:video:type' => array(
-        'value' => '',
-      ),
     ),
   );
 
@@ -332,16 +206,13 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
     'instance' => 'node:ding_news',
     'config' => array(
       'title' => array(
-        'value' => '',
+        'value' => '[node:title]',
       ),
       'description' => array(
         'value' => '[node:field-ding-body:summary]',
       ),
       'abstract' => array(
         'value' => '[node:field_ding_body]',
-      ),
-      'keywords' => array(
-        'value' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -355,35 +226,8 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
           'noydir' => 0,
         ),
       ),
-      'news_keywords' => array(
-        'value' => '',
-      ),
-      'copyright' => array(
-        'value' => '',
-      ),
       'image_src' => array(
         'value' => '[node:field_list_image]',
-      ),
-      'canonical' => array(
-        'value' => '',
-      ),
-      'shortlink' => array(
-        'value' => '',
-      ),
-      'publisher' => array(
-        'value' => '',
-      ),
-      'author' => array(
-        'value' => '',
-      ),
-      'original-source' => array(
-        'value' => '',
-      ),
-      'fb:admins' => array(
-        'value' => '',
-      ),
-      'fb:app_id' => array(
-        'value' => '',
       ),
       'og:title' => array(
         'value' => '[node:title]',
@@ -391,59 +235,11 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
       'og:description' => array(
         'value' => '[node:field_ding_body]',
       ),
-      'og:type' => array(
-        'value' => '',
-      ),
       'og:image' => array(
         'value' => '[node:field_list_image]',
       ),
       'og:url' => array(
         'value' => '[current-page:url]',
-      ),
-      'og:latitude' => array(
-        'value' => '',
-      ),
-      'og:longitude' => array(
-        'value' => '',
-      ),
-      'og:street-address' => array(
-        'value' => '',
-      ),
-      'og:locality' => array(
-        'value' => '',
-      ),
-      'og:region' => array(
-        'value' => '',
-      ),
-      'og:postal-code' => array(
-        'value' => '',
-      ),
-      'og:country-name' => array(
-        'value' => '',
-      ),
-      'og:email' => array(
-        'value' => '',
-      ),
-      'og:phone_number' => array(
-        'value' => '',
-      ),
-      'og:fax_number' => array(
-        'value' => '',
-      ),
-      'og:video' => array(
-        'value' => '',
-      ),
-      'og:video:secure_url' => array(
-        'value' => '',
-      ),
-      'og:video:width' => array(
-        'value' => '',
-      ),
-      'og:video:height' => array(
-        'value' => '',
-      ),
-      'og:video:type' => array(
-        'value' => '',
       ),
     ),
   );
@@ -453,16 +249,13 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
     'instance' => 'node:ding_page',
     'config' => array(
       'title' => array(
-        'value' => '',
+        'value' => '[node:title]',
       ),
       'description' => array(
         'value' => '[node:field-ding-body:summary]',
       ),
       'abstract' => array(
         'value' => '[node:field_ding_body]',
-      ),
-      'keywords' => array(
-        'value' => '',
       ),
       'robots' => array(
         'value' => array(
@@ -476,35 +269,8 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
           'noydir' => 0,
         ),
       ),
-      'news_keywords' => array(
-        'value' => '',
-      ),
-      'copyright' => array(
-        'value' => '',
-      ),
       'image_src' => array(
         'value' => '[node:field_page_list_image]',
-      ),
-      'canonical' => array(
-        'value' => '',
-      ),
-      'shortlink' => array(
-        'value' => '',
-      ),
-      'publisher' => array(
-        'value' => '',
-      ),
-      'author' => array(
-        'value' => '',
-      ),
-      'original-source' => array(
-        'value' => '',
-      ),
-      'fb:admins' => array(
-        'value' => '',
-      ),
-      'fb:app_id' => array(
-        'value' => '',
       ),
       'og:title' => array(
         'value' => '[node:title]',
@@ -512,59 +278,11 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
       'og:description' => array(
         'value' => '[node:field_ding_body]',
       ),
-      'og:type' => array(
-        'value' => '',
-      ),
       'og:image' => array(
         'value' => '[node:field_page_list_image]',
       ),
       'og:url' => array(
         'value' => '[current-page:url]',
-      ),
-      'og:latitude' => array(
-        'value' => '',
-      ),
-      'og:longitude' => array(
-        'value' => '',
-      ),
-      'og:street-address' => array(
-        'value' => '',
-      ),
-      'og:locality' => array(
-        'value' => '',
-      ),
-      'og:region' => array(
-        'value' => '',
-      ),
-      'og:postal-code' => array(
-        'value' => '',
-      ),
-      'og:country-name' => array(
-        'value' => '',
-      ),
-      'og:email' => array(
-        'value' => '',
-      ),
-      'og:phone_number' => array(
-        'value' => '',
-      ),
-      'og:fax_number' => array(
-        'value' => '',
-      ),
-      'og:video' => array(
-        'value' => '',
-      ),
-      'og:video:secure_url' => array(
-        'value' => '',
-      ),
-      'og:video:width' => array(
-        'value' => '',
-      ),
-      'og:video:height' => array(
-        'value' => '',
-      ),
-      'og:video:type' => array(
-        'value' => '',
       ),
     ),
   );
@@ -574,32 +292,10 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
     'instance' => 'taxonomy_term',
     'config' => array(
       'title' => array(
-        'value' => '',
-      ),
-      'description' => array(
-        'value' => '',
+        'value' => '[current-page:page-title]',
       ),
       'og:title' => array(
-        'value' => '',
-      ),
-      'og:description' => array(
-        'value' => '',
-      ),
-    ),
-  );
-
-  // Exported Metatag config instance: user.
-  $config['user'] = array(
-    'instance' => 'user',
-    'config' => array(
-      'title' => array(
-        'value' => '',
-      ),
-      'og:type' => array(
-        'value' => '',
-      ),
-      'og:title' => array(
-        'value' => '',
+        'value' => '[current-page:page-title]',
       ),
     ),
   );
