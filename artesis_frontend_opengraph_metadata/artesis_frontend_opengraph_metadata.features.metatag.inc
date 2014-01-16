@@ -44,9 +44,6 @@ function artesis_frontend_opengraph_metadata_metatag_export_default() {
       'og:description' => array(
         'value' => '[variable:site_slogan]',
       ),
-      'og:image' => array(
-        'value' => 'https://www.slagelsebib.dk/sites/all/themes/slagbib/images/slagbib-title.png',
-      ),
       'og:url' => array(
         'value' => '[current-page:url]',
       ),
