@@ -1,5 +1,5 @@
 div.panels-ipe-newblock {
-  z-index: 1
+  z-index: 1;
 }
 
 div.panels-ipe-placeholder {
@@ -11,7 +11,7 @@ div.ipe-popup {
   box-shadow: none;
   display: none;
   position: absolute;
-  z-index: 99
+  z-index: 999;
 }
 
 div.ipe-popup .item-list ul li {
