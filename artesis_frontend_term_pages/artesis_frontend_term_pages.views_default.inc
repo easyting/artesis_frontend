@@ -87,6 +87,7 @@ function artesis_frontend_term_pages_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['operator'] = '>=';
   $handler->display->display_options['filters']['date_filter']['group'] = 1;
   $handler->display->display_options['filters']['date_filter']['default_date'] = 'now';
+  $handler->display->display_options['filters']['date_filter']['year_range'] = '-0:+0';
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'field_data_field_event_date.field_event_date_value' => 'field_data_field_event_date.field_event_date_value',
     'field_data_field_event_date.field_event_date_value2' => 'field_data_field_event_date.field_event_date_value2',
