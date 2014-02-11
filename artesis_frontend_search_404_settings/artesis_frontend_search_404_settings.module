@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Artesis Frontend Search 404 Settings feature.
+ */
+
+include_once 'artesis_frontend_search_404_settings.features.inc';
