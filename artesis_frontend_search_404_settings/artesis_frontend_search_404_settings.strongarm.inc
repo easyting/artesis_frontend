@@ -70,7 +70,7 @@ function artesis_frontend_search_404_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search404_ignore_query';
-  $strongarm->value = 'gif jpg jpeg bmp png';
+  $strongarm->value = 'gif jpg jpeg bmp png svg ico xml pdf doc xdoc rtf';
   $export['search404_ignore_query'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -105,7 +105,7 @@ function artesis_frontend_search_404_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search404_regex';
-  $strongarm->value = '';
+  $strongarm->value = '(page|da|en|news|events)';
   $export['search404_regex'] = $strongarm;
 
   $strongarm = new stdClass();
