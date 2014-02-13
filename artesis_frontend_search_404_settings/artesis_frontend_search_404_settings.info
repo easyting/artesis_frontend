@@ -1,9 +1,10 @@
 name = Artesis Frontend Search 404 Settings
 core = 7.x
-package = Features
+package = Artesis
 version = 7.x-0.1
 project = artesis_frontend_search_404_settings
 dependencies[] = ctools
+dependencies[] = search404
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:1
