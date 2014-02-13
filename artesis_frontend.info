@@ -33,7 +33,6 @@ dependencies[] = profile2
 dependencies[] = relation
 dependencies[] = rules
 dependencies[] = search
-dependencies[] = search404
 dependencies[] = shortcut
 dependencies[] = similarterms
 dependencies[] = strongarm
