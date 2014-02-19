@@ -483,6 +483,30 @@ Materials',
     $pane = new stdClass();
     $pane->pid = 'new-14';
     $pane->panel = 'right';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ting_search_related_content-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'items_per_page' => '2',
+      'offset' => '0',
+      'arguments' => array(
+        'search_api_views_fulltext' => '%keywords:raw',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-14'] = $pane;
+    $display->panels['right'][0] = 'new-14';
+    $pane = new stdClass();
+    $pane->pid = 'new-15';
+    $pane->panel = 'right';
     $pane->type = 'ting_search';
     $pane->subtype = 'ting_search';
     $pane->shown = TRUE;
@@ -497,12 +521,12 @@ Materials',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-14'] = $pane;
-    $display->panels['right'][0] = 'new-14';
+    $display->content['new-15'] = $pane;
+    $display->panels['right'][1] = 'new-15';
     $pane = new stdClass();
-    $pane->pid = 'new-15';
+    $pane->pid = 'new-16';
     $pane->panel = 'right';
     $pane->type = 'page_tabs';
     $pane->subtype = 'page_tabs';
@@ -523,27 +547,6 @@ Materials',
       'css_class' => 'search-results-tabs',
     );
     $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-15'] = $pane;
-    $display->panels['right'][1] = 'new-15';
-    $pane = new stdClass();
-    $pane->pid = 'new-16';
-    $pane->panel = 'right';
-    $pane->type = 'block';
-    $pane->subtype = 'ting_search-sort-form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-16'] = $pane;
@@ -552,7 +555,7 @@ Materials',
     $pane->pid = 'new-17';
     $pane->panel = 'right';
     $pane->type = 'block';
-    $pane->subtype = 'ding_toggle_format-toggle';
+    $pane->subtype = 'ting_search-sort-form';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -573,7 +576,7 @@ Materials',
     $pane->pid = 'new-18';
     $pane->panel = 'right';
     $pane->type = 'block';
-    $pane->subtype = 'ding_availability-legend';
+    $pane->subtype = 'ding_toggle_format-toggle';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -594,7 +597,7 @@ Materials',
     $pane->pid = 'new-19';
     $pane->panel = 'right';
     $pane->type = 'block';
-    $pane->subtype = 'ting_search-records-per-page';
+    $pane->subtype = 'ding_availability-legend';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -614,6 +617,27 @@ Materials',
     $pane = new stdClass();
     $pane->pid = 'new-20';
     $pane->panel = 'right';
+    $pane->type = 'block';
+    $pane->subtype = 'ting_search-records-per-page';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 6;
+    $pane->locks = array();
+    $display->content['new-20'] = $pane;
+    $display->panels['right'][6] = 'new-20';
+    $pane = new stdClass();
+    $pane->pid = 'new-21';
+    $pane->panel = 'right';
     $pane->type = 'search_result';
     $pane->subtype = 'search_result';
     $pane->shown = TRUE;
@@ -632,30 +656,6 @@ Materials',
       'context' => 'argument_string_1',
       'override_title' => 1,
       'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 6;
-    $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['right'][6] = 'new-20';
-    $pane = new stdClass();
-    $pane->pid = 'new-21';
-    $pane->panel = 'right';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ting_search_related_content-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'items_per_page' => '2',
-      'offset' => '0',
-      'arguments' => array(
-        'search_api_views_fulltext' => '%keywords:raw',
-      ),
     );
     $pane->cache = array();
     $pane->style = array(
