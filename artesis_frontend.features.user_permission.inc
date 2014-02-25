@@ -138,6 +138,16 @@ function artesis_frontend_user_default_permissions() {
     'module' => 'block',
   );
 
+  // Exported permission: administer category menu.
+  $permissions['administer category menu'] = array(
+    'name' => 'administer category menu',
+    'roles' => array(
+      0 => 'administrator',
+      1 => 'local administrator',
+    ),
+    'module' => 'ding_content',
+  );
+
   // Exported permission: administer comments.
   $permissions['administer comments'] = array(
     'name' => 'administer comments',
