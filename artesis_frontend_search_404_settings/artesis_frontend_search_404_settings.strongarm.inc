@@ -14,7 +14,7 @@ function artesis_frontend_search_404_settings_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'search404_custom_search_path';
-  $strongarm->value = 'search/ting/@keys';
+  $strongarm->value = 'search/node/@keys';
   $export['search404_custom_search_path'] = $strongarm;
 
   $strongarm = new stdClass();
