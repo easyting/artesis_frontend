@@ -245,7 +245,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_mainpage_complex';
+  $display->layout = 'omega_12_mainpage';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
