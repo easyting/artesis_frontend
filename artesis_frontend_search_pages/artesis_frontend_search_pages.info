@@ -11,4 +11,3 @@ features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:1
 features[page_manager_handlers][] = search_mkdru_ding_panel_context_2
 features[page_manager_handlers][] = search_node_panel_context_2
-features[page_manager_handlers][] = search_ting_search_panel_context_2
