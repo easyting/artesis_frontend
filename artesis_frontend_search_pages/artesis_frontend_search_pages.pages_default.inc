@@ -233,7 +233,7 @@ Website',
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout = 'omega_12_event_search_page';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -241,6 +241,9 @@ Website',
       'middle' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'top' => NULL,
+      'top_left' => NULL,
+      'top_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -248,21 +251,13 @@ Website',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'campaign';
-    $pane->subtype = 'campaign';
+    $pane->pid = 'new-7';
+    $pane->panel = 'top';
+    $pane->type = 'block';
+    $pane->subtype = 'block-3';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
-      'context' => array(
-        0 => 'empty',
-        1 => 'empty',
-        2 => 'argument_string_1',
-        3 => 'empty',
-      ),
       'override_title' => 1,
       'override_title_text' => '',
     );
@@ -274,20 +269,17 @@ Website',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $display->content['new-7'] = $pane;
+    $display->panels['top'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'right';
-    $pane->type = 'page_title';
-    $pane->subtype = 'page_title';
+    $pane->pid = 'new-8';
+    $pane->panel = 'top_left';
+    $pane->type = 'block';
+    $pane->subtype = 'block-4';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'markup' => 'h2',
-      'class' => '',
-      'id' => '',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -298,11 +290,11 @@ Website',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['right'][0] = 'new-2';
+    $display->content['new-8'] = $pane;
+    $display->panels['top_left'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'right';
+    $pane->pid = 'new-9';
+    $pane->panel = 'top_left';
     $pane->type = 'page_tabs';
     $pane->subtype = 'page_tabs';
     $pane->shown = TRUE;
@@ -324,11 +316,77 @@ Website',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][1] = 'new-3';
+    $display->content['new-9'] = $pane;
+    $display->panels['top_left'][1] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'right';
+    $pane->pid = 'new-10';
+    $pane->panel = 'top_right';
+    $pane->type = 'page_title';
+    $pane->subtype = 'page_title';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'markup' => 'h2',
+      'class' => '',
+      'id' => '',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-10'] = $pane;
+    $display->panels['top_right'][0] = 'new-10';
+    $pane = new stdClass();
+    $pane->pid = 'new-11';
+    $pane->panel = 'top_right';
+    $pane->type = 'block';
+    $pane->subtype = 'block-6';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['top_right'][1] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
+    $pane->panel = 'top_right';
+    $pane->type = 'block';
+    $pane->subtype = 'block-7';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['top_right'][2] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'top_right';
     $pane->type = 'views';
     $pane->subtype = 'ding_node_search';
     $pane->shown = TRUE;
@@ -350,7 +408,7 @@ Website',
         0 => 'argument_string_1.raw',
       ),
       'override_title' => 1,
-      'override_title_text' => '',
+      'override_title_text' => 'Artikler',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -358,10 +416,10 @@ Website',
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 2;
+    $pane->position = 3;
     $pane->locks = '';
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][2] = 'new-4';
+    $display->content['new-13'] = $pane;
+    $display->panels['top_right'][3] = 'new-13';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
