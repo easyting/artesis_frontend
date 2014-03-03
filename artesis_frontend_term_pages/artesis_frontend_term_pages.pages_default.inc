@@ -299,7 +299,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     ),
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_mainpage_complex';
+  $display->layout = 'omega_12_mainpage';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -312,6 +312,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
       'bottom_left_small' => NULL,
       'bottom_right_small' => NULL,
       'bottom_medium_right' => NULL,
+      'top_middle' => NULL,
+      'bottom_left' => NULL,
+      'bottom_medium' => NULL,
+      'bottom_right' => NULL,
     ),
   );
   $display->cache = array();
@@ -320,13 +324,18 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-7';
-    $pane->panel = 'top_left';
-    $pane->type = 'block';
-    $pane->subtype = 'ding_library-ding_sidebar_menu';
-    $pane->shown = TRUE;
+    $pane->panel = 'bottom_left';
+    $pane->type = 'category_menu';
+    $pane->subtype = 'category_menu';
+    $pane->shown = FALSE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_title' => 1,
+      'type' => 'category',
+      'context' => array(
+        0 => 'argument_term_1',
+        1 => 'empty',
+      ),
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -338,20 +347,15 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-7'] = $pane;
-    $display->panels['top_left'][0] = 'new-7';
+    $display->panels['bottom_left'][0] = 'new-7';
     $pane = new stdClass();
     $pane->pid = 'new-8';
-    $pane->panel = 'top_left';
-    $pane->type = 'category_menu';
-    $pane->subtype = 'category_menu';
+    $pane->panel = 'bottom_left';
+    $pane->type = 'block';
+    $pane->subtype = 'ding_library-ding_sidebar_menu';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'type' => 'news',
-      'context' => array(
-        0 => 'empty',
-        1 => 'empty',
-      ),
       'override_title' => 0,
       'override_title_text' => '',
     );
@@ -364,10 +368,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->position = 1;
     $pane->locks = array();
     $display->content['new-8'] = $pane;
-    $display->panels['top_left'][1] = 'new-8';
+    $display->panels['bottom_left'][1] = 'new-8';
     $pane = new stdClass();
     $pane->pid = 'new-9';
-    $pane->panel = 'top_left';
+    $pane->panel = 'bottom_left';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
     $pane->shown = TRUE;
@@ -375,13 +379,14 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->configuration = array(
       'ding_campaign_count' => 3,
       'ding_campaign_offset' => 0,
+      'ding_campaign_image_style' => 'medium',
       'context' => array(
         0 => 'empty',
         1 => 'empty',
         2 => 'empty',
         3 => 'argument_term_1',
       ),
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -393,10 +398,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->position = 2;
     $pane->locks = array();
     $display->content['new-9'] = $pane;
-    $display->panels['top_left'][2] = 'new-9';
+    $display->panels['bottom_left'][2] = 'new-9';
     $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'top_right';
+    $pane->panel = 'bottom_medium';
     $pane->type = 'term_description';
     $pane->subtype = 'term_description';
     $pane->shown = TRUE;
@@ -415,33 +420,26 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane->position = 0;
     $pane->locks = array();
     $display->content['new-10'] = $pane;
-    $display->panels['top_right'][0] = 'new-10';
+    $display->panels['bottom_medium'][0] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
-    $pane->panel = 'top_right';
-    $pane->type = 'views';
-    $pane->subtype = 'artesis_category_taxonomy_term';
+    $pane->panel = 'bottom_right';
+    $pane->type = 'campaign';
+    $pane->subtype = 'campaign';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'override_pager_settings' => 0,
-      'use_pager' => 1,
-      'nodes_per_page' => '0',
-      'pager_id' => '0',
-      'offset' => '0',
-      'more_link' => 0,
-      'feed_icons' => 0,
-      'panel_args' => 1,
-      'link_to_view' => 0,
-      'args' => '1',
-      'url' => '',
-      'display' => 'page',
+      'ding_campaign_count' => 3,
+      'ding_campaign_offset' => 3,
+      'ding_campaign_image_style' => 'medium',
       'context' => array(
-        0 => 'argument_term_1.tid',
-        1 => '',
+        0 => 'empty',
+        1 => 'empty',
+        2 => 'empty',
+        3 => 'argument_term_1',
       ),
-      'override_title' => 0,
-      'override_title_text' => '',
+      'override_title' => 1,
+      'override_title_text' => 'Se også',
     );
     $pane->cache = array();
     $pane->style = array(
@@ -449,10 +447,10 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-11'] = $pane;
-    $display->panels['top_right'][1] = 'new-11';
+    $display->panels['bottom_right'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
