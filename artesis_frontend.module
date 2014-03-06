@@ -152,16 +152,18 @@ function _artesis_frontend_get_allowed_plugins() {
   // Plugin definition follows ctools convention 'module - plugin name'.
   // Views must be declared by 'views' value.
   // Blocks must be declared by 'block' value.
-  return array(
+  $menu = array(
     'ding_nodelist' => 'ding_nodelist',
     'ding_item_list' => 'ding_item_list',
     'alma_item_list' => 'alma_item_list',
     'campaign' => 'campaign',
     'term_description' => 'term_description',
     'ding_item_viewer-item_viewer' => 'block',
-    'carousel' => 'carousel',
+    'carousel' => 'carousel', // This ctool content_type does not exist!!!
     'ding_library_opening_hours-ding_library_opened_today' => 'block',
   );
+  drupal_alter('artesis_frontend_ipe_menu', $menu);
+  return $menu;
 }
 
 /**

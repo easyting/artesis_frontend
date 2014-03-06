@@ -4,4 +4,28 @@
  * Drupal requires this file.
  */
 
+
+/**
+ * Implements hook_entity_info_alter().
+ *
+ * Set special view mode for ting object fields.
+ */
+function artesis_frontend_ting_pages_entity_info_alter(&$entity_info) {
+  $entity_info['ting_object']['view modes'] += array(
+    'ting_object_fields' => array(
+      'label' => t('Fields (for object page)'),
+      'custom settings' => TRUE,
+    ),
+  );
+}
+
+/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function artesis_frontend_ting_pages_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'ctools') {
+    return 'plugins/' . $plugin;
+  }
+}
+
 include_once('artesis_frontend_ting_pages.features.inc');

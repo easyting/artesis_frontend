@@ -105,20 +105,15 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'left';
-    $pane->type = 'campaign';
-    $pane->subtype = 'campaign';
+    $pane->type = 'category_menu_fold';
+    $pane->subtype = 'category_menu_fold';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
       'context' => array(
-        0 => 'empty',
-        1 => 'empty',
-        2 => 'empty',
-        3 => 'argument_term_1',
+        0 => 'argument_term_1',
       ),
-      'override_title' => 1,
+      'override_title' => 0,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -134,15 +129,20 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-4';
     $pane->panel = 'left';
-    $pane->type = 'category_menu_fold';
-    $pane->subtype = 'category_menu_fold';
+    $pane->type = 'campaign';
+    $pane->subtype = 'campaign';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
+      'ding_campaign_count' => 3,
+      'ding_campaign_offset' => 0,
       'context' => array(
-        0 => 'argument_term_1',
+        0 => 'empty',
+        1 => 'empty',
+        2 => 'empty',
+        3 => 'argument_term_1',
       ),
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
