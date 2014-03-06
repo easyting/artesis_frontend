@@ -69,18 +69,18 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => -1,
   );
 
-  $theme['mkopac-mkopac_user_block'] = array(
-    'module' => 'mkopac',
-    'delta' => 'mkopac_user_block',
+  $theme['mkopac_user-mkopac_user_profile'] = array(
+    'module' => 'mkopac_user',
+    'delta' => 'mkopac_user_profile',
     'theme' => 'alpha_basetheme',
     'status' => '1',
-    'weight' => '0',
+    'weight' => '-23',
     'region' => 'user_second',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
     'title' => '',
-    'cache' => -1,
+    'cache' => 2,
   );
 
   $theme['search-form'] = array(
@@ -143,9 +143,9 @@ function artesis_frontend_default_fe_block_settings() {
     'module' => 'user',
     'delta' => 'login',
     'theme' => 'alpha_basetheme',
-    'status' => 0,
+    'status' => '1',
     'weight' => '-22',
-    'region' => '',
+    'region' => 'user_second',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
@@ -214,9 +214,9 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => -1,
   );
 
-  $theme['mkopac-mkopac_user_block'] = array(
-    'module' => 'mkopac',
-    'delta' => 'mkopac_user_block',
+  $theme['mkopac_user-mkopac_user_profile'] = array(
+    'module' => 'mkopac_user',
+    'delta' => 'mkopac_user_profile',
     'theme' => 'bartik',
     'status' => 0,
     'weight' => '0',
@@ -225,7 +225,7 @@ function artesis_frontend_default_fe_block_settings() {
     'visibility' => '0',
     'pages' => '',
     'title' => '',
-    'cache' => -1,
+    'cache' => 2,
   );
 
   $theme['search-form'] = array(
@@ -359,9 +359,9 @@ function artesis_frontend_default_fe_block_settings() {
     'cache' => -1,
   );
 
-  $theme['mkopac-mkopac_user_block'] = array(
-    'module' => 'mkopac',
-    'delta' => 'mkopac_user_block',
+  $theme['mkopac_user-mkopac_user_profile'] = array(
+    'module' => 'mkopac_user',
+    'delta' => 'mkopac_user_profile',
     'theme' => 'seven',
     'status' => 0,
     'weight' => '0',
@@ -370,7 +370,7 @@ function artesis_frontend_default_fe_block_settings() {
     'visibility' => '0',
     'pages' => '',
     'title' => '',
-    'cache' => -1,
+    'cache' => 2,
   );
 
   $theme['search-form'] = array(
