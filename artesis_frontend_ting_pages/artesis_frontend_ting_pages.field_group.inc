@@ -21,7 +21,7 @@ function artesis_frontend_ting_pages_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => '',
-    'weight' => '6',
+    'weight' => '7',
     'children' => array(
       0 => 'ting_series',
       1 => 'ding_periodical_issues',
