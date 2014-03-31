@@ -16,7 +16,14 @@ function artesis_frontend_ting_pages_features_override_default_overrides() {
     'label' => 'above',
     'settings' => array(),
     'type' => 'hidden',
-    'weight' => '48',
+    'weight' => '19',
+  );
+  $overrides["field.ting_object-ting_object-ding_entity_buttons.field_instance|display|ting_object_fields"] = array(
+    'label' => 'hidden',
+    'module' => 'ding_entity',
+    'settings' => array(),
+    'type' => 'ding_entity_buttons_ajax',
+    'weight' => '8',
   );
   $overrides["field.ting_object-ting_object-ding_periodical_issues.field_instance|display|ting_object_fields"] = array(
     'label' => 'inline',
@@ -25,11 +32,31 @@ function artesis_frontend_ting_pages_features_override_default_overrides() {
     'type' => 'ding_periodical_issues_default',
     'weight' => '33',
   );
+  $overrides["field.ting_object-ting_object-more_info.field_instance|display|ting_object_fields"] = array(
+    'label' => 'above',
+    'settings' => array(),
+    'type' => 'hidden',
+    'weight' => '10',
+  );
+  $overrides["field.ting_object-ting_object-ting_abstract.field_instance|display|ting_object_fields"] = array(
+    'label' => 'hidden',
+    'module' => 'ting',
+    'settings' => array(),
+    'type' => 'ting_abstract_default',
+    'weight' => '5',
+  );
+  $overrides["field.ting_object-ting_object-ting_author.field_instance|display|ting_object_fields"] = array(
+    'label' => 'hidden',
+    'module' => 'ting',
+    'settings' => array(),
+    'type' => 'ting_author_default',
+    'weight' => '4',
+  );
   $overrides["field.ting_object-ting_object-ting_cover.field_instance|display|ting_object_fields"] = array(
     'label' => 'above',
     'settings' => array(),
     'type' => 'hidden',
-    'weight' => '47',
+    'weight' => '18',
   );
   $overrides["field.ting_object-ting_object-ting_details_age.field_instance|display|ting_object_fields"] = array(
     'label' => 'inline',
@@ -192,6 +219,13 @@ function artesis_frontend_ting_pages_features_override_default_overrides() {
     'type' => 'ting_details_single',
     'weight' => '11',
   );
+  $overrides["field.ting_object-ting_object-ting_details_subjects.field_instance|display|ting_object_fields"] = array(
+    'label' => 'inline',
+    'module' => 'ding_ting_frontend',
+    'settings' => array(),
+    'type' => 'ting_details_subject_search',
+    'weight' => '6',
+  );
   $overrides["field.ting_object-ting_object-ting_details_subtitles.field_instance|display|ting_object_fields"] = array(
     'label' => 'inline',
     'module' => 'ding_ting_frontend',
@@ -239,18 +273,6 @@ function artesis_frontend_ting_pages_features_override_default_overrides() {
     'settings' => array(),
     'type' => 'ding_availability_type',
     'weight' => '0',
-  );
-  $overrides["field.ting_object-ting_object-voxb_review.field_instance|display|ting_object_fields"] = array(
-    'label' => 'above',
-    'settings' => array(),
-    'type' => 'hidden',
-    'weight' => '45',
-  );
-  $overrides["field.ting_object-ting_object-voxb_tags.field_instance|display|ting_object_fields"] = array(
-    'label' => 'above',
-    'settings' => array(),
-    'type' => 'hidden',
-    'weight' => '46',
   );
 
  return $overrides;

@@ -27,7 +27,16 @@ function artesis_frontend_ting_pages_field_default_fields_alter(&$data) {
       'label' => 'above',
       'settings' => array(),
       'type' => 'hidden',
-      'weight' => '48',
+      'weight' => '19',
+    ); /* WAS: '' */
+  }
+  if (isset($data['ting_object-ting_object-ding_entity_buttons'])) {
+    $data['ting_object-ting_object-ding_entity_buttons']['field_instance']['display']['ting_object_fields'] = array(
+      'label' => 'hidden',
+      'module' => 'ding_entity',
+      'settings' => array(),
+      'type' => 'ding_entity_buttons_ajax',
+      'weight' => '8',
     ); /* WAS: '' */
   }
   if (isset($data['ting_object-ting_object-ding_periodical_issues'])) {
@@ -39,12 +48,38 @@ function artesis_frontend_ting_pages_field_default_fields_alter(&$data) {
       'weight' => '33',
     ); /* WAS: '' */
   }
+  if (isset($data['ting_object-ting_object-more_info'])) {
+    $data['ting_object-ting_object-more_info']['field_instance']['display']['ting_object_fields'] = array(
+      'label' => 'above',
+      'settings' => array(),
+      'type' => 'hidden',
+      'weight' => '10',
+    ); /* WAS: '' */
+  }
+  if (isset($data['ting_object-ting_object-ting_abstract'])) {
+    $data['ting_object-ting_object-ting_abstract']['field_instance']['display']['ting_object_fields'] = array(
+      'label' => 'hidden',
+      'module' => 'ting',
+      'settings' => array(),
+      'type' => 'ting_abstract_default',
+      'weight' => '5',
+    ); /* WAS: '' */
+  }
+  if (isset($data['ting_object-ting_object-ting_author'])) {
+    $data['ting_object-ting_object-ting_author']['field_instance']['display']['ting_object_fields'] = array(
+      'label' => 'hidden',
+      'module' => 'ting',
+      'settings' => array(),
+      'type' => 'ting_author_default',
+      'weight' => '4',
+    ); /* WAS: '' */
+  }
   if (isset($data['ting_object-ting_object-ting_cover'])) {
     $data['ting_object-ting_object-ting_cover']['field_instance']['display']['ting_object_fields'] = array(
       'label' => 'above',
       'settings' => array(),
       'type' => 'hidden',
-      'weight' => '47',
+      'weight' => '18',
     ); /* WAS: '' */
   }
   if (isset($data['ting_object-ting_object-ting_details_age'])) {
@@ -254,6 +289,15 @@ function artesis_frontend_ting_pages_field_default_fields_alter(&$data) {
       'weight' => '11',
     ); /* WAS: '' */
   }
+  if (isset($data['ting_object-ting_object-ting_details_subjects'])) {
+    $data['ting_object-ting_object-ting_details_subjects']['field_instance']['display']['ting_object_fields'] = array(
+      'label' => 'inline',
+      'module' => 'ding_ting_frontend',
+      'settings' => array(),
+      'type' => 'ting_details_subject_search',
+      'weight' => '6',
+    ); /* WAS: '' */
+  }
   if (isset($data['ting_object-ting_object-ting_details_subtitles'])) {
     $data['ting_object-ting_object-ting_details_subtitles']['field_instance']['display']['ting_object_fields'] = array(
       'label' => 'inline',
@@ -314,22 +358,6 @@ function artesis_frontend_ting_pages_field_default_fields_alter(&$data) {
       'settings' => array(),
       'type' => 'ding_availability_type',
       'weight' => '0',
-    ); /* WAS: '' */
-  }
-  if (isset($data['ting_object-ting_object-voxb_review'])) {
-    $data['ting_object-ting_object-voxb_review']['field_instance']['display']['ting_object_fields'] = array(
-      'label' => 'above',
-      'settings' => array(),
-      'type' => 'hidden',
-      'weight' => '45',
-    ); /* WAS: '' */
-  }
-  if (isset($data['ting_object-ting_object-voxb_tags'])) {
-    $data['ting_object-ting_object-voxb_tags']['field_instance']['display']['ting_object_fields'] = array(
-      'label' => 'above',
-      'settings' => array(),
-      'type' => 'hidden',
-      'weight' => '46',
     ); /* WAS: '' */
   }
 }

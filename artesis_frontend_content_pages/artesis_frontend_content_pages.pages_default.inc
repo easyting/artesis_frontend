@@ -676,6 +676,30 @@ return TRUE;
     $pane = new stdClass();
     $pane->pid = 'new-20';
     $pane->panel = 'right';
+    $pane->type = 'category_menu_fold';
+    $pane->subtype = 'category_menu_fold';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'context' => array(
+        0 => 'relationship_entity_from_field:field_category-node-taxonomy_term_1',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-20'] = $pane;
+    $display->panels['right'][0] = 'new-20';
+    $pane = new stdClass();
+    $pane->pid = 'new-21';
+    $pane->panel = 'right';
     $pane->type = 'ding_related_items';
     $pane->subtype = 'ding_related_items';
     $pane->shown = TRUE;
@@ -689,30 +713,6 @@ return TRUE;
       'method' => '0',
       'settings' => array(),
     );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['right'][0] = 'new-20';
-    $pane = new stdClass();
-    $pane->pid = 'new-21';
-    $pane->panel = 'right';
-    $pane->type = 'category_menu_fold';
-    $pane->subtype = 'category_menu_fold';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => array(
-        0 => 'relationship_entity_from_field:field_category-node-taxonomy_term_1',
-      ),
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
