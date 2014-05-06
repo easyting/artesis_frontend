@@ -25,7 +25,6 @@ dependencies[] = locale
 dependencies[] = menu
 dependencies[] = mkdru
 dependencies[] = mkopac
-dependencies[] = mkopac_user
 dependencies[] = opening_hours
 dependencies[] = openlayers_ui
 dependencies[] = overlay
