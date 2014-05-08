@@ -25,34 +25,6 @@ function artesis_frontend_views_default_views_alter(&$views) {
  */
 function artesis_frontend_form_alter(&$form, &$forms_state, $form_id) {
   if ($form_id == 'user_profile_form' || $form_id == 'user_register_form') {
-    $form['account']['roles']['#access'] = user_access('change user role');
-
-    if (user_access('change user role')) {
-      global $user;
-      $account = $form['#user'];
-      $roles = array_map('check_plain', artesis_user_roles(TRUE, NULL, $user));
-
-      // The disabled checkbox subelement for the 'authenticated user' role
-      // must be generated separately and added to the checkboxes element,
-      // because of a limitation in Form API not supporting a single disabled
-      // checkbox within a set of checkboxes.
-      // @todo This should be solved more elegantly. See issue #119038.
-      $checkbox_authenticated = array(
-        '#type' => 'checkbox',
-        '#title' => $roles[DRUPAL_AUTHENTICATED_RID],
-        '#default_value' => TRUE,
-        '#disabled' => TRUE,
-      );
-      unset($roles[DRUPAL_AUTHENTICATED_RID]);
-      $form['account']['roles'] = array(
-        '#type' => 'checkboxes',
-        '#title' => t('Roles'),
-        '#default_value' => (isset($account->roles) ? array_keys($account->roles) : array()),
-        '#options' => $roles,
-        DRUPAL_AUTHENTICATED_RID => $checkbox_authenticated,
-      );
-    }
-
     // Assume user profile edit form.
     if (arg(0) == 'user' && arg(2) == 'edit') {
       foreach ($form['#validate'] as $k => $v) {
