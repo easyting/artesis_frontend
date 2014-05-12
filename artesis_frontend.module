@@ -287,3 +287,22 @@ function artesis_frontend_block_view($delta = '') {
 
   return $block;
 }
+
+/**
+ * Implements hook_query_alter().
+ */
+function artesis_frontend_query_alter(QueryAlterableInterface $query) {
+  if ($query->hasTag('node_access') && $query->hasTag('pager')) {
+    $excluded_types = array('ding_campaign');
+
+    if (!empty($excluded_types)) {
+      $tables = $query->getTables();
+
+      foreach ($tables as $table) {
+        if ($table['table'] == 'search_index') {
+          $query->condition('n.type', $excluded_types, 'NOT IN');
+        }
+      }
+    }
+  }
+}
