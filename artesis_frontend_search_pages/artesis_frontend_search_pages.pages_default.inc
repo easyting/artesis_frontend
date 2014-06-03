@@ -36,7 +36,7 @@ E-ressources',
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout = 'mkopac_2col';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -248,7 +248,7 @@ Website',
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-1';
+    $pane->pid = 'new-7';
     $pane->panel = 'left';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
@@ -274,10 +274,10 @@ Website',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
+    $display->content['new-7'] = $pane;
+    $display->panels['left'][0] = 'new-7';
     $pane = new stdClass();
-    $pane->pid = 'new-2';
+    $pane->pid = 'new-8';
     $pane->panel = 'right';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -298,10 +298,10 @@ Website',
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['right'][0] = 'new-2';
+    $display->content['new-8'] = $pane;
+    $display->panels['right'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-9';
     $pane->panel = 'right';
     $pane->type = 'page_tabs';
     $pane->subtype = 'page_tabs';
@@ -324,10 +324,10 @@ Website',
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['right'][1] = 'new-3';
+    $display->content['new-9'] = $pane;
+    $display->panels['right'][1] = 'new-9';
     $pane = new stdClass();
-    $pane->pid = 'new-4';
+    $pane->pid = 'new-10';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'ding_node_search';
@@ -360,8 +360,8 @@ Website',
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = '';
-    $display->content['new-4'] = $pane;
-    $display->panels['right'][2] = 'new-4';
+    $display->content['new-10'] = $pane;
+    $display->panels['right'][2] = 'new-10';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

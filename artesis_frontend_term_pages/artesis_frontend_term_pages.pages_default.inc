@@ -42,7 +42,7 @@ function artesis_frontend_term_pages_default_page_manager_handlers() {
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout = 'mkopac_2col';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(

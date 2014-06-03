@@ -51,13 +51,16 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     'panels_breadcrumbs_home' => 1,
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_twocol_8_4';
+  $display->layout = 'mkopac_2col_complex';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
       'default' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'middle' => NULL,
+      'sidebar_first' => NULL,
+      'sidebar_second' => NULL,
     ),
   );
   $display->cache = array();
@@ -66,25 +69,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-1';
-    $pane->panel = 'left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'ding_news-panel_pane_2';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-1'] = $pane;
-    $display->panels['left'][0] = 'new-1';
-    $pane = new stdClass();
-    $pane->pid = 'new-2';
-    $pane->panel = 'left';
+    $pane->panel = 'middle';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_main_image';
     $pane->shown = TRUE;
@@ -106,43 +91,15 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-2'] = $pane;
-    $display->panels['left'][1] = 'new-2';
+    $display->content['new-1'] = $pane;
+    $display->panels['middle'][0] = 'new-1';
     $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'left';
-    $pane->type = 'node_content';
-    $pane->subtype = 'node_content';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'links' => 0,
-      'no_extras' => 1,
-      'override_title' => 1,
-      'override_title_text' => '',
-      'identifier' => '',
-      'link' => 0,
-      'leave_node_title' => 0,
-      'build_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['left'][2] = 'new-3';
-    $pane = new stdClass();
-    $pane->pid = 'new-4';
-    $pane->panel = 'left';
+    $pane->pid = 'new-2';
+    $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ding_news-panel_pane_3';
+    $pane->subtype = 'ding_news-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -152,85 +109,12 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['left'][3] = 'new-4';
+    $display->content['new-2'] = $pane;
+    $display->panels['middle'][1] = 'new-2';
     $pane = new stdClass();
-    $pane->pid = 'new-5';
-    $pane->panel = 'left';
-    $pane->type = 'ding_related_items';
-    $pane->subtype = 'ding_related_items';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-      'item_list_custom_title' => 'Related materials',
-    );
-    $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
-    );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 4;
-    $pane->locks = array();
-    $display->content['new-5'] = $pane;
-    $display->panels['left'][4] = 'new-5';
-    $pane = new stdClass();
-    $pane->pid = 'new-6';
-    $pane->panel = 'left';
-    $pane->type = 'node_comments';
-    $pane->subtype = 'node_comments';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'mode' => '1',
-      'comments_per_page' => '50',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 5;
-    $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['left'][5] = 'new-6';
-    $pane = new stdClass();
-    $pane->pid = 'new-7';
-    $pane->panel = 'left';
-    $pane->type = 'node_comment_form';
-    $pane->subtype = 'node_comment_form';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'anon_links' => 0,
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 6;
-    $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['left'][6] = 'new-7';
-    $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-3';
     $pane->panel = 'right';
     $pane->type = 'category_menu';
     $pane->subtype = 'category_menu';
@@ -253,10 +137,10 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['right'][0] = 'new-8';
+    $display->content['new-3'] = $pane;
+    $display->panels['right'][0] = 'new-3';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-4';
     $pane->panel = 'right';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
@@ -282,8 +166,101 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['right'][1] = 'new-9';
+    $display->content['new-4'] = $pane;
+    $display->panels['right'][1] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
+    $pane->panel = 'sidebar_first';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ding_news-panel_pane_3';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-5'] = $pane;
+    $display->panels['sidebar_first'][0] = 'new-5';
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'sidebar_first';
+    $pane->type = 'node_comments';
+    $pane->subtype = 'node_comments';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'mode' => '1',
+      'comments_per_page' => '50',
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['sidebar_first'][1] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'sidebar_first';
+    $pane->type = 'node_comment_form';
+    $pane->subtype = 'node_comment_form';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'anon_links' => 0,
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_first'][2] = 'new-7';
+    $pane = new stdClass();
+    $pane->pid = 'new-8';
+    $pane->panel = 'sidebar_second';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'links' => 0,
+      'no_extras' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 0,
+      'build_mode' => 'full',
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-8'] = $pane;
+    $display->panels['sidebar_second'][0] = 'new-8';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -374,7 +351,7 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     'body_classes_to_add' => '',
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_twocol_8_4';
+  $display->layout = 'mkopac_2col_complex';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -384,6 +361,8 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
       'right' => NULL,
       'top' => NULL,
       'bottom' => NULL,
+      'sidebar_first' => NULL,
+      'sidebar_second' => NULL,
     ),
   );
   $display->cache = array();
@@ -391,8 +370,36 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
+    $pane->pid = 'new-9';
+    $pane->panel = 'middle';
+    $pane->type = 'entity_field';
+    $pane->subtype = 'node:field_main_image';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'label' => 'hidden',
+      'formatter' => 'image',
+      'formatter_settings' => array(
+        'image_style' => 'ding_node_page',
+        'image_link' => '',
+      ),
+      'context' => 'argument_entity_id:node_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-9'] = $pane;
+    $display->panels['middle'][0] = 'new-9';
+    $pane = new stdClass();
     $pane->pid = 'new-10';
-    $pane->panel = 'left';
+    $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'ding_event-panel_pane_2';
     $pane->shown = TRUE;
@@ -420,13 +427,68 @@ return FALSE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-10'] = $pane;
-    $display->panels['left'][0] = 'new-10';
+    $display->panels['middle'][1] = 'new-10';
     $pane = new stdClass();
     $pane->pid = 'new-11';
-    $pane->panel = 'left';
+    $pane->panel = 'right';
+    $pane->type = 'category_menu';
+    $pane->subtype = 'category_menu';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'type' => 'category',
+      'context' => array(
+        0 => 'empty',
+        1 => 'empty',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-11'] = $pane;
+    $display->panels['right'][0] = 'new-11';
+    $pane = new stdClass();
+    $pane->pid = 'new-12';
+    $pane->panel = 'right';
+    $pane->type = 'campaign';
+    $pane->subtype = 'campaign';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'ding_campaign_count' => 3,
+      'ding_campaign_offset' => 0,
+      'context' => array(
+        0 => 'argument_entity_id:node_1',
+        1 => 'empty',
+        2 => 'empty',
+        3 => 'empty',
+      ),
+      'override_title' => 1,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-12'] = $pane;
+    $display->panels['right'][1] = 'new-12';
+    $pane = new stdClass();
+    $pane->pid = 'new-13';
+    $pane->panel = 'sidebar_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'ding_event-panel_pane_4';
     $pane->shown = TRUE;
@@ -454,69 +516,13 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $display->content['new-11'] = $pane;
-    $display->panels['left'][1] = 'new-11';
-    $pane = new stdClass();
-    $pane->pid = 'new-12';
-    $pane->panel = 'left';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_main_image';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'image',
-      'formatter_settings' => array(
-        'image_style' => 'ding_node_page',
-        'image_link' => '',
-      ),
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 2;
-    $pane->locks = array();
-    $display->content['new-12'] = $pane;
-    $display->panels['left'][2] = 'new-12';
-    $pane = new stdClass();
-    $pane->pid = 'new-13';
-    $pane->panel = 'left';
-    $pane->type = 'node_content';
-    $pane->subtype = 'node_content';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'links' => 0,
-      'no_extras' => 1,
-      'override_title' => 1,
-      'override_title_text' => '',
-      'identifier' => '',
-      'link' => 0,
-      'leave_node_title' => 0,
-      'build_mode' => 'full',
-      'context' => 'argument_entity_id:node_1',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 0;
     $pane->locks = array();
     $display->content['new-13'] = $pane;
-    $display->panels['left'][3] = 'new-13';
+    $display->panels['sidebar_first'][0] = 'new-13';
     $pane = new stdClass();
     $pane->pid = 'new-14';
-    $pane->panel = 'left';
+    $pane->panel = 'sidebar_first';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_date';
     $pane->shown = TRUE;
@@ -544,13 +550,13 @@ return TRUE;
       'css_class' => 'content-event-day',
     );
     $pane->extras = array();
-    $pane->position = 4;
+    $pane->position = 1;
     $pane->locks = array();
     $display->content['new-14'] = $pane;
-    $display->panels['left'][4] = 'new-14';
+    $display->panels['sidebar_first'][1] = 'new-14';
     $pane = new stdClass();
     $pane->pid = 'new-15';
-    $pane->panel = 'left';
+    $pane->panel = 'sidebar_first';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_event_date';
     $pane->shown = TRUE;
@@ -566,7 +572,7 @@ return TRUE;
         'fromto' => 'value',
       ),
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
@@ -578,13 +584,13 @@ return TRUE;
       'css_class' => 'content-event-month',
     );
     $pane->extras = array();
-    $pane->position = 5;
+    $pane->position = 2;
     $pane->locks = array();
     $display->content['new-15'] = $pane;
-    $display->panels['left'][5] = 'new-15';
+    $display->panels['sidebar_first'][2] = 'new-15';
     $pane = new stdClass();
     $pane->pid = 'new-16';
-    $pane->panel = 'left';
+    $pane->panel = 'sidebar_first';
     $pane->type = 'views_panes';
     $pane->subtype = 'ding_event-panel_pane_3';
     $pane->shown = TRUE;
@@ -596,38 +602,13 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 6;
+    $pane->position = 3;
     $pane->locks = array();
     $display->content['new-16'] = $pane;
-    $display->panels['left'][6] = 'new-16';
+    $display->panels['sidebar_first'][3] = 'new-16';
     $pane = new stdClass();
     $pane->pid = 'new-17';
-    $pane->panel = 'left';
-    $pane->type = 'ding_related_items';
-    $pane->subtype = 'ding_related_items';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
-      'override_title_text' => '',
-    );
-    $pane->cache = array(
-      'method' => '0',
-      'settings' => array(),
-    );
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 7;
-    $pane->locks = array();
-    $display->content['new-17'] = $pane;
-    $display->panels['left'][7] = 'new-17';
-    $pane = new stdClass();
-    $pane->pid = 'new-18';
-    $pane->panel = 'left';
+    $pane->panel = 'sidebar_second';
     $pane->type = 'node_comments';
     $pane->subtype = 'node_comments';
     $pane->shown = TRUE;
@@ -645,13 +626,13 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 8;
+    $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-18'] = $pane;
-    $display->panels['left'][8] = 'new-18';
+    $display->content['new-17'] = $pane;
+    $display->panels['sidebar_second'][0] = 'new-17';
     $pane = new stdClass();
-    $pane->pid = 'new-19';
-    $pane->panel = 'left';
+    $pane->pid = 'new-18';
+    $pane->panel = 'sidebar_second';
     $pane->type = 'node_comment_form';
     $pane->subtype = 'node_comment_form';
     $pane->shown = TRUE;
@@ -668,65 +649,38 @@ return TRUE;
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 9;
-    $pane->locks = array();
-    $display->content['new-19'] = $pane;
-    $display->panels['left'][9] = 'new-19';
-    $pane = new stdClass();
-    $pane->pid = 'new-20';
-    $pane->panel = 'right';
-    $pane->type = 'category_menu';
-    $pane->subtype = 'category_menu';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'type' => 'category',
-      'context' => array(
-        0 => 'empty',
-        1 => 'empty',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 0;
-    $pane->locks = array();
-    $display->content['new-20'] = $pane;
-    $display->panels['right'][0] = 'new-20';
-    $pane = new stdClass();
-    $pane->pid = 'new-21';
-    $pane->panel = 'right';
-    $pane->type = 'campaign';
-    $pane->subtype = 'campaign';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'ding_campaign_count' => 3,
-      'ding_campaign_offset' => 0,
-      'context' => array(
-        0 => 'argument_entity_id:node_1',
-        1 => 'empty',
-        2 => 'empty',
-        3 => 'empty',
-      ),
-      'override_title' => 1,
-      'override_title_text' => '',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-21'] = $pane;
-    $display->panels['right'][1] = 'new-21';
+    $display->content['new-18'] = $pane;
+    $display->panels['sidebar_second'][1] = 'new-18';
+    $pane = new stdClass();
+    $pane->pid = 'new-19';
+    $pane->panel = 'sidebar_second';
+    $pane->type = 'node_content';
+    $pane->subtype = 'node_content';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'links' => 0,
+      'no_extras' => 1,
+      'override_title' => 1,
+      'override_title_text' => '',
+      'identifier' => '',
+      'link' => 0,
+      'leave_node_title' => 0,
+      'build_mode' => 'full',
+      'context' => 'argument_entity_id:node_1',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 2;
+    $pane->locks = array();
+    $display->content['new-19'] = $pane;
+    $display->panels['sidebar_second'][2] = 'new-19';
   $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
@@ -767,7 +721,7 @@ return TRUE;
     ),
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout = 'mkopac_2col';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -781,7 +735,7 @@ return TRUE;
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-22';
+    $pane->pid = 'new-20';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'opening_hours-week';
@@ -799,10 +753,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-22'] = $pane;
-    $display->panels['left'][0] = 'new-22';
+    $display->content['new-20'] = $pane;
+    $display->panels['left'][0] = 'new-20';
     $pane = new stdClass();
-    $pane->pid = 'new-23';
+    $pane->pid = 'new-21';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'ding_library-ding_sidebar_menu';
@@ -820,10 +774,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-23'] = $pane;
-    $display->panels['left'][1] = 'new-23';
+    $display->content['new-21'] = $pane;
+    $display->panels['left'][1] = 'new-21';
     $pane = new stdClass();
-    $pane->pid = 'new-24';
+    $pane->pid = 'new-22';
     $pane->panel = 'left';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
@@ -849,10 +803,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-24'] = $pane;
-    $display->panels['left'][2] = 'new-24';
+    $display->content['new-22'] = $pane;
+    $display->panels['left'][2] = 'new-22';
     $pane = new stdClass();
-    $pane->pid = 'new-25';
+    $pane->pid = 'new-23';
     $pane->panel = 'right';
     $pane->type = 'page_title';
     $pane->subtype = 'page_title';
@@ -873,10 +827,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-25'] = $pane;
-    $display->panels['right'][0] = 'new-25';
+    $display->content['new-23'] = $pane;
+    $display->panels['right'][0] = 'new-23';
     $pane = new stdClass();
-    $pane->pid = 'new-26';
+    $pane->pid = 'new-24';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_main_image';
@@ -901,10 +855,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-26'] = $pane;
-    $display->panels['right'][1] = 'new-26';
+    $display->content['new-24'] = $pane;
+    $display->panels['right'][1] = 'new-24';
     $pane = new stdClass();
-    $pane->pid = 'new-27';
+    $pane->pid = 'new-25';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_ding_body';
@@ -929,10 +883,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 2;
     $pane->locks = array();
-    $display->content['new-27'] = $pane;
-    $display->panels['right'][2] = 'new-27';
+    $display->content['new-25'] = $pane;
+    $display->panels['right'][2] = 'new-25';
     $pane = new stdClass();
-    $pane->pid = 'new-28';
+    $pane->pid = 'new-26';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'ding_event';
@@ -965,10 +919,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 3;
     $pane->locks = array();
-    $display->content['new-28'] = $pane;
-    $display->panels['right'][3] = 'new-28';
+    $display->content['new-26'] = $pane;
+    $display->panels['right'][3] = 'new-26';
     $pane = new stdClass();
-    $pane->pid = 'new-29';
+    $pane->pid = 'new-27';
     $pane->panel = 'right';
     $pane->type = 'views';
     $pane->subtype = 'ding_news';
@@ -1001,10 +955,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-29'] = $pane;
-    $display->panels['right'][4] = 'new-29';
+    $display->content['new-27'] = $pane;
+    $display->panels['right'][4] = 'new-27';
     $pane = new stdClass();
-    $pane->pid = 'new-30';
+    $pane->pid = 'new-28';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'ding_library-panel_pane_2';
@@ -1025,10 +979,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 5;
     $pane->locks = array();
-    $display->content['new-30'] = $pane;
-    $display->panels['right'][5] = 'new-30';
+    $display->content['new-28'] = $pane;
+    $display->panels['right'][5] = 'new-28';
     $pane = new stdClass();
-    $pane->pid = 'new-31';
+    $pane->pid = 'new-29';
     $pane->panel = 'right';
     $pane->type = 'entity_field';
     $pane->subtype = 'node:field_geocode';
@@ -1056,10 +1010,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 6;
     $pane->locks = array();
-    $display->content['new-31'] = $pane;
-    $display->panels['right'][6] = 'new-31';
+    $display->content['new-29'] = $pane;
+    $display->panels['right'][6] = 'new-29';
     $pane = new stdClass();
-    $pane->pid = 'new-32';
+    $pane->pid = 'new-30';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'contact_info_teaser-panel_pane_2';
@@ -1077,10 +1031,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 7;
     $pane->locks = array();
-    $display->content['new-32'] = $pane;
-    $display->panels['right'][7] = 'new-32';
+    $display->content['new-30'] = $pane;
+    $display->panels['right'][7] = 'new-30';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-23';
+  $display->title_pane = 'new-21';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_7'] = $handler;
 
@@ -1119,7 +1073,7 @@ return TRUE;
     ),
   );
   $display = new panels_display();
-  $display->layout = 'omega_12_twocol_4_8';
+  $display->layout = 'mkopac_2col';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -1133,7 +1087,7 @@ return TRUE;
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-33';
+    $pane->pid = 'new-31';
     $pane->panel = 'left';
     $pane->type = 'block';
     $pane->subtype = 'ding_library-ding_sidebar_menu';
@@ -1151,10 +1105,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-33'] = $pane;
-    $display->panels['left'][0] = 'new-33';
+    $display->content['new-31'] = $pane;
+    $display->panels['left'][0] = 'new-31';
     $pane = new stdClass();
-    $pane->pid = 'new-34';
+    $pane->pid = 'new-32';
     $pane->panel = 'left';
     $pane->type = 'campaign';
     $pane->subtype = 'campaign';
@@ -1180,10 +1134,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-34'] = $pane;
-    $display->panels['left'][1] = 'new-34';
+    $display->content['new-32'] = $pane;
+    $display->panels['left'][1] = 'new-32';
     $pane = new stdClass();
-    $pane->pid = 'new-35';
+    $pane->pid = 'new-33';
     $pane->panel = 'right';
     $pane->type = 'node_title';
     $pane->subtype = 'node_title';
@@ -1203,10 +1157,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-35'] = $pane;
-    $display->panels['right'][0] = 'new-35';
+    $display->content['new-33'] = $pane;
+    $display->panels['right'][0] = 'new-33';
     $pane = new stdClass();
-    $pane->pid = 'new-36';
+    $pane->pid = 'new-34';
     $pane->panel = 'right';
     $pane->type = 'node_content';
     $pane->subtype = 'node_content';
@@ -1231,10 +1185,10 @@ return TRUE;
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $display->content['new-36'] = $pane;
-    $display->panels['right'][1] = 'new-36';
+    $display->content['new-34'] = $pane;
+    $display->panels['right'][1] = 'new-34';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-35';
+  $display->title_pane = 'new-33';
   $handler->conf['display'] = $display;
   $export['node_view_panel_context_8'] = $handler;
 
