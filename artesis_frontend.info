@@ -198,4 +198,5 @@ features[user_permission][] = view revisions
 features[variable][] = date_format_day_month_year
 features[variable][] = extlink_target
 features[variable][] = image_jpeg_quality
+features[variable][] = webform_node_types
 features[views_view][] = parent_vocabulary_terms

@@ -30,5 +30,17 @@ function artesis_frontend_strongarm() {
   $strongarm->value = '100';
   $export['image_jpeg_quality'] = $strongarm;
 
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'webform_node_types';
+  $strongarm->value = array(
+    0 => 'ding_event',
+    1 => 'ding_news',
+    2 => 'ding_page',
+    3 => 'webform',
+  );
+  $export['webform_node_types'] = $strongarm;
+
   return $export;
 }
