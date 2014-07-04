@@ -336,16 +336,15 @@ function artesis_frontend_block_view($delta = '') {
       $tid = isset($item['page_arguments'][0]->tid) ? $item['page_arguments'][0]->tid : FALSE;
 
       // Assume that's a term page, according to how it was laoded.
-      if (!in_array('taxonomy_term_load', $item['load_functions']) || !$tid) {
+      if (!$tid || !in_array('taxonomy_term_load', $item['load_functions'])) {
         break;
       }
 
       $rss = drupal_add_feed();
-      foreach ($rss as $k => $v) {
+      foreach (array_keys($rss) as $v) {
         // Check whether the feed generated contains the current term id.
-        if (strpos($k, '/' . $tid . '/') !== FALSE) {
-          $title = $k;
-          $url = $k;
+        if (strpos($v, '/' . $tid . '/') !== FALSE) {
+          $title = $url = $v;
           break;
         }
       }
