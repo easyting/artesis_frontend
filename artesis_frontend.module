@@ -331,12 +331,21 @@ function artesis_frontend_block_view($delta = '') {
       $url = NULL;
       $title = NULL;
 
-      // Check if we have RSS link in html head.
-      $headers = drupal_add_html_head();
-      foreach ($headers as $k => $v) {
-        if ($v['#tag'] == 'link' && $v['#attributes']['rel'] == 'alternate' && $v['#attributes']['type'] == 'application/rss+xml') {
-          $title = $v['#attributes']['title'];
-          $url = $v['#attributes']['href'];
+
+      $item = menu_get_item();
+      $tid = isset($item['page_arguments'][0]->tid) ? $item['page_arguments'][0]->tid : FALSE;
+
+      // Assume that's a term page, according to how it was laoded.
+      if (!in_array('taxonomy_term_load', $item['load_functions']) || !$tid) {
+        break;
+      }
+
+      $rss = drupal_add_feed();
+      foreach ($rss as $k => $v) {
+        // Check whether the feed generated contains the current term id.
+        if (strpos($k, '/' . $tid . '/') !== FALSE) {
+          $title = $k;
+          $url = $k;
           break;
         }
       }
@@ -364,6 +373,7 @@ function artesis_frontend_block_view($delta = '') {
           '#path' => $url,
         );
       }
+
       break;
   }
 
