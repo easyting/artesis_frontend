@@ -81,3 +81,10 @@ function artesis_frontend_update_7000() {
   $status['taxonomy_term'] = FALSE;
   variable_set('views_defaults', $status);
 }
+
+/**
+ * Enable artesis frontend overrides.
+ */
+function artesis_frontend_update_7001() {
+  module_enable('artesis_frontend_overrides');
+}
