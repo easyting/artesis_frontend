@@ -86,5 +86,5 @@ function artesis_frontend_update_7000() {
  * Enable artesis frontend overrides.
  */
 function artesis_frontend_update_7001() {
-  module_enable('artesis_frontend_overrides');
+  module_enable(array('artesis_frontend_overrides'));
 }
