@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the artesis_frontend_overrides feature.
+ */
+
+include_once 'artesis_frontend_overrides.features.inc';
