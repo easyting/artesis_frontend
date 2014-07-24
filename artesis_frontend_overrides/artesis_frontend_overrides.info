@@ -1,0 +1,8 @@
+name = Artesis Frontend Overrides
+description = Override system entities or existing features
+core = 7.x
+package = Artesis
+dependencies[] = taxonomy
+features[features_api][] = api:1
+features[features_override_items][] = views_view.taxonomy_term
+features[features_overrides][] = views_view.taxonomy_term.display|feed|display_options|row_options
