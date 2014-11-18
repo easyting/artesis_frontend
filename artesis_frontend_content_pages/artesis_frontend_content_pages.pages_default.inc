@@ -209,14 +209,14 @@ function artesis_frontend_content_pages_default_page_manager_handlers() {
     $pane = new stdClass();
     $pane->pid = 'new-6';
     $pane->panel = 'top_middle';
-    $pane->type = 'token';
-    $pane->subtype = 'node:created';
+    $pane->type = 'node_created';
+    $pane->subtype = 'node_created';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'sanitize' => 1,
+      'format' => 'ding_news_date_format',
       'context' => 'argument_entity_id:node_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
     );
     $pane->cache = array();
